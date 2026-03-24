@@ -172,10 +172,14 @@ class SQLiteStore:
                 # Mark old triple as superseded
                 c.execute("UPDATE triples SET superseded_by=? WHERE id=?", (-1, existing["id"]))
 
+            try:
+                conf = float(triple.get("confidence", 1.0))
+            except (ValueError, TypeError):
+                conf = 1.0
             c.execute(
                 "INSERT INTO triples (user_id, session_id, subject, predicate, object, confidence, timestamp) VALUES (?,?,?,?,?,?,?)",
-                (user_id, session_id, triple.get("subject", ""), triple.get("predicate", ""),
-                 triple.get("object", ""), triple.get("confidence", 1.0), timestamp)
+                (user_id, session_id, str(triple.get("subject", "")), str(triple.get("predicate", "")),
+                 str(triple.get("object", "")), conf, timestamp)
             )
             triple_id = c.lastrowid
             # Index in FTS
@@ -199,8 +203,8 @@ class SQLiteStore:
         for entity in extraction.entities:
             c.execute(
                 "INSERT OR IGNORE INTO entities (user_id, name, entity_type, description, aliases) VALUES (?,?,?,?,?)",
-                (user_id, entity.get("name", ""), entity.get("type", ""),
-                 entity.get("description", ""), json.dumps(entity.get("aliases", [])))
+                (user_id, str(entity.get("name", "")), str(entity.get("type", "")),
+                 str(entity.get("description", "")), json.dumps(entity.get("aliases", [])))
             )
             counts["entities"] += 1
 
@@ -219,9 +223,9 @@ class SQLiteStore:
         for event in extraction.temporal_events:
             c.execute(
                 "INSERT INTO temporal_events (user_id, event, timestamp_raw, absolute_date, duration, recurring, frequency) VALUES (?,?,?,?,?,?,?)",
-                (user_id, event.get("event", ""), event.get("timestamp", ""),
-                 event.get("absolute_date"), event.get("duration"),
-                 1 if event.get("recurring") else 0, event.get("frequency"))
+                (user_id, str(event.get("event", "")), str(event.get("timestamp", "")),
+                 str(event.get("absolute_date") or ""), str(event.get("duration") or ""),
+                 1 if event.get("recurring") else 0, str(event.get("frequency") or ""))
             )
             event_id = c.lastrowid
             content = f"{event.get('event', '')} {event.get('timestamp', '')} {event.get('absolute_date', '')}"
@@ -240,11 +244,15 @@ class SQLiteStore:
             if existing and existing["value"] != attr.get("value", ""):
                 c.execute("UPDATE profiles SET superseded_by=? WHERE id=?", (-1, existing["id"]))
 
+            try:
+                pconf = float(attr.get("confidence", 1.0))
+            except (ValueError, TypeError):
+                pconf = 1.0
             c.execute(
                 "INSERT INTO profiles (user_id, person, category, attribute, value, confidence, timestamp) VALUES (?,?,?,?,?,?,?)",
-                (user_id, attr.get("person", ""), attr.get("category", ""),
-                 attr.get("attribute", ""), attr.get("value", ""),
-                 attr.get("confidence", 1.0), timestamp)
+                (user_id, str(attr.get("person", "")), str(attr.get("category", "")),
+                 str(attr.get("attribute", "")), str(attr.get("value", "")),
+                 pconf, timestamp)
             )
             content = f"{attr.get('person', '')} {attr.get('attribute', '')} {attr.get('value', '')}"
             c.execute("INSERT INTO memory_fts (content, memory_type, memory_id, user_id) VALUES (?,?,?,?)",

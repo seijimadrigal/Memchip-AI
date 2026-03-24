@@ -39,8 +39,8 @@ class Extraction:
 class ExtractionPipeline:
     def __init__(
         self,
-        provider: str = "openai",
-        model: str = "gpt-4.1-mini",
+        provider: str = "openrouter",
+        model: str = "openai/gpt-4.1-mini",
         api_key: Optional[str] = None,
     ):
         self.provider = provider
@@ -55,14 +55,22 @@ class ExtractionPipeline:
         timestamp: str = "",
     ) -> Extraction:
         """Run full extraction pipeline on text."""
+        import concurrent.futures
         result = Extraction(raw_text=text)
 
-        # Run all extractions (could be parallelized)
-        result.triples = self._extract_triples(text, timestamp)
-        result.summary = self._extract_summary(text, timestamp)
-        result.entities = self._extract_entities(text)
-        result.temporal_events = self._extract_temporal(text, timestamp)
-        result.profile_attributes = self._extract_profile(text)
+        # Run extractions in parallel (5 independent LLM calls)
+        with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+            f_triples = executor.submit(self._extract_triples, text, timestamp)
+            f_summary = executor.submit(self._extract_summary, text, timestamp)
+            f_entities = executor.submit(self._extract_entities, text)
+            f_temporal = executor.submit(self._extract_temporal, text, timestamp)
+            f_profile = executor.submit(self._extract_profile, text)
+
+            result.triples = f_triples.result()
+            result.summary = f_summary.result()
+            result.entities = f_entities.result()
+            result.temporal_events = f_temporal.result()
+            result.profile_attributes = f_profile.result()
 
         return result
 

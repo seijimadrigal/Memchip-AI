@@ -29,8 +29,8 @@ class RetrievalEngine:
         self,
         store,
         embedding_model: str = "all-MiniLM-L6-v2",
-        llm_provider: str = "openai",
-        llm_model: str = "gpt-4.1-mini",
+        llm_provider: str = "openrouter",
+        llm_model: str = "openai/gpt-4.1-mini",
         api_key: Optional[str] = None,
     ):
         self.store = store

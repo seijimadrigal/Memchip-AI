@@ -76,11 +76,11 @@ Output ONLY a single number: 1 (correct) or 0 (incorrect)."""
 
     response = call_llm(
         prompt=prompt,
-        provider="openai",
-        model="gpt-4.1-mini",
+        provider="openrouter",
+        model="openai/gpt-4.1-mini",
         api_key=api_key,
         temperature=0.0,
-        max_tokens=5,
+        max_tokens=50,
     )
 
     try:
@@ -93,14 +93,14 @@ def run_benchmark(
     data_path: str,
     output_dir: str,
     api_key: Optional[str] = None,
-    llm_model: str = "gpt-4.1-mini",
+    llm_model: str = "openai/gpt-4.1-mini",
     max_conversations: Optional[int] = None,
     resume: bool = True,
 ):
     """Run the full LoCoMo benchmark."""
-    api_key = api_key or os.environ.get("OPENAI_API_KEY")
+    api_key = api_key or os.environ.get("OPENROUTER_API_KEY") or os.environ.get("OPENAI_API_KEY")
     if not api_key:
-        raise ValueError("Set OPENAI_API_KEY environment variable")
+        raise ValueError("Set OPENROUTER_API_KEY or OPENAI_API_KEY environment variable")
 
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -314,7 +314,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run LoCoMo benchmark on MemChip")
     parser.add_argument("--data", required=True, help="Path to locomo10.json")
     parser.add_argument("--output", default="results", help="Output directory")
-    parser.add_argument("--model", default="gpt-4.1-mini", help="LLM model")
+    parser.add_argument("--model", default="openai/gpt-4.1-mini", help="LLM model")
     parser.add_argument("--max-conv", type=int, help="Max conversations to process")
     parser.add_argument("--no-resume", action="store_true", help="Don't resume from checkpoint")
     args = parser.parse_args()
