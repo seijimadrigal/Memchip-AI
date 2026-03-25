@@ -52,7 +52,7 @@ def get_ground_truth(qa: dict) -> str | None:
     return qa.get("answer")
 
 
-def run_benchmark(data_path: str, output_dir: str, max_conv: int = None, no_resume: bool = False):
+def run_benchmark(data_path: str, output_dir: str, max_conv: int = None, no_resume: bool = False, conversations: str = None):
     api_key = os.environ.get("OPENROUTER_API_KEY")
     if not api_key:
         print("ERROR: OPENROUTER_API_KEY not set")
@@ -61,7 +61,11 @@ def run_benchmark(data_path: str, output_dir: str, max_conv: int = None, no_resu
     os.makedirs(output_dir, exist_ok=True)
     data = load_data(data_path)
     
-    if max_conv:
+    if conversations:
+        conv_ids = [c.strip() for c in conversations.split(",")]
+        data = [c for c in data if c["sample_id"] in conv_ids]
+        print(f"  Filtered to {len(data)} conversations: {conv_ids}")
+    elif max_conv:
         data = data[:max_conv]
 
     checkpoint_path = os.path.join(output_dir, "checkpoint.json")
@@ -230,7 +234,8 @@ if __name__ == "__main__":
     parser.add_argument("--data", required=True, help="Path to locomo10.json")
     parser.add_argument("--output", required=True, help="Output directory")
     parser.add_argument("--max-conv", type=int, default=None, help="Max conversations to process")
+    parser.add_argument("--conversations", type=str, default=None, help="Comma-separated conv IDs (e.g. conv-26,conv-30,conv-44)")
     parser.add_argument("--no-resume", action="store_true", help="Don't resume from checkpoint")
     args = parser.parse_args()
     
-    run_benchmark(args.data, args.output, args.max_conv, args.no_resume)
+    run_benchmark(args.data, args.output, args.max_conv, args.no_resume, args.conversations)
