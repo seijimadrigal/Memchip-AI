@@ -386,3 +386,502 @@ Ingesting 32 sessions...
   Ingesting session_28 (5:19 pm on 5 August, 2023)...
   Ingesting session_29 (8:06 pm on 9 August, 2023)...
   Ingesting session_30 (12:10 am on 11 August, 2023)...
+  Ingesting session_31 (3:14 pm on 13 August, 2023)...
+  Ingesting session_32 (11:08 am on 16 August, 2023)...
+Ingestion complete. Profiles: 2, Episodes: 32
+  [1/193] ✅ (temporal) [B] Who did Maria have dinner with on May 3, 2023?
+  [2/193] ✅ (temporal) [B] When did Maria donate her car?
+  [3/193] ✅ (single-hop) [B] What martial arts has John done?
+  [4/193] ✅ (single-hop) [multihop(A,A,C)] What type of volunteering have John and Maria both done?
+  [5/193] ✅ (temporal) [B] When did John join the online support group?
+  [6/193] ✅ (temporal) [B] When did Maria go to the beach?
+  [7/193] ❌ (single-hop) [B] Where has Maria made friends?
+  [8/193] ❌ (single-hop) [B] What items des John mention having as a child?
+  [9/193] ❌ (open-domain) [A] What might John's financial status be?
+  [10/193] ✅ (single-hop) [multihop(C,A,B,B)] Who gave Maria's family money when she was younger and her family was going thro
+  [11/193] ✅ (temporal) [B] When did Maria meet Jean?
+  [12/193] ✅ (single-hop) [multihop(C,A,C)] What people has Maria met and helped while volunteering?
+  [13/193] ✅ (single-hop) [B] What test has John taken multiple times?
+  [14/193] ✅ (temporal) [B] When did Maria's grandmother pass away?
+  [15/193] ✅ (open-domain) [A] Would John be considered a patriotic person?
+  [16/193] ✅ (single-hop) [B] What writing classes has Maria taken?
+  [17/193] ✅ (temporal) [B] When did John get his degree?
+  [18/193] ❌ (open-domain) [B] What might John's degree be in?
+  [19/193] ❌ (single-hop) [B] Who did John go to yoga with?
+  [20/193] ❌ (single-hop) [B] What damages have happened to John's car?
+  [21/193] ✅ (temporal) [B] When did John take a road trip to the Pacific Northwest?
+  [22/193] ❌ (single-hop) [multihop(A,B,A,B)] What areas of the U.S. has John been to or is planning to go to?
+  [23/193] ✅ (temporal) [B] When did John go to a convention with colleagues?
+  [24/193] ✅ (single-hop) [B] What desserts has Maria made?
+  [25/193] ✅ (temporal) [B] When did John start boot camp with his family?
+  [26/193] ✅ (single-hop) [B] What European countries has Maria been to?
+  [27/193] ❌ (single-hop) [B] What has Maria done to feel closer to her faith?
+  [28/193] ✅ (temporal) [B] When did John have a party with veterans?
+  [29/193] ✅ (single-hop) [B] What causes does John feel passionate about supporting?
+  [30/193] ✅ (single-hop) [multihop(A,B,A)] What events is Maria planning for the homeless shelter funraiser?
+  [31/193] ✅ (single-hop) [B] What shelters does Maria volunteer at?
+  [32/193] ✅ (temporal) [B] When did John get his dog Max?
+  [33/193] ❌ (single-hop) [multihop(A,C,C)] What outdoor activities has John done with his colleagues?
+  [34/193] ❌ (single-hop) [B] What types of yoga has Maria practiced?
+  [35/193] ✅ (temporal) [B] When did Maria join a gym?
+  [36/193] ✅ (single-hop) [B] What states has Maria vacationed at?
+  [37/193] ✅ (single-hop) [B] What music events has John attended?
+  [38/193] ✅ (single-hop) [B] What events for veterans has John participated in?
+  [39/193] ✅ (temporal) [B] When did Maria get in a car accident?
+  [40/193] ✅ (open-domain) [B] Around which US holiday did Maria get into a car accident?
+  [41/193] ✅ (single-hop) [B] What are the names of John's children?
+  [42/193] ✅ (open-domain) [C] Does John live close to a beach or the mountains?
+  [43/193] ✅ (single-hop) [B] What area was hit by a flood?
+  [44/193] ✅ (temporal) [B] When was John's old area hit with a flood?
+  [45/193] ✅ (single-hop) [multihop(A,B,C,A,C)] What activities has Maria done with her church friends?
+  [46/193] ✅ (open-domain) [D] Would John be open to moving to another country?
+  [47/193] ✅ (temporal) [B] When did Maria go hiking with her church friends?
+  [48/193] ❌ (single-hop) [B] What exercises has John done?
+  [49/193] ❌ (temporal) [B] When did John have his first firefighter call-out?
+  [50/193] ❌ (single-hop) [B] What food item did Maria drop off at the homeless shelter?
+  [51/193] ❌ (open-domain) [A] What attributes describe John?
+  [52/193] ✅ (temporal) [B] When did Maria start volunteering at the homeless shelter?
+  [53/193] ✅ (single-hop) [B] Who have written notes of gratitude to Maria?
+  [54/193] ✅ (temporal) [B] When did John help renovate his hometown community center?
+  [55/193] ✅ (temporal) [B] When did Maria take up community work with her church friends?
+  [56/193] ✅ (temporal) [B] When did Maria receive a medal from the homeless shelter?
+  [57/193] ❌ (temporal) [B] When did John participate in a 5K charity run?
+  [58/193] ❌ (single-hop) [B] What causes has John done events for?
+  [59/193] ✅ (temporal) [B] When did Maria get Coco?
+  [60/193] ✅ (temporal) [B] When did John go on a camping trip with Max?
+  [61/193] ✅ (single-hop) [B] What are Maria's dogs' names?
+  [62/193] ✅ (temporal) [B] When did Maria adopt Shadow?
+  [63/193] ✅ (single-hop) [B] How many dogs has Maria adopted from the dog shelter she volunteers at?
+  [64/193] ❌ (temporal) [B] How many weeks passed between Maria adopting Coco and Shadow?
+  [65/193] ✅ (open-domain) [C] What job might Maria pursue in the future?
+  [66/193] ✅ (multi-hop) [multihop(A,A,B,C)] What is John's main focus in local politics?
+  [67/193] ✅ (multi-hop) [multihop(C,C,C)] What sparked John's interest in improving education and infrastructure in the co
+  [68/193] ✅ (multi-hop) [multihop(A,B,A,B,C)] How did the extra funding help the school shown in the photo shared by John?
+  [69/193] ❌ (multi-hop) [multihop(B,A,B,C)] What type of workout class did Maria start doing in December 2023?
+  [70/193] ❌ (multi-hop) [multihop(B,C,B,B,C)] What did Maria donate to a homeless shelter in December 2023?
+  [71/193] ✅ (multi-hop) [multihop(A,A,B,C,A,B)] What kind of meal did John and his family make together in the photo shared by J
+  [72/193] ✅ (multi-hop) [multihop(A,A,A,B,C)] What kind of online group did John join?
+  [73/193] ❌ (multi-hop) [multihop(A,B,A,A)] What kind of activities did John and his mates from the online group do as part 
+  [74/193] ✅ (multi-hop) [multihop(A,A,C)] Who inspired Maria to start volunteering?
+  [75/193] ✅ (multi-hop) [multihop(B,A,B,C)] Why did Maria sit with the little girl at the shelter event in February 2023?
+  [76/193] ✅ (multi-hop) [multihop(A,C,B)] What did Jean go through before meeting Maria?
+  [77/193] ✅ (multi-hop) [multihop(A,C,C)] Why did John decide to run for office again?
+  [78/193] ✅ (multi-hop) [multihop(A,B,A,B,A,B)] What activity did John's colleague, Rob, invite him to?
+  [79/193] ✅ (multi-hop) [multihop(A,A,A)] What is the name of John's one-year-old child?
+  [80/193] ✅ (multi-hop) [multihop(A,A,B)] How often does John take his kids to the park?
+  [81/193] ✅ (multi-hop) [multihop(A,A,B,A,B)] What did Maria make for her home to remind her of a trip to England?
+  [82/193] ✅ (multi-hop) [multihop(A,B,A,B,C,A,B)] Where did Maria get the idea for the castle shadow box in her home?
+  [83/193] ❌ (multi-hop) [multihop(A,A,B,C,A,B,C)] What did John receive a certificate for?
+  [84/193] ✅ (multi-hop) [multihop(A,A,C)] What areas is John particularly interested in for policymaking?
+  [85/193] ✅ (multi-hop) [multihop(B,B,B)] What did Maria participate in last weekend before April 10, 2023?
+  [86/193] ❌ (multi-hop) [multihop(A,B,B)] What event did John volunteer at last weekend?
+  [87/193] ✅ (multi-hop) [multihop(B,C,C)] What did John do that put a strain on his wallet?
+  [88/193] ✅ (multi-hop) [multihop(A,B,B)] Where did John explore on a road trip last year?
+  [89/193] ✅ (multi-hop) [multihop(A,C,B)] What topic has John been blogging about recently?
+  [90/193] ✅ (multi-hop) [multihop(C,A,C)] Why did John start blogging about politics and policies?
+  [91/193] ✅ (multi-hop) [multihop(A,A,C)] What was the focus of John's recent research and writing on his blog?
+  [92/193] ✅ (temporal) [B] What did John attend with his colleagues in March 2023?
+  [93/193] ✅ (multi-hop) [multihop(A,A,A)] How often does John work out with his family?
+  [94/193] ✅ (multi-hop) [multihop(A,B,C,A,C)] How has John's fitness improved since starting boot camps with his family?
+  [95/193] ✅ (multi-hop) [multihop(A,A,B,C)] What kind of food did Maria have on her dinner spread iwth her mother?
+  [96/193] ✅ (multi-hop) [multihop(A,B,A)] What activity did Maria and her mom do together in May 2023?
+  [97/193] ✅ (multi-hop) [multihop(A,A,C)] What did Maria do to feel closer to a community and her faith?
+  [98/193] ✅ (multi-hop) [multihop(A,C,A)] Why did Maria join a nearby church recently?
+  [99/193] ✅ (multi-hop) [multihop(A,B,C)] What did John host for the veterans in May 2023 as part of the project?
+  [100/193] ✅ (multi-hop) [multihop(C,A,B)] What did John and the veterans do during the small party?
+  [101/193] ✅ (multi-hop) [multihop(C,B,C)] What emotions did John feel during the small party with the veterans?
+  [102/193] ❌ (multi-hop) [multihop(B,B,A)] What event is Maria getting ready for at the shelter on May 25, 2023?
+  [103/193] ✅ (multi-hop) [multihop(A,A,A)] What does Maria need to spread the word about for the fundraiser for the volunte
+  [104/193] ✅ (multi-hop) [multihop(B,B,C)] What was the name of the pet that John had to say goodbye to on 3 June, 2023?
+  [105/193] ✅ (multi-hop) [multihop(B,B,B,C)] How long was Max a part of John's family?
+  [106/193] ❌ (multi-hop) [multihop(A,A,A)] How does John plan to honor the memories of his beloved pet?
+  [107/193] ✅ (multi-hop) [multihop(C,A,C)] What important values does John want to teach his kids through adopting a rescue
+  [108/193] ✅ (multi-hop) [multihop(B,B,C)] What new activity did Maria start recently, as mentioned on 3 June, 2023?
+  [109/193] ✅ (multi-hop) [multihop(A,B,A,B,A,B)] What did Maria say it was like being at the waterfall in Oregon?
+  [110/193] ✅ (multi-hop) [multihop(A,B,C,A,A)] What does Maria say she feels when doing upside-down yoga poses?
+  [111/193] ✅ (multi-hop) [multihop(A,A,B)] What exciting news did Maria share on 16 June, 2023?
+  [112/193] ✅ (multi-hop) [multihop(A,A,C)] What yoga activity has Maria been trying to improve her strength and endurance?
+  [113/193] ✅ (multi-hop) [multihop(A,A,A)] What did John recently get promoted to?
+  [114/193] ✅ (multi-hop) [multihop(C,C,C)] What was one of the biggest challenges John faced in his journey to becoming ass
+  [115/193] ✅ (multi-hop) [multihop(C,A,A)] How does John describe the support he received during his journey to becoming as
+  [116/193] ✅ (multi-hop) [multihop(B,B,A)] What kind of event did John and his family attend in June 2023?
+  [117/193] ✅ (multi-hop) [multihop(C,C,C)] Why did Maria need to help her cousin find a new place to live?
+  [118/193] ✅ (multi-hop) [multihop(A,B,B)] What event did John participate in to show support for veterans' rights?
+  [119/193] ✅ (multi-hop) [multihop(A,A,B,C)] What inspired John to join the marching event for veterans' rights?
+  [120/193] ✅ (multi-hop) [multihop(A,A,B)] How often does John get to see sunsets like the one he shared with Maria?
+  [121/193] ✅ (multi-hop) [multihop(A,B,B,B)] What natural disaster affected John's old area on 7 July, 2023?
+  [122/193] ✅ (multi-hop) [multihop→C] How did the flood impact the homes in John's old area?
+  [123/193] ✅ (multi-hop) [multihop(C,B,C)] What motivated Maria and John to discuss potential solutions for their community
+  [124/193] ✅ (multi-hop) [multihop(A,B,A)] What did Maria plan to do later on the evening of 7 July, 2023?
+  [125/193] ✅ (multi-hop) [multihop(C,A,B,A,B)] What kind of activities did Maria do at the picnic with her church friends?
+  [126/193] ✅ (multi-hop) [multihop(C,A,A)] What does John appreciate about the veteran's hospital visit?
+  [127/193] ✅ (multi-hop) [multihop(C,C,C)] What did John take away from visiting the veteran's hospital?
+  [128/193] ✅ (multi-hop) [multihop(A,C,C)] Why did John feel inspired to join the military after the visit to the hospital?
+  [129/193] ✅ (multi-hop) [multihop(B,B,A)] In what activity did Maria and her church friends participate in July 2023?
+  [130/193] ✅ (multi-hop) [multihop(A,A,A)] What does John think about trying new classes at the yoga studio?
+  [131/193] ✅ (multi-hop) [multihop(A,A,C)] Which activity has John done apart from yoga at the studio?
+  [132/193] ✅ (multi-hop) [multihop(A,A,B)] What community service did Maria mention that she was involved in on 31 July, 20
+  [133/193] ✅ (multi-hop) [multihop(A,C,C)] How did Maria start volunteering at the homeless shelter?
+  [134/193] ✅ (multi-hop) [multihop(B,B,B)] What did John do the week before August 3, 2023 involving his kids?
+  [135/193] ✅ (multi-hop) [multihop(A,B,A,A,B)] How did John describe his kids' reaction at the military memorial?
+  [136/193] ✅ (multi-hop) [multihop(C,A,B,C)] Why does Maria think it's important for younger generations to visit military me
+  [137/193] ✅ (multi-hop) [multihop(D,A,C)] What does John believe is important for children regarding veterans?
+  [138/193] ✅ (multi-hop) [multihop(B,B,B)] What happened to John's job in August 2023?
+  [139/193] ✅ (multi-hop) [multihop(B,B,B)] What activity did Maria take up with her friends from church in August 2023?
+  [140/193] ✅ (multi-hop) [multihop(B,C,C)] What did John do to help his community last year in his hometown?
+  [141/193] ❌ (multi-hop) [multihop(A,A,A)] What cause did the 5K charity run organized by John support?
+  [142/193] ❌ (multi-hop) [multihop(A,A,A)] Who did John work with to raise awareness and funds for victims of domestic abus
+  [143/193] ✅ (multi-hop) [multihop(B,B,B)] What recognition did Maria receive at the homeless shelter in August 2023?
+  [144/193] ✅ (multi-hop) [multihop(B,B,A)] What is the name of Maria's puppy she got two weeks before August 11, 2023?
+  [145/193] ✅ (multi-hop) [multihop(A,B,B)] What activity did John and Max enjoy together last summer?
+  [146/193] ✅ (multi-hop) [multihop(A,B,A,B,A,B)] How does John describe the camping trip with Max?
+  [147/193] ✅ (multi-hop) [multihop(C,C,A)] Why does John say he feels stuck and questioning his decisions and goals?
+  [148/193] ✅ (multi-hop) [multihop(A,A,A)] What is the name of Maria's second puppy?
+  [149/193] ✅ (multi-hop) [multihop(A,A,B,C)] How is Maria's new puppy adjusting to its new home?
+  [150/193] ❌ (multi-hop) [multihop(B,A,B)] What is John currently doing as a volunteer in August 2023?
+  [151/193] ❌ (multi-hop) [multihop(A,B,A,A)] What activities does John's family enjoy doing together?
+  [152/193] ✅ (multi-hop) [multihop(A,A,B)] What did the donations help John's community acquire on 16 August, 2023?
+  [153/193] ✅ (adversarial) [adversarial_masked] What is John's main focus in international politics?
+  [154/193] ❌ (adversarial) [adversarial_masked] What did Maria donate to a luxury store in December 2023?
+  [155/193] ✅ (adversarial) [adversarial_masked] Who inspired John to start volunteering?
+  [156/193] ✅ (adversarial) [adversarial_masked] Why did Maria decide to run for office again?
+  [157/193] ✅ (adversarial) [adversarial_masked] What activity did Maria's colleague, Rob, invite her to?
+  [158/193] ✅ (adversarial) [adversarial_masked] What is the name of Maria's one-year-old child?
+  [159/193] ❌ (adversarial) [adversarial_masked] How often does John take his kids to the library?
+  [160/193] ❌ (adversarial) [adversarial_masked] What did Maria make for her home to remind her of a trip to France?
+  [161/193] ✅ (adversarial) [adversarial_masked] Where did John get the idea for the castle shadow box in his home?
+  [162/193] ❌ (adversarial) [adversarial_masked] What did Maria receive a certificate for?
+  [163/193] ❌ (adversarial) [adversarial_masked] What areas is John particularly interested in for art appreciation?
+  [164/193] ✅ (adversarial) [adversarial_masked] Why did Maria start blogging about politics and policies?
+  [165/193] ❌ (adversarial) [adversarial_masked] What was the focus of John's recent travel and photography blog?
+  [166/193] ✅ (adversarial) [adversarial_masked] How often does Maria work out with her family?
+  [167/193] ✅ (adversarial) [adversarial_masked] How has John's artistic skills improved since starting boot camps with his famil
+  [168/193] ✅ (adversarial) [adversarial_masked] What kind of food did Maria have on her dinner spread with her father?
+  [169/193] ✅ (adversarial) [adversarial_masked] What did John do to feel closer to a community and his faith?
+  [170/193] ✅ (adversarial) [adversarial_masked] Why did John join a nearby church recently?
+  [171/193] ✅ (adversarial) [adversarial_masked] How long was Max a part of Maria's family?
+  [172/193] ✅ (adversarial) [adversarial_masked] How does Maria plan to honor the memories of her beloved pet?
+  [173/193] ✅ (adversarial) [adversarial_masked] What important values does Maria want to teach her kids through adopting a rescu
+  [174/193] ✅ (adversarial) [adversarial_masked] What did Maria say it was like being at the desert in Oregon?
+  [175/193] ✅ (adversarial) [adversarial_masked] What does John say she feels when doing upside-down yoga poses?
+  [176/193] ✅ (adversarial) [adversarial_masked] What did Maria recently get promoted to?
+  [177/193] ✅ (adversarial) [adversarial_masked] What was one of the biggest challenges Maria faced in her journey to becoming as
+  [178/193] ✅ (adversarial) [adversarial_masked] Why did John need to help his cousin find a new place to live?
+  [179/193] ✅ (adversarial) [adversarial_masked] What event did Maria participate in to show support for veterans' rights?
+  [180/193] ❌ (adversarial) [adversarial_masked] How did the drought impact the homes in John's old area?
+  [181/193] ❌ (adversarial) [adversarial_masked] What does John criticize about the veteran's hospital visit?
+  [182/193] ✅ (adversarial) [adversarial_masked] What did John take away from visiting the orphanage?
+  [183/193] ✅ (adversarial) [adversarial_masked] Why did Maria feel inspired to join the military after the visit to the hospital
+  [184/193] ✅ (adversarial) [adversarial_masked] How did Maria describe her kids' reaction at the military memorial?
+  [185/193] ❌ (adversarial) [adversarial_masked] Why does Maria think it's important for younger generations to visit art galleri
+  [186/193] ❌ (adversarial) [adversarial_masked] What happened to Maria's job in August 2023?
+  [187/193] ❌ (adversarial) [adversarial_masked] What cause did the 5K charity run organized by Maria support?
+  [188/193] ✅ (adversarial) [adversarial_masked] Who did John work with to raise awareness and funds for animal welfare?
+  [189/193] ✅ (adversarial) [adversarial_masked] What recognition did John receive at the homeless shelter in August 2023?
+  [190/193] ✅ (adversarial) [adversarial_masked] What is the name of John's puppy he got two weeks before August 11, 2023?
+  [191/193] ✅ (adversarial) [adversarial_masked] How does Maria describe the camping trip with Max?
+  [192/193] ✅ (adversarial) [adversarial_masked] What is the name of Maria's second kitten?
+  [193/193] ✅ (adversarial) [adversarial_masked] How is John's new puppy adjusting to its new home?
+
+============================================================
+Processing conversation: conv-42 (Joanna & Nate)
+============================================================
+Ingesting 29 sessions...
+  Ingesting session_1 (7:31 pm on 21 January, 2022)...
+  Ingesting session_2 (2:01 pm on 23 January, 2022)...
+  Ingesting session_3 (9:27 am on 7 February, 2022)...
+  Ingesting session_4 (1:07 pm on 25 February, 2022)...
+  Ingesting session_5 (6:59 pm on 18 March, 2022)...
+  Ingesting session_6 (1:43 pm on 24 March, 2022)...
+  Ingesting session_7 (7:37 pm on 15 April, 2022)...
+  Ingesting session_8 (6:44 pm on 17 April, 2022)...
+  Ingesting session_9 (7:44 pm on 21 April, 2022)...
+  Ingesting session_10 (11:54 am on 2 May, 2022)...
+  Ingesting session_11 (3:35 pm on 12 May, 2022)...
+  Ingesting session_12 (7:49 pm on 20 May, 2022)...
+  Ingesting session_13 (3:00 pm on 25 May, 2022)...
+  Ingesting session_14 (5:44 pm on 3 June, 2022)...
+  Ingesting session_15 (2:12 pm on 5 June, 2022)...
+  Ingesting session_16 (10:55 am on 24 June, 2022)...
+  Ingesting session_17 (2:34 pm on 10 July, 2022)...
+  Ingesting session_18 (6:12 pm on 14 August, 2022)...
+  Ingesting session_19 (10:57 am on 22 August, 2022)...
+  Ingesting session_20 (6:03 pm on 5 September, 2022)...
+  Ingesting session_21 (1:43 pm on 14 September, 2022)...
+  Ingesting session_22 (11:15 am on 6 October, 2022)...
+  Ingesting session_23 (10:58 am on 9 October, 2022)...
+  Ingesting session_24 (2:01 pm on 21 October, 2022)...
+  Ingesting session_25 (8:16 pm on 25 October, 2022)...
+  Ingesting session_26 (3:56 pm on 4 November, 2022)...
+  Ingesting session_27 (8:10 pm on 7 November, 2022)...
+  Ingesting session_28 (5:54 pm on 9 November, 2022)...
+  Ingesting session_29 (12:06 am on 11 November, 2022)...
+Ingestion complete. Profiles: 2, Episodes: 29
+  [1/260] ✅ (open-domain) [multihop(A,A,C)] Is it likely that Nate has friends besides Joanna?
+  [2/260] ❌ (single-hop) [multihop(A,A,C)] What kind of interests do Joanna and Nate share?
+  [3/260] ✅ (temporal) [B] When did Joanna first watch "Eternal Sunshine of the Spotless Mind?
+  [4/260] ✅ (temporal) [B] When did Nate win his first video game tournament?
+  [5/260] ❌ (open-domain) [A] What pets wouldn't cause any discomfort to Joanna?
+  [6/260] ❌ (single-hop) [B] What are Joanna's hobbies?
+  [7/260] ✅ (temporal) [B] How long has Nate had his first two turtles?
+  [8/260] ✅ (temporal) [B] When did Joanna finish her first screenplay?
+  [9/260] ✅ (temporal) [B] When did Nate get his first two turtles?
+  [10/260] ✅ (temporal) [B] What major achievement did Joanna accomplish in January 2022?
+  [11/260] ✅ (single-hop) [B] What emotions is Joanna feeling about  the screenplay she submitted?
+  [12/260] ❌ (single-hop) [B] What is Joanna allergic to?
+  [13/260] ❌ (open-domain) [multihop(A,A,B,C,A,B)] What underlying condition might Joanna have based on her allergies?
+  [14/260] ✅ (temporal) [B] When did Joanna have an audition for a writing gig?
+  [15/260] ✅ (open-domain) [C] What nickname does Nate use for Joanna?
+  [16/260] ✅ (temporal) [C] When did Nate get purple hair?
+  [17/260] ✅ (temporal) [B] What physical transformation did Nate undergo in April 2022?
+  [18/260] ✅ (temporal) [B] What movie did Joanna watch on 1 May, 2022?
+  [19/260] ✅ (temporal) [B] Which outdoor spot did Joanna visit in May?
+  [20/260] ✅ (single-hop) [B] How many times has Joanna found new hiking trails?
+  [21/260] ✅ (temporal) [B] When did Nate adopt Max?
+  [22/260] ✅ (temporal) [B] Who was the new addition to Nate's family in May 2022?
+  [23/260] ✅ (temporal) [B] When did Joanna start writing her third screenplay?
+  [24/260] ❌ (single-hop) [multihop(A,A,B,C,C)] Which of Joanna's screenplay were rejected from production companies?
+  [25/260] ✅ (temporal) [B] When is Nate hosting a gaming party?
+  [26/260] ✅ (temporal) [B] When did Joanna hike with her buddies?
+  [27/260] ❌ (temporal) [C] When did Nate win his third tourney?
+  [28/260] ✅ (single-hop) [multihop(A,A,C)] What places has Joanna submitted her work to?
+  [29/260] ✅ (temporal) [B] When did Nate make vegan icecream and share it with a vegan diet group?
+  [30/260] ✅ (temporal) [B] When is Joanna going to make Nate's ice cream for her family?
+  [31/260] ✅ (single-hop) [B] What kind of writings does Joanna do?
+  [32/260] ✅ (temporal) [B] When did Nate win his fourth video game tournament?
+  [33/260] ✅ (temporal) [B] Where did Joanna travel to in July 2022?
+  [34/260] ❌ (temporal) [B] When did someone write Joanna a touching letter?
+  [35/260] ❌ (single-hop) [multihop(A,C,A,B,C)] What book recommendations has Joanna given to Nate?
+  [36/260] ❌ (temporal) [B] When did Nate take time off to chill with his pets?
+  [37/260] ✅ (temporal) [B] When did Joanna share her book with her writers group?
+  [38/260] ✅ (temporal) [B] When did Nate win an international tournament?
+  [39/260] ✅ (temporal) [B] When did Joanna make a desert with almond milk?
+  [40/260] ✅ (temporal) [B] When did Nate attend a cooking show?
+  [41/260] ✅ (temporal) [B] When did Joanna's laptop crash?
+  [42/260] ❌ (temporal) [B] When did Joanna make a chocolate tart with raspberries?
+  [43/260] ❌ (single-hop) [multihop(A,B,C,A,B,C,C)] What movies have both Joanna and Nate seen?
+  [44/260] ❌ (temporal) [B] How long did it take for Joanna to finish writing her book?
+  [45/260] ✅ (temporal) [B] When did Nate win a lot of money in a video game tournament?
+  [46/260] ✅ (temporal) [B] When did Joanna finish up the writing for her book?
+  [47/260] ❌ (single-hop) [B] What board games has Nate played?
+  [48/260] ✅ (single-hop) [multihop(B,A,A)] What places has Nate met new people?
+  [49/260] ✅ (temporal) [B] When did Nate go to a convention and meet new people?
+  [50/260] ✅ (single-hop) [B] How many times has Joanna's scripts been rejected?
+  [51/260] ✅ (single-hop) [multihop(A,B,A,A)] What is something Nate gave to Joanna that brings her a lot of joy?
+  [52/260] ❌ (single-hop) [B] When did Nate get Tilly for Joanna?
+  [53/260] ❌ (single-hop) [multihop(A,C,C)] How many of Joanna's writing have made it to the big screen?
+  [54/260] ❌ (single-hop) [B] How many times has Nate taken his turtles on a walk?
+  [55/260] ❌ (temporal) [C] When was Joanna's second movie script shown on the big screens?
+  [56/260] ✅ (single-hop) [B] What is Joanna inspired by?
+  [57/260] ✅ (single-hop) [multihop(A,A,C)] What animal do both Nate and Joanna like?
+  [58/260] ✅ (temporal) [B] When did Joanna plan to go over to Nate's and share recipes?
+  [59/260] ❌ (single-hop) [multihop(A,A,C)] What things has Nate reccomended to Joanna?
+  [60/260] ✅ (single-hop) [B] What does Joanna do to remember happy memories?
+  [61/260] ✅ (open-domain) [C] What Console does Nate own?
+  [62/260] ❌ (single-hop) [B] What mediums does Nate use to play games?
+  [63/260] ✅ (single-hop) [B] How many letters has Joanna recieved?
+  [64/260] ✅ (single-hop) [B] What video games does Nate play?
+  [65/260] ✅ (temporal) [B] When did Nate win a big Valorant tourney?
+  [66/260] ✅ (temporal) [B] Which torunament did Nate win in the beginning of November 2022?
+  [67/260] ❌ (open-domain) [B] What alternative career might Nate consider after gaming?
+  [68/260] ✅ (single-hop) [B] What pets does Nate have?
+  [69/260] ✅ (open-domain) [A] How many hikes has Joanna been on?
+  [70/260] ✅ (single-hop) [B] How many turtles does Nate have?
+  [71/260] ❌ (single-hop) [B] What activities does Nate do with his turtles?
+  [72/260] ✅ (single-hop) [B] What do both Joanna and Nate appreciate the beauty of?
+  [73/260] ✅ (temporal) [B] When did Joanna plan on going to Nate's to watch him play with his turtles?
+  [74/260] ✅ (open-domain) [B] What state did Joanna visit in summer 2021?
+  [75/260] ❌ (single-hop) [multihop(A,A,B,C)] What recommendations has Nate received from Joanna?
+  [76/260] ✅ (single-hop) [B] What are Nate's favorite desserts?
+  [77/260] ✅ (single-hop) [multihop(A,A,B,C,C)] How has Nate tried to disburse his vegan ice-cream recipes?
+  [78/260] ✅ (temporal) [B] When did Nate win his second tournament?
+  [79/260] ❌ (single-hop) [B] How many video game tournaments has Nate participated in?
+  [80/260] ✅ (single-hop) [B] How many screenplays has Joanna written?
+  [81/260] ❌ (single-hop) [B] How many tournaments has Nate won?
+  [82/260] ❌ (single-hop) [B] What recipes has Joanna made?
+  [83/260] ❌ (single-hop) [B] What recipes has Nate made?
+  [84/260] ✅ (single-hop) [B] What are the skills that Nate has helped others learn?
+  [85/260] ✅ (open-domain) [B] Was the first half of September 2022 a good month career-wise for Nate and Joann
+  [86/260] ✅ (open-domain) [multihop(A,C,C)] What kind of job is Joanna beginning to preform the duties of because of her mov
+  [87/260] ✅ (temporal) [B] When did Nate take his turtles to the beach?
+  [88/260] ✅ (open-domain) [B] What state did Nate visit?
+  [89/260] ❌ (multi-hop) [multihop(A,A,B,A,B)] What is one of Joanna's favorite movies?
+  [90/260] ❌ (multi-hop) [multihop(A,A,A)] What color did Nate choose for his hair?
+  [91/260] ✅ (multi-hop) [multihop(A,A,B,A,B,C)] What is Nate's favorite movie trilogy?
+  [92/260] ❌ (multi-hop) [multihop(A,A,B,C,C)] What is Nate's favorite book series about?
+  [93/260] ❌ (multi-hop) [multihop(A,B,C,A,B,C,A,B,C)] What kind of lighting does Nate's gaming room have?
+  [94/260] ✅ (multi-hop) [multihop(A,A,C)] What game was the second tournament that Nate won based on?
+  [95/260] ✅ (multi-hop) [multihop(A,A,C)] What is Joanna's third screenplay about?
+  [96/260] ❌ (multi-hop) [multihop(A,A,A)] What is Nate's favorite video game?
+  [97/260] ✅ (multi-hop) [multihop(A,B,A,B,A,B)] What type of movies does Nate enjoy watching the most?
+  [98/260] ❌ (multi-hop) [multihop(A,B,B,C)] What did Joanna just finish last Friday on 23 January, 2022?
+  [99/260] ✅ (multi-hop) [multihop(A,B,A,A)] What genre is Joanna's first screenplay?
+  [100/260] ✅ (multi-hop) [multihop(B,A,B)] What are Joanna's plans for her finished screenplay in January 2022?
+  [101/260] ✅ (multi-hop) [multihop(A,A,B,B)] For how long has Nate had his turtles?
+  [102/260] ✅ (multi-hop) [multihop(A,A,B,A,B)] What did Nate think of the coconut milk ice cream he made?
+  [103/260] ❌ (multi-hop) [multihop(A,A,C)] Which dairy-free dessert flavors does Nate enjoy?
+  [104/260] ❌ (multi-hop) [multihop(B,A,B)] What did Joanna recently watch and recommend to Nate on February 7, 2022?
+  [105/260] ✅ (multi-hop) [multihop(A,C,A,B)] What is "Little Women" about according to Joanna?
+  [106/260] ✅ (multi-hop) [multihop(B,A,B)] What flavor of ice cream did Nate make for his friend on 25 February, 2022?
+  [107/260] ✅ (multi-hop) [multihop(A,B,B)] What inspired Joanna's new screenplay on 25 February, 2022?
+  [108/260] ✅ (multi-hop) [multihop(C,A,B,C)] Why does Nate like turtles as pets?
+  [109/260] ✅ (multi-hop) [multihop(A,B,A,B,A,B)] How does Nate describe the process of taking care of turtles?
+  [110/260] ✅ (multi-hop) [multihop(A,A,A)] What was Joanna's audition for?
+  [111/260] ✅ (multi-hop) [multihop(A,A,C)] Why did Nate choose the hair color he did?
+  [112/260] ✅ (multi-hop) [multihop(A,A,A,B)] What are the main ingredients of the ice cream recipe shared by Nate?
+  [113/260] ✅ (multi-hop) [multihop(A,A,A)] What is Joanna's project called in the writers group?
+  [114/260] ❌ (multi-hop) [multihop(A,A,B,A,B)] What is Nate's favorite genre of movies?
+  [115/260] ✅ (multi-hop) [multihop(A,A,A,B)] What kind of books does Nate enjoy?
+  [116/260] ✅ (multi-hop) [multihop(A,A,A,B)] What kind of films does Joanna enjoy?
+  [117/260] ❌ (multi-hop) [multihop(A,A,A)] Which activity helps Nate escape and stimulates his imagination?
+  [118/260] ✅ (multi-hop) [multihop(B,A,B)] What filling did Joanna use in the cake she made recently in May 2022?
+  [119/260] ✅ (multi-hop) [multihop(B,A,B)] What kind of frosting did Joanna use on the cake she made recently in May 2022?
+  [120/260] ❌ (multi-hop) [multihop(C,A,A)] What does Nate feel he could do when out in cool places like Whispering Falls?
+  [121/260] ✅ (multi-hop) [multihop(A,C,A,B)] What creative activity does Nate joke about pursuing after being inspired by the
+  [122/260] ✅ (multi-hop) [multihop(A,B,D,A)] Who invited Nate to join her on the trails sometime?
+  [123/260] ✅ (multi-hop) [multihop(A,A,B)] What did Nate do for Joanna on 25 May, 2022?
+  [124/260] ✅ (multi-hop) [multihop(A,A,B,A,B)] How does Nate describe the stuffed animal he got for Joanna?
+  [125/260] ✅ (multi-hop) [multihop(B,A,B)] What event is Nate organizing in June 2022?
+  [126/260] ✅ (multi-hop) [multihop(B,A,B,C)] Who did Nate plan to invite to his gaming party in June 2022?
+  [127/260] ✅ (multi-hop) [multihop(A,B,A,A)] What special items did Nate get for everyone at his gaming party?
+  [128/260] ✅ (multi-hop) [multihop(B,A,A,B)] What did Joanna write yesterday that appeared on the big screen?
+  [129/260] ✅ (multi-hop) [multihop(A,A,A,B)] What superhero is Joanna a fan of?
+  [130/260] ✅ (multi-hop) [multihop(A,A,B,A,B)] Which superhero toy figure does Nate share a photo of?
+  [131/260] ✅ (multi-hop) [multihop(A,D,D)] What is displayed on Joanna's cork board for motivation and creativity?
+  [132/260] ✅ (multi-hop) [multihop(A,A,A)] What does the photo on Joanna's cork board remind her of?
+  [133/260] ✅ (multi-hop) [multihop(A,A,C)] What did Nate make and share with his vegan diet group?
+  [134/260] ✅ (multi-hop) [multihop(B,B,A,B)] How many people attended the gaming party hosted by Nate in June 2022?
+  [135/260] ✅ (multi-hop) [multihop(A,A,A)] What recipe Nate offer to share with Joanna?
+  [136/260] ✅ (multi-hop) [multihop(A,C,A)] What did Joanna plan to do with the recipe Nate promised to share?
+  [137/260] ✅ (multi-hop) [multihop(B,C,B)] How many video game tournaments has Nate won by July 10, 2022?
+  [138/260] ✅ (multi-hop) [multihop(A,A,A)] Where did Joanna go for a road trip for research?
+  [139/260] ✅ (multi-hop) [multihop(A,A,A)] What did Joanna discover at the library in Woodhaven?
+  [140/260] ❌ (multi-hop) [multihop(A,C,C)] What specific themes are explored in Joanna's new book?
+  [141/260] ✅ (multi-hop) [multihop(B,A,A)] What inspired Joanna's new script in July 2022?
+  [142/260] ✅ (multi-hop) [multihop(B,C,C)] What did Nate do while Joanna was on her road trip?
+  [143/260] ✅ (multi-hop) [multihop(A,A,C)] What does Nate do that he loves and can make money from?
+  [144/260] ✅ (multi-hop) [multihop(A,A,C)] How did Joanna feel when someone wrote her a letter after reading her blog post?
+  [145/260] ✅ (multi-hop) [multihop(A,A,A)] What kind of impact does Joanna hope to have with her writing?
+  [146/260] ✅ (multi-hop) [multihop(A,A,C)] What kind of content did Joanna share that someone wrote her a letter about?
+  [147/260] ❌ (multi-hop) [multihop(A,C,C)] What motivates Joanna to keep writing even on tough days?
+  [148/260] ❌ (multi-hop) [multihop(A,A,A,B)] What type of ice cream does Joanna mention that Nate makes and is delicious?
+  [149/260] ✅ (multi-hop) [multihop(A,A,A)] How did Nate feel about sharing his love for dairy-free desserts with Joanna?
+  [150/260] ✅ (multi-hop) [multihop(A,A,B)] What did Joanna share with her writers group in August 2022?
+  [151/260] ✅ (multi-hop) [multihop(C,C,C)] How did Joanna celebrate after sharing her book with her writers group?
+  [152/260] ✅ (multi-hop) [multihop(A,B,A,B,A,B,C)] How did Nate celebrate winning the international tournament?
+  [153/260] ✅ (multi-hop) [multihop(A,B,A,C)] Why is Joanna experimenting with dairy-free options in her dessert recipes?
+  [154/260] ✅ (multi-hop) [multihop(A,A,A)] What substitution does Nate suggest for butter in dairy-free baking?
+  [155/260] ✅ (multi-hop) [multihop(A,A,B,A,B)] What type of show did Nate host where he taught vegan ice cream recipes?
+  [156/260] ✅ (multi-hop) [multihop(A,B,C,A,B,A,B)] What is Nate's favorite dish from the cooking show he hosted?
+  [157/260] ❌ (multi-hop) [multihop(A,A,A)] What is one of Nate's favorite dairy-free treats besides coconut milk ice cream?
+  [158/260] ❌ (multi-hop) [multihop(A,B,A,A)] What dessert did Joanna share a photo of that has an almond flour crust, chocola
+  [159/260] ❌ (multi-hop) [multihop(A,A,B,A,B)] What kind of cake did Joanna share a photo of that she likes making for birthday
+  [160/260] ✅ (multi-hop) [multihop(A,B,A,A,B)] What two main ingredients are part of the dessert Joanna shared a photo of with 
+  [161/260] ✅ (multi-hop) [multihop(B,B,B)] What movie did Nate recently watch and enjoy on October 6, 2022?
+  [162/260] ✅ (multi-hop) [multihop(A,A,A)] What did Joanna make for one of the ladies at her writing club?
+  [163/260] ❌ (multi-hop) [multihop(B,B,B)] What game did Nate play at the game convention he attended on 9 October, 2022?
+  [164/260] ✅ (multi-hop) [multihop(A,B,A,B)] What movie has Nate recently seen that blew his mind?
+  [165/260] ❌ (multi-hop) [multihop(A,A,B,B,C)] What game has Nate been playing nonstop with a futuristic setting and gameplay o
+  [166/260] ❌ (multi-hop) [multihop(A,A,B,A,B)] What did Nate share a photo of when mentioning unwinding at home?
+  [167/260] ✅ (multi-hop) [multihop(A,B,C,A,B,A,B,C)] How did Joanna describe the classic movie he watched?
+  [168/260] ✅ (multi-hop) [multihop(A,B,A,B,A,B)] What does Joanna recommend to make a living room comfy like hers?
+  [169/260] ❌ (multi-hop) [multihop(A,B,A,C)] What helps Joanna stay focused and brings her joy?
+  [170/260] ❌ (multi-hop) [multihop(A,A,A,B)] What does Joanna do while she writes?
+  [171/260] ✅ (multi-hop) [multihop(A,A,B,C)] Why did Joanna name the stuffed animal dog Tilly?
+  [172/260] ✅ (multi-hop) [multihop(A,A,C)] What does Joanna do after receiving a rejection from a production company?
+  [173/260] ✅ (multi-hop) [multihop(A,A,A)] How does Nate feel about Joanna's ability to bounce back from setbacks?
+  [174/260] ✅ (multi-hop) [multihop(A,A,A)] What encouragement does Nate give to Joanna after her setback?
+  [175/260] ❌ (multi-hop) [multihop(A,A,A)] What does Nate rely on for cheer and joy?
+  [176/260] ✅ (multi-hop) [multihop(A,A,B,C,A,B)] What does Joanna use to remember her dog from Michigan?
+  [177/260] ✅ (multi-hop) [multihop(A,B,B)] What did Joanna contribute to that was shown on the big screen on the Sunday bef
+  [178/260] ✅ (multi-hop) [multihop(A,A,A)] What inspires Joanna to create drawings of her characters?
+  [179/260] ✅ (multi-hop) [multihop(A,A,A)] Where does Joanna get her ideas for the characters from?
+  [180/260] ✅ (multi-hop) [multihop(A,A,B,B)] How did Joanna feel on October 25, 2022 about seeing her characters come alive o
+  [181/260] ✅ (multi-hop) [multihop(A,B,C,A,B,A,B)] What type of diet do Nate's turtles have?
+  [182/260] ✅ (multi-hop) [multihop(A,A,A)] What ingredient did Nate use to make the ice cream lactose-free?
+  [183/260] ✅ (multi-hop) [multihop(B,C,C)] What did Joanna find in old notebooks last week that prompted her to reflect on 
+  [184/260] ✅ (multi-hop) [multihop(B,B,B)] What game is Nate currently playing and recommends to others on November 7, 2022
+  [185/260] ❌ (multi-hop) [multihop(A,A,C)] What did Joanna receive from her brother that brought back childhood memories?
+  [186/260] ✅ (multi-hop) [multihop(A,B,A,B,A,B)] What is the type of game "Xenoblade Chronicles" that Nate is playing?
+  [187/260] ✅ (multi-hop) [multihop(A,B,B)] What dish did Nate make on 9 November, 2022?
+  [188/260] ✅ (multi-hop) [multihop(B,A,B)] What project is Joanna working on in her notebook on November 9, 2022?
+  [189/260] ✅ (multi-hop) [multihop(A,A,B,B)] What is Nate creating for YouTube on 9 November, 2022?
+  [190/260] ✅ (multi-hop) [multihop(A,A,B,A,B)] What inspired Nate to start making gaming videos?
+  [191/260] ✅ (multi-hop) [multihop(A,A,B,A,B)] What new content is Nate creating for YouTube?
+  [192/260] ✅ (multi-hop) [multihop(A,B,C,A,B,C)] What advice does Joanna give to Nate about making YouTube videos?
+  [193/260] ✅ (multi-hop) [multihop(B,B,B)] What did Joanna take a picture of near Fort Wayne last summer?
+  [194/260] ✅ (multi-hop) [multihop(A,A,B,A,B)] What inspired Joanna to take a picture of the sunset in the field near Fort Wayn
+  [195/260] ✅ (multi-hop) [multihop(A,B,A,B,C,C)] Why did Nate get a third turtle?
+  [196/260] ❌ (multi-hop) [multihop(A,B,A,B,A)] What does Nate want to do when he goes over to Joanna's place?
+  [197/260] ✅ (multi-hop) [multihop(A,A,B,A,B)] What did Nate take to the beach in Tampa?
+  [198/260] ✅ (multi-hop) [multihop(A,B,A,B,A,B)] What does Nate love most about having turtles?
+  [199/260] ✅ (multi-hop) [multihop(A,B,B)] What did Nate share a photo of as a part of his experimentation in November 2022
+  [200/260] ❌ (adversarial) [adversarial_masked] What color did Joanna choose for her hair?
+  [201/260] ❌ (adversarial) [adversarial_masked] What is Joanna's favorite movie trilogy?
+  [202/260] ❌ (adversarial) [adversarial_masked] What is Joanna's favorite book series about?
+  [203/260] ❌ (adversarial) [adversarial_masked] What kind of lighting does Joanna's gaming room have?
+  [204/260] ✅ (adversarial) [adversarial_masked] What game was the second tournament that Joanna won based on?
+  [205/260] ✅ (adversarial) [adversarial_masked] What is Nate's third screenplay about?
+  [206/260] ❌ (adversarial) [adversarial_masked] What type of movies does Nate hate watching the most?
+  [207/260] ✅ (adversarial) [adversarial_masked] What genre is Joanna's first novella?
+  [208/260] ✅ (adversarial) [adversarial_masked] What are Nate's plans for his finished screenplay in January 2022?
+  [209/260] ❌ (adversarial) [adversarial_masked] For how long has Nate had his snakes?
+  [210/260] ❌ (adversarial) [adversarial_masked] What did Nate think of the caramel ice cream he made?
+  [211/260] ❌ (adversarial) [adversarial_masked] What flavor of cake did Nate make for his friend on 25 February, 2022?
+  [212/260] ✅ (adversarial) [adversarial_masked] What was Nate's audition for?
+  [213/260] ✅ (adversarial) [adversarial_masked] Why did Joanna choose the hair color she did?
+  [214/260] ✅ (adversarial) [adversarial_masked] What are the main ingredients of the ice cream recipe shared by Joanna?
+  [215/260] ✅ (adversarial) [adversarial_masked] What is Nate's project called in the writers group?
+  [216/260] ❌ (adversarial) [adversarial_masked] Which activity helps Nate escape and numbs his mind?
+  [217/260] ✅ (adversarial) [adversarial_masked] What filling did Nate use in the cake he made recently in May 2022?
+  [218/260] ✅ (adversarial) [adversarial_masked] Who did Joanna plan to invite to her gaming party in June 2022?
+  [219/260] ✅ (adversarial) [adversarial_masked] What special items did Joanna get for everyone at her gaming party?
+  [220/260] ❌ (adversarial) [adversarial_masked] What supervillain is Joanna a fan of?
+  [221/260] ✅ (adversarial) [adversarial_masked] Which superhero toy figure does Joanna share a photo of?
+  [222/260] ✅ (adversarial) [adversarial_masked] What did Joanna make and share with her vegan diet group?
+  [223/260] ✅ (adversarial) [adversarial_masked] How many people attended the gaming party hosted by Joanna in June 2022?
+  [224/260] ✅ (adversarial) [adversarial_masked] Where did Nate go for a road trip for research?
+  [225/260] ❌ (adversarial) [adversarial_masked] What did Joanna discover at the museum in Woodhaven?
+  [226/260] ✅ (adversarial) [adversarial_masked] What specific themes are explored in Nate's new book?
+  [227/260] ✅ (adversarial) [adversarial_masked] How did Nate feel when someone wrote him a letter after reading his blog post?
+  [228/260] ❌ (adversarial) [adversarial_masked] What kind of impact does Joanna hope to have with her painting?
+  [229/260] ✅ (adversarial) [adversarial_masked] What did Nate share with his writers group in August 2022?
+  [230/260] ✅ (adversarial) [adversarial_masked] How did Nate celebrate after sharing his book with a writers group?
+  [231/260] ✅ (adversarial) [adversarial_masked] How did Joanna celebrate winning the international tournament?
+  [232/260] ❌ (adversarial) [adversarial_masked] What substitution does Nate suggest for sugar in dairy-free baking?
+  [233/260] ✅ (adversarial) [adversarial_masked] What type of show did Joanna host where she taught vegan ice cream recipes?
+  [234/260] ✅ (adversarial) [adversarial_masked] What is Joanna's favorite dish from the cooking show she hosted?
+  [235/260] ✅ (adversarial) [adversarial_masked] What dessert did Nate share a photo of that has an almond flour crust, chocolate
+  [236/260] ✅ (adversarial) [adversarial_masked] What two main ingredients are part of the dessert Nate shared a photo of with bl
+  [237/260] ✅ (adversarial) [adversarial_masked] What movie did Joanna recently watch and enjoy on October 6, 2022?
+  [238/260] ✅ (adversarial) [adversarial_masked] What did Nate make for one of the ladies at his writing club?
+  [239/260] ✅ (adversarial) [adversarial_masked] What game has Joanna been playing nonstop with a futuristic setting and gameplay
+  [240/260] ✅ (adversarial) [adversarial_masked] How did Nate describe the classic movie he watched?
+  [241/260] ❌ (adversarial) [adversarial_masked] What does Nate recommend to make a living room comfy like his?
+  [242/260] ❌ (adversarial) [adversarial_masked] What helps Joanna stay distracted and brings her sadness?
+  [243/260] ❌ (adversarial) [adversarial_masked] What does Nate do while he writes?
+  [244/260] ✅ (adversarial) [adversarial_masked] What does Nate do after receiving a rejection from a production company?
+  [245/260] ❌ (adversarial) [adversarial_masked] What does Joanna rely on for cheer and joy?
+  [246/260] ✅ (adversarial) [adversarial_masked] What does Nate use to remember his dog from Michigan?
+  [247/260] ❌ (adversarial) [adversarial_masked] What inspires Joanna to create music for her characters?
+  [248/260] ✅ (adversarial) [adversarial_masked] What type of diet do Joanna's turtles have?
+  [249/260] ✅ (adversarial) [adversarial_masked] What did Nate find in old notebooks last week that prompted him to reflect on he
+  [250/260] ✅ (adversarial) [adversarial_masked] What game is Joanna currently playing and recommends to others on November 7, 20
+  [251/260] ❌ (adversarial) [adversarial_masked] What did Nate receive from his brother that brought back childhood memories?
+  [252/260] ✅ (adversarial) [adversarial_masked] What is the type of game "Xenoblade Chronicles" that Joanna is playing?
+  [253/260] ✅ (adversarial) [adversarial_masked] What project is Nate working on in his notebook on November 9, 2022?
+  [254/260] ✅ (adversarial) [adversarial_masked] What is Joanna creating for YouTube on 9 November, 2022?
+  [255/260] ❌ (adversarial) [adversarial_masked] What inspired Joanna to start making gaming videos?
+  [256/260] ✅ (adversarial) [adversarial_masked] What new content is Nate creating for television?
+  [257/260] ✅ (adversarial) [adversarial_masked] What did Nate take a picture of near Fort Wayne last summer?
+  [258/260] ✅ (adversarial) [adversarial_masked] Why did Joanna get a third turtle?
+  [259/260] ✅ (adversarial) [adversarial_masked] What did Joanna take to the beach in Tampa?
+  [260/260] ✅ (adversarial) [adversarial_masked] What does Joanna love most about having turtles?
+
+============================================================
+Processing conversation: conv-43 (Tim & John)
+============================================================
+Ingesting 29 sessions...
+  Ingesting session_1 (7:48 pm on 21 May, 2023)...
+  Ingesting session_2 (5:08 pm on 15 June, 2023)...
+  Ingesting session_3 (4:21 pm on 16 July, 2023)...

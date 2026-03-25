@@ -10,6 +10,8 @@ Each iteration saves: code snapshot, results, and what changed.
 5. Target: 93-95% overall on LoCoMo (1,540 questions, 10 conversations)
 6. **Speed: < 2 seconds per query in production** — competitors (Mem0) do 0.2-1.4s. Minimize LLM calls per query (target: 1). Use local embeddings + BM25 for retrieval, not LLM-powered search. Parallel where possible.
 7. Architecture must be production-ready, not just benchmark-optimized
+8. **Verification required:** VPS agents (Luna etc.) propose ideas — Lyn verifies before implementing. No unverified changes go into the codebase.
+9. **Team roles:** Lyn + Midus = orchestrators. VPS agents = research assistants. Cj = project owner.
 
 ## v2_run5_baseline (2026-03-25)
 - **Overall: 69.8%** (199 questions, conv-26 only)
