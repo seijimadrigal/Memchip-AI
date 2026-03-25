@@ -1,0 +1,27 @@
+{
+  "overall_score": 0.5,
+  "total_correct": 76,
+  "total_questions": 152,
+  "categories": {
+    "multi_hop": {
+      "score": 0.28125,
+      "correct": 9,
+      "total": 32
+    },
+    "temporal": {
+      "score": 0.4594594594594595,
+      "correct": 17,
+      "total": 37
+    },
+    "open_domain": {
+      "score": 0.6153846153846154,
+      "correct": 8,
+      "total": 13
+    },
+    "single_hop": {
+      "score": 0.6,
+      "correct": 42,
+      "total": 70
+    }
+  }
+}
