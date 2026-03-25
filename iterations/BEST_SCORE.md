@@ -45,4 +45,19 @@
 
 ---
 
+---
+
+## Speed Tracking
+
+| Version | Per-query latency | LLM calls/query | Retrieval method |
+|---|---|---|---|
+| v2_run5 | ~19s | 3-4 (router+retrieval+answer+escalation) | Keyword overlap (LLM-powered) |
+| Target | < 2s | 1 (answer only) | Local embeddings + BM25 |
+
+**Competitor benchmarks:**
+- Mem0: 0.2s median, 1.4s full pipeline
+- Mem0 with rerank+filter: ~0.41s
+
+---
+
 _Updated automatically after each benchmark run. Always compare against these numbers._
