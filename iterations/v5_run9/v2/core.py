@@ -6,7 +6,7 @@ from .consolidation import consolidate_session
 from .router import classify_query, is_confident, escalate, decompose_multihop
 from .answerer import (
     answer_strategy_a, answer_strategy_b, answer_strategy_c, answer_strategy_d,
-    answer_strategy_open_domain, synthesize_subanswers, _mask_entities_in_context,
+    synthesize_subanswers, _mask_entities_in_context,
 )
 
 
@@ -25,10 +25,6 @@ class MemChipV2:
         # Adversarial (category 5): use entity-masked answering
         if category == 5:
             return self._recall_adversarial(question)
-        
-        # Open-domain (category 3): inference from personality/preferences (v8)
-        if category == 3:
-            return self._recall_open_domain(question)
         
         strategy = classify_query(self.api_key, question, category)
         
@@ -95,23 +91,6 @@ class MemChipV2:
             "strategy": "adversarial_masked",
             "strategies_tried": ["adversarial_masked"],
         }
-
-    def _recall_open_domain(self, question: str) -> dict:
-        """Open-domain recall (v8): inference from personality, preferences, life events."""
-        profiles = self.storage.get_all_profiles()
-        episodes = self.storage.get_all_episodes()
-        relevant_ids = self._identify_relevant_sessions(question, episodes)
-        raw_sessions = self.storage.get_engrams(relevant_ids)
-        
-        answer = answer_strategy_open_domain(self.api_key, question, profiles, episodes, raw_sessions)
-        
-        if not is_confident(answer):
-            # Escalate to strategy D
-            all_raw = self.storage.get_all_engrams()
-            answer = answer_strategy_d(self.api_key, question, profiles, episodes, all_raw)
-            return {"answer": answer, "strategy": "open_domain→D", "strategies_tried": ["open_domain", "D"]}
-        
-        return {"answer": answer, "strategy": "open_domain", "strategies_tried": ["open_domain"]}
 
     def _recall_single(self, question: str, strategy: str, max_escalations: int = 3) -> dict:
         """Single question recall with confidence escalation."""
@@ -182,17 +161,6 @@ class MemChipV2:
         episodes = self.storage.get_all_episodes()
         
         if strategy == "B":
-            # v8: enrich with FTS5 raw snippets for single-hop questions
-            fts_hits = self.storage.search_engrams(question, limit=3)
-            if fts_hits:
-                snippet_parts = []
-                for hit in fts_hits:
-                    snippet = self.storage.get_engram_snippets(hit["session_id"], question, window=500)
-                    if snippet:
-                        snippet_parts.append(f"[{hit['session_id']}]: {snippet}")
-                if snippet_parts:
-                    raw_snippet_section = "\n\nRelevant Raw Excerpts:\n" + "\n\n".join(snippet_parts)
-                    return answer_strategy_b(self.api_key, question, profiles, episodes, temporal_context=raw_snippet_section)
             return answer_strategy_b(self.api_key, question, profiles, episodes)
         
         if strategy == "C":

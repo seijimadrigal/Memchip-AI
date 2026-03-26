@@ -885,3 +885,1565 @@ Ingesting 29 sessions...
   Ingesting session_1 (7:48 pm on 21 May, 2023)...
   Ingesting session_2 (5:08 pm on 15 June, 2023)...
   Ingesting session_3 (4:21 pm on 16 July, 2023)...
+  Ingesting session_4 (4:17 pm on 2 August, 2023)...
+  Ingesting session_5 (10:29 am on 9 August, 2023)...
+  Ingesting session_6 (1:08 pm on 11 August, 2023)...
+  Ingesting session_7 (7:54 pm on 17 August, 2023)...
+  Ingesting session_8 (4:29 pm on 21 August, 2023)...
+  Ingesting session_9 (6:59 pm on 26 August, 2023)...
+  Ingesting session_10 (2:52 pm on 31 August, 2023)...
+  Ingesting session_11 (8:17 pm on 21 September, 2023)...
+  Ingesting session_12 (3:00 pm on 2 October, 2023)...
+  Ingesting session_13 (1:50 pm on 13 October, 2023)...
+  Ingesting session_14 (1:50 pm on 17 October, 2023)...
+  Ingesting session_15 (5:51 pm on 21 October, 2023)...
+  Ingesting session_16 (11:41 am on 6 November, 2023)...
+  Ingesting session_17 (3:36 pm on 11 November, 2023)...
+  Ingesting session_18 (3:59 pm on 16 November, 2023)...
+  Ingesting session_19 (10:22 am on 21 November, 2023)...
+  Ingesting session_20 (9:52 am on 1 December, 2023)...
+  Ingesting session_21 (5:34 pm on 6 December, 2023)...
+  Ingesting session_22 (7:42 pm on 8 December, 2023)...
+  Ingesting session_23 (8:28 pm on 11 December, 2023)...
+  Ingesting session_24 (3:37 pm on 16 December, 2023)...
+  Ingesting session_25 (10:04 am on 19 December, 2023)...
+  Ingesting session_26 (3:35 pm on 26 December, 2023)...
+  Ingesting session_27 (5:26 pm on 2 January, 2024)...
+  Ingesting session_28 (5:24 pm on 7 January, 2024)...
+  Ingesting session_29 (1:41 pm on 12 January, 2024)...
+Ingestion complete. Profiles: 2, Episodes: 29
+  [1/242] ✅ (single-hop) [B] what are John's goals with regards to his basketball career?
+  [2/242] ✅ (single-hop) [multihop(A,C,A)] What are John's goals for his career that are not related to his basketball skil
+  [3/242] ❌ (single-hop) [B] What items does John collect?
+  [4/242] ✅ (open-domain) [C] Would Tim enjoy reading books by C. S. Lewis or John Greene?
+  [5/242] ❌ (single-hop) [C] What books has Tim read?
+  [6/242] ❌ (open-domain) [multihop(A,B,C,A,B,C)] Based on Tim's collections, what is a shop that he would enjoy visiting in New Y
+  [7/242] ❌ (temporal) [B] In which month's game did John achieve a career-high score in points?
+  [8/242] ❌ (single-hop) [B] Which geographical locations has Tim been to?
+  [9/242] ❌ (open-domain) [multihop(A,B,C,B)] Which outdoor gear company likely signed up John for an endorsement deal?
+  [10/242] ❌ (single-hop) [B] Which endorsement deals has John been offered?
+  [11/242] ✅ (temporal) [B] When was John in Seattle for a game?
+  [12/242] ✅ (single-hop) [B] What sports does John like besides basketball?
+  [13/242] ✅ (temporal) [B] What year did John start surfing?
+  [14/242] ✅ (single-hop) [B] What does Tim do to escape reality?
+  [15/242] ✅ (single-hop) [B] What kind of writing does Tim do?
+  [16/242] ✅ (open-domain) [A] Who is Anthony?
+  [17/242] ❌ (temporal) [B] After how many weeks did Tim reconnect with the fellow Harry Potter fan from Cal
+  [18/242] ❌ (single-hop) [B] How many games has John mentioned winning?
+  [19/242] ✅ (single-hop) [B] What authors has Tim read books from?
+  [20/242] ❌ (open-domain) [multihop(A,B,C,A,C)] What is a prominent charity organization that John might want to work with and w
+  [21/242] ✅ (temporal) [multihop(A,C,C)] Which city was John in before traveling to Chicago?
+  [22/242] ❌ (single-hop) [B] Which US cities does John mention visiting to Tim?
+  [23/242] ✅ (temporal) [B] When did John meet with his teammates after returning from Chicago?
+  [24/242] ✅ (temporal) [B] When is Tim attending a book conference?
+  [25/242] ✅ (temporal) [B] Where was John between August 11 and August 15 2023?
+  [26/242] ✅ (single-hop) [multihop(A,B,A,C)] What similar sports collectible do Tim and John own?
+  [27/242] ❌ (single-hop) [B] Which TV series does Tim mention watching?
+  [28/242] ✅ (open-domain) [B] Which popular time management technique does Tim use to prepare for exams?
+  [29/242] ✅ (open-domain) [B] Which popular music composer's tunes does Tim enjoy playing on the piano?
+  [30/242] ✅ (single-hop) [multihop→C] What schools did John play basketball in and how many years was he with his team
+  [31/242] ✅ (single-hop) [B] Which cities has John been to?
+  [32/242] ✅ (temporal) [B] What month did Tim plan on going to Universal Studios?
+  [33/242] ✅ (open-domain) [B] Which US states might Tim be in during September 2023 based on his plans of visi
+  [34/242] ✅ (temporal) [B] When does John plan on traveling with his team on a team trip?
+  [35/242] ❌ (open-domain) [multihop(A,C,A)] What could John do after his basketball career?
+  [36/242] ❌ (single-hop) [B] What outdoor activities does John enjoy?
+  [37/242] ✅ (single-hop) [multihop(A,A)] Who is Tim and John's favorite basketball player?
+  [38/242] ✅ (temporal) [B] Which week did Tim visit the UK for the Harry Potter Conference?
+  [39/242] ✅ (single-hop) [B] which country has Tim visited most frequently in his travels?
+  [40/242] ❌ (temporal) [B] What year did Tim go to the Smoky Mountains?
+  [41/242] ❌ (temporal) [D] Has Tim been to North Carolina and/or Tennesee states in the US?
+  [42/242] ✅ (single-hop) [B] What kind of fiction stories does Tim write?
+  [43/242] ✅ (single-hop) [B] What has John cooked?
+  [44/242] ✅ (single-hop) [B] What does John like about Lebron James?
+  [45/242] ✅ (temporal) [B] When did John and his wife go on a European vacation?
+  [46/242] ✅ (temporal) [B] Which country was Tim visiting in the second week of November?
+  [47/242] ✅ (temporal) [B] Where was Tim in the week before 16 November 2023?
+  [48/242] ✅ (temporal) [B] When did John get married at a greenhouse?
+  [49/242] ❌ (single-hop) [B] When did John get an ankle injury in 2023?
+  [50/242] ❌ (single-hop) [B] How many times has John injured his ankle?
+  [51/242] ✅ (single-hop) [multihop(A,B,A)] Which book was John reading during his recovery from an ankle injury?
+  [52/242] ❌ (open-domain) [A] What kind of yoga for building core strength might John benefit from?
+  [53/242] ✅ (single-hop) [B] What does John do to supplement his basketball training?
+  [54/242] ❌ (open-domain) [A] What other exercises can help John with his basketball performance?
+  [55/242] ✅ (temporal) [B] When did John take a trip to the Rocky Mountains?
+  [56/242] ❌ (temporal) [B] When did John start playing professionally?
+  [57/242] ❌ (temporal) [B] When did Tim start playing the violin?
+  [58/242] ✅ (single-hop) [B] What instruments does Tim play?
+  [59/242] ✅ (temporal) [B] When did John attend the Harry Potter trivia?
+  [60/242] ✅ (single-hop) [B] Which career-high performances did John achieve in 2023?
+  [61/242] ❌ (temporal) [B] When did John achieve a career-high assist performance?
+  [62/242] ❌ (single-hop) [C] What books has John read?
+  [63/242] ✅ (single-hop) [B] What does John do to share his knowledge?
+  [64/242] ✅ (temporal) [B] When did John organize a basketball camp for kids?
+  [65/242] ✅ (temporal) [B] Which month was John in Italy?
+  [66/242] ✅ (single-hop) [B] What fantasy movies does Tim like?
+  [67/242] ❌ (open-domain) [D] What is a Star Wars book that Tim might enjoy?
+  [68/242] ❌ (open-domain) [multihop(A,A,C)] What would be a good hobby related to his travel dreams for Tim to pick up?
+  [69/242] ✅ (temporal) [B] What day did Tim get into his study abroad program?
+  [70/242] ✅ (temporal) [B] When will Tim leave for Ireland?
+  [71/242] ❌ (open-domain) [multihop(A,B,C,A,B,C,D)] Which Star Wars-related locations would Tim enjoy during his visit to Ireland?
+  [72/242] ✅ (multi-hop) [multihop(A,B,B)] Which team did John sign with on 21 May, 2023?
+  [73/242] ✅ (multi-hop) [multihop(A,A,A)] What is John's position on the team he signed with?
+  [74/242] ✅ (multi-hop) [multihop(A,A,A,B)] What challenge did John encounter during pre-season training?
+  [75/242] ❌ (multi-hop) [multihop(C,C,C)] What aspects of the Harry Potter universe will be discussed in John's fan projec
+  [76/242] ❌ (multi-hop) [multihop(A,A,B,A)] What forum did Tim join recently?
+  [77/242] ✅ (multi-hop) [multihop(A,B,A,A,B)] What kind of picture did Tim share as part of their Harry Potter book collection
+  [78/242] ✅ (multi-hop) [multihop(A,B,C,D)] What was the highest number of points John scored in a game recently?
+  [79/242] ❌ (multi-hop) [multihop(A,A,B)] What did John celebrate at a restaurant with teammates?
+  [80/242] ✅ (multi-hop) [multihop(A,B,A,B,C)] What kind of deals did John sign with Nike and Gatorade?
+  [81/242] ✅ (multi-hop) [multihop(A,D,C)] Which city is John excited to have a game at?
+  [82/242] ✅ (multi-hop) [multihop(B,B,C,D,C)] How long has John been surfing?
+  [83/242] ✅ (multi-hop) [multihop(A,B,C,C)] How does John feel while surfing?
+  [84/242] ✅ (multi-hop) [multihop(A,A,B,C,A,B)] What kind of articles has Tim been writing about for the online magazine?
+  [85/242] ✅ (multi-hop) [multihop(A,A,A)] Which two fantasy novels does Tim particularly enjoy writing about?
+  [86/242] ✅ (multi-hop) [multihop(A,B,B,A)] What did Anthony and John end up playing during the charity event?
+  [87/242] ❌ (multi-hop) [multihop(A,B,C,C)] What did John share with the person he skyped about?
+  [88/242] ❌ (multi-hop) [multihop(A,A,C)] How did John describe the team bond?
+  [89/242] ✅ (multi-hop) [multihop(A,B,A)] How did John get introduced to basketball?
+  [90/242] ❌ (multi-hop) [multihop(A,A,A)] What is John's number one goal in his basketball career?
+  [91/242] ✅ (multi-hop) [multihop(A,A,A)] What organization is John teaming up with for his charity work?
+  [92/242] ✅ (multi-hop) [multihop(B,B,B)] When did John meet back up with his teammates after his trip in August 2023?
+  [93/242] ✅ (multi-hop) [multihop(A,B,B,C)] What did John's teammates give him when they met on Aug 15th?
+  [94/242] ✅ (multi-hop) [multihop(A,B,C,C)] Why did John's teammates sign the basketball they gave him?
+  [95/242] ✅ (multi-hop) [multihop(A,A,B,A,B)] What is the main intention behind Tim wanting to attend the book conference?
+  [96/242] ✅ (multi-hop) [multihop(A,B,B)] What new activity has Tim started learning in August 2023?
+  [97/242] ✅ (multi-hop) [multihop(A,A,B,A,B)] Which movie's theme is Tim's favorite to play on the piano?
+  [98/242] ✅ (multi-hop) [multihop(A,B,A,B,A,B)] What special memory does "Harry Potter and the Philosopher's Stone" bring to Tim
+  [99/242] ❌ (multi-hop) [multihop(C,A,B,B)] Which movie does Tim mention they enjoy watching during Thanksgiving?
+  [100/242] ✅ (multi-hop) [multihop(A,A,B,A,B)] What tradition does Tim mention they love during Thanksgiving?
+  [101/242] ✅ (multi-hop) [multihop(A,B,C,B,B,C)] How long did John and his high school basketball teammates play together?
+  [102/242] ✅ (multi-hop) [multihop(A,A,B)] How was John's experience in New York City?
+  [103/242] ✅ (multi-hop) [multihop(A,C,C)] What did John say about NYC, enticing Tim to visit?
+  [104/242] ✅ (multi-hop) [multihop(B,B,A)] What kind of soup did John make recently?
+  [105/242] ✅ (multi-hop) [multihop(A,A,A)] What spice did John add to the soup for flavor?
+  [106/242] ✅ (multi-hop) [multihop(A,A,B,A,B)] What is Tim excited to see at Universal Studios?
+  [107/242] ❌ (multi-hop) [multihop(C,A,A)] Where are John and his teammates planning to explore on a team trip?
+  [108/242] ✅ (multi-hop) [multihop(C,A,B)] What city did Tim suggest to John for the team trip next month?
+  [109/242] ✅ (multi-hop) [multihop(A,A,A)] What does John want to do after his basketball career?
+  [110/242] ✅ (multi-hop) [multihop(A,A,A)] What advice did Tim give John about picking endorsements?
+  [111/242] ✅ (multi-hop) [multihop(A,A,A,B)] What book recommendation did Tim give to John for the trip?
+  [112/242] ✅ (multi-hop) [multihop(A,A,A)] What type of venue did John and his girlfriend choose for their wedding ceremony
+  [113/242] ✅ (multi-hop) [multihop(A,B,A)] What was the setting for John and his wife's first dance?
+  [114/242] ✅ (multi-hop) [multihop(A,A,B,A)] Which basketball team does Tim support?
+  [115/242] ✅ (multi-hop) [multihop(A,C,A)] What passion does Tim mention connects him with people from all over the world?
+  [116/242] ✅ (multi-hop) [multihop(A,C,C)] How does John describe the game season for his team?
+  [117/242] ✅ (multi-hop) [multihop(A,C,A)] How does John say his team handles tough opponents?
+  [118/242] ❌ (multi-hop) [multihop(A,A,C)] What motivates John's team to get better, according to John?
+  [119/242] ✅ (multi-hop) [multihop(A,C,A)] What did John's team win at the end of the season?
+  [120/242] ❌ (multi-hop) [multihop(A,B,C,A,A,B,C)] Where did Tim capture the photography of the sunset over the mountain range?
+  [121/242] ✅ (multi-hop) [multihop(A,A,C)] How does John feel about being seen as a mentor by some of the younger players?
+  [122/242] ✅ (multi-hop) [multihop(A,A,A)] What does John find rewarding about mentoring the younger players?
+  [123/242] ✅ (multi-hop) [multihop(C,A,C)] What has John been able to help the younger players achieve?
+  [124/242] ✅ (multi-hop) [multihop(A,A,B,A,B)] What genre is the novel that Tim is writing?
+  [125/242] ❌ (multi-hop) [multihop(A,A,A)] Who is one of Tim's sources of inspiration for writing?
+  [126/242] ✅ (multi-hop) [multihop(A,A,B,A,B)] What J.K. Rowling quote does Tim resonate with?
+  [127/242] ✅ (multi-hop) [multihop(A,A,C)] What does John write on the whiteboard to help him stay motivated?
+  [128/242] ✅ (multi-hop) [multihop(A,A,A)] What hobby is a therapy for John when away from the court?
+  [129/242] ✅ (multi-hop) [multihop(A,B,A,A)] What type of meal does John often cook using a slow cooker?
+  [130/242] ✅ (multi-hop) [multihop(A,B,A,A)] How will John share the honey garlic chicken recipe with the other person?
+  [131/242] ✅ (multi-hop) [multihop(A,B,B)] What was Tim's huge writing issue last week,as mentioned on November 6, 2023?
+  [132/242] ✅ (multi-hop) [multihop(A,B,A,B,A)] What does Tim have that serves as a reminder of hard work and is his prized poss
+  [133/242] ✅ (multi-hop) [multihop(C,C,C)] Why do Tim and John find LeBron inspiring?
+  [134/242] ✅ (multi-hop) [multihop(A,A,A)] How did John describe the views during their road trip out on the European coast
+  [135/242] ✅ (multi-hop) [multihop(A,A,B)] What is one of Tim's favorite fantasy TV shows, as mentioned on November 11, 202
+  [136/242] ❌ (multi-hop) [multihop(A,B,A,B,C)] How does Tim stay motivated during difficult study sessions?
+  [137/242] ❌ (multi-hop) [multihop(A,B,C,B,B,C)] What did Tim say about his injury on 16 November, 2023?
+  [138/242] ✅ (multi-hop) [multihop(A,B,B,C)] What was the setback Tim faced in his writing project on 21 November, 2023?
+  [139/242] ✅ (multi-hop) [multihop(A,B,C,A,A)] How did John overcome his ankle injury from last season?
+  [140/242] ❌ (multi-hop) [multihop(A,B,A,B,A)] What motivated Tim to keep pushing himself to get better in writing and reading?
+  [141/242] ✅ (multi-hop) [multihop(B,C,C)] How did John overcome a mistake he made during a big game in basketball?
+  [142/242] ✅ (multi-hop) [multihop(A,A,C)] What book did John recently finish rereading that left him feeling inspired and 
+  [143/242] ✅ (multi-hop) [multihop(A,A,C)] How did "The Alchemist" impact John's perspective on following dreams?
+  [144/242] ❌ (multi-hop) [multihop(A,A,A)] What is John trying out to improve his strength and flexibility after recovery f
+  [145/242] ✅ (multi-hop) [multihop(A,A,A)] How long does John usually hold the yoga pose he shared with Tim?
+  [146/242] ✅ (multi-hop) [multihop(A,B,B,C)] Where was the forest picture shared by John on December 1,2023 taken?
+  [147/242] ✅ (multi-hop) [multihop(A,A,B,A,B)] What did Tim recently start learning in addition to being part of a travel club 
+  [148/242] ✅ (multi-hop) [multihop(A,A,B,B)] What instrument is Tim learning to play in December 2023?
+  [149/242] ✅ (multi-hop) [multihop(B,B,B,C,D)] How long has Tim been playing the piano for, as of December 2023?
+  [150/242] ✅ (multi-hop) [multihop(A,B,B)] What book did Tim just finish reading on 8th December, 2023?
+  [151/242] ❌ (multi-hop) [multihop(B,C,A)] Which book did Tim recommend to John as a good story on 8th December, 2023?
+  [152/242] ❌ (multi-hop) [multihop→C] What is the topic of discussion between John and Tim on 11 December, 2023?
+  [153/242] ✅ (multi-hop) [multihop(A,A,A,B)] What kind of game did John have a career-high in assists in?
+  [154/242] ✅ (multi-hop) [multihop(A,A,A)] What was John's way of dealing with doubts and stress when he was younger?
+  [155/242] ✅ (multi-hop) [multihop(B,A,A)] How did John feel about the atmosphere during the big game against the rival tea
+  [156/242] ✅ (multi-hop) [multihop(A,A,C)] How did John feel after being able to jog without pain?
+  [157/242] ✅ (multi-hop) [multihop(B,B,B,C)] What kind of deal did John get in December?
+  [158/242] ✅ (multi-hop) [multihop(A,B,A,A,B)] Where was the photoshoot done for John's gear deal?
+  [159/242] ✅ (multi-hop) [multihop(A,A,C)] In which area has John's team seen the most growth during training?
+  [160/242] ✅ (multi-hop) [multihop(A,B,A,B,A,B,C)] What type of seminars is John conducting?
+  [161/242] ✅ (multi-hop) [multihop(A,C,C)] What activity did Tim do after reading the stories about the Himalayan trek?
+  [162/242] ✅ (multi-hop) [multihop(A,A,C)] What is one cause that John supports with his influence and resources?
+  [163/242] ✅ (multi-hop) [multihop(A,B,A,B)] What new fantasy TV series is Tim excited about?
+  [164/242] ✅ (multi-hop) [multihop(A,A,B,A,B)] Which language is Tim learning?
+  [165/242] ❌ (multi-hop) [multihop(A,B,A,B,A,B,C)] What language does Tim know besides German?
+  [166/242] ❌ (multi-hop) [multihop(B,A,B,C,C)] What book did Tim get in Italy that inspired him to cook?
+  [167/242] ✅ (multi-hop) [multihop(A,A,C)] What is John's favorite book series?
+  [168/242] ✅ (multi-hop) [multihop(A,A,B,A,B)] According to John, who is his favorite character from Lord of the Rings?
+  [169/242] ✅ (multi-hop) [multihop(A,B,A,C)] Why does John like Aragorn from Lord of the Rings?
+  [170/242] ✅ (multi-hop) [multihop(A,A,B,A,B)] What kind of painting does John have in his room as a reminder?
+  [171/242] ✅ (multi-hop) [multihop(A,B,C,C)] What is the painting of Aragorn a reminder for John to be in everything he does?
+  [172/242] ✅ (multi-hop) [multihop(A,B,A,B,A,B)] What map does Tim show to his friend John?
+  [173/242] ✅ (multi-hop) [multihop(A,B,A,B,A,B)] Where will Tim be going for a semester abroad?
+  [174/242] ✅ (multi-hop) [multihop(A,B,C,A,B)] Which city in Ireland will Tim be staying in during his semester abroad?
+  [175/242] ✅ (multi-hop) [multihop(A,B,B,C)] What charity event did John organize recently in 2024?
+  [176/242] ❌ (multi-hop) [multihop(B,C,B)] What achievement did John share with Tim in January 2024?
+  [177/242] ✅ (multi-hop) [multihop(A,B,A,B,A,B)] What was Johns's reaction to sealing the deal with the beverage company?
+  [178/242] ✅ (multi-hop) [multihop(B,B,B)] Which city did John recommend to Tim in January 2024?
+  [179/242] ✅ (adversarial) [adversarial_masked] Which team did Tim sign with on 21 May, 2023?
+  [180/242] ✅ (adversarial) [adversarial_masked] What is Tim's position on the team he signed with?
+  [181/242] ✅ (adversarial) [adversarial_masked] What challenge did Tim encounter during pre-season training?
+  [182/242] ❌ (adversarial) [adversarial_masked] What cult did Tim join recently?
+  [183/242] ✅ (adversarial) [adversarial_masked] What was the highest number of points Tim scored in a game recently?
+  [184/242] ✅ (adversarial) [adversarial_masked] What did Tim celebrate at a restaurant with teammates?
+  [185/242] ✅ (adversarial) [adversarial_masked] What kind of deals did Tim sign with Nike and Gatorade?
+  [186/242] ✅ (adversarial) [adversarial_masked] How does Tim feel while surfing?
+  [187/242] ✅ (adversarial) [adversarial_masked] What kind of articles has John been writing about for the online magazine?
+  [188/242] ✅ (adversarial) [adversarial_masked] Which two mystery novels does Tim particularly enjoy writing about?
+  [189/242] ✅ (adversarial) [adversarial_masked] What did Anthony and Tim end up playing during the charity event?
+  [190/242] ✅ (adversarial) [adversarial_masked] How did Tim get introduced to basketball?
+  [191/242] ✅ (adversarial) [adversarial_masked] What is Tim's number one goal in his basketball career?
+  [192/242] ✅ (adversarial) [adversarial_masked] What organization is Tim teaming up with for his charity work?
+  [193/242] ✅ (adversarial) [adversarial_masked] What did Tim's teammates give him when they met on Aug 15th?
+  [194/242] ❌ (adversarial) [adversarial_masked] Why did John's teammates sign the football they gave him?
+  [195/242] ✅ (adversarial) [adversarial_masked] What is the main intention behind John wanting to attend the book conference?
+  [196/242] ✅ (adversarial) [adversarial_masked] What new activity has John started learning in August 2023?
+  [197/242] ❌ (adversarial) [adversarial_masked] What special memory does "Fifty Shades of Grey" bring to Tim?
+  [198/242] ✅ (adversarial) [adversarial_masked] Which movie does John mention they enjoy watching during Thanksgiving?
+  [199/242] ❌ (adversarial) [adversarial_masked] What tradition does Tim mention they love during Halloween?
+  [200/242] ✅ (adversarial) [adversarial_masked] How long did Tim and his high school basketball teammates play together?
+  [201/242] ✅ (adversarial) [adversarial_masked] How was Tim's experience in New York City?
+  [202/242] ✅ (adversarial) [adversarial_masked] What spice did Tim add to the soup for flavor?
+  [203/242] ❌ (adversarial) [adversarial_masked] What is Tim excited to see at Disneyland?
+  [204/242] ❌ (adversarial) [adversarial_masked] Where are John and his teammates planning to avoid on a team trip?
+  [205/242] ✅ (adversarial) [adversarial_masked] What does Tim want to do after his basketball career?
+  [206/242] ❌ (adversarial) [adversarial_masked] What type of venue did John and his girlfriend choose for their breakup?
+  [207/242] ✅ (adversarial) [adversarial_masked] What passion does John mention connects him with people from all over the world?
+  [208/242] ✅ (adversarial) [adversarial_masked] How does Tim say his team handles tough opponents?
+  [209/242] ✅ (adversarial) [adversarial_masked] Where did Tim capture the painting of the sunset over the mountain range?
+  [210/242] ✅ (adversarial) [adversarial_masked] What does Tim find rewarding about mentoring the younger players?
+  [211/242] ✅ (adversarial) [adversarial_masked] What has Tim been able to help the younger players achieve?
+  [212/242] ✅ (adversarial) [adversarial_masked] What genre is the novel that John is writing?
+  [213/242] ❌ (adversarial) [adversarial_masked] Who is one of Tim's sources of inspiration for painting?
+  [214/242] ✅ (adversarial) [adversarial_masked] What does Tim write on the whiteboard to help him stay motivated?
+  [215/242] ✅ (adversarial) [adversarial_masked] What hobby is a therapy for Tim when away from the court?
+  [216/242] ✅ (adversarial) [adversarial_masked] What type of meal does Tim often cook using a slow cooker?
+  [217/242] ✅ (adversarial) [adversarial_masked] How will Tim share the honey garlic chicken recipe with the other person?
+  [218/242] ✅ (adversarial) [adversarial_masked] What is one of Tim's favorite crime TV shows, as mentioned on November 11, 2023?
+  [219/242] ✅ (adversarial) [adversarial_masked] What was the setback Tim faced in his coding project on 21 November, 2023?
+  [220/242] ✅ (adversarial) [adversarial_masked] How did Tim overcome his ankle injury from last season?
+  [221/242] ✅ (adversarial) [adversarial_masked] What motivated John to keep pushing himself to get better in writing and reading
+  [222/242] ✅ (adversarial) [adversarial_masked] How did Tim overcome a mistake he made during a big game in basketball?
+  [223/242] ✅ (adversarial) [adversarial_masked] What is Tim trying out to improve his strength and flexibility after recovery fr
+  [224/242] ✅ (adversarial) [adversarial_masked] What did John recently start learning in addition to being part of a travel club
+  [225/242] ✅ (adversarial) [adversarial_masked] What instrument is John learning to play in December 2023?
+  [226/242] ✅ (adversarial) [adversarial_masked] How long has John been playing the piano for, as of December 2023?
+  [227/242] ❌ (adversarial) [adversarial_masked] What movie did Tim just finish watching on 8th December, 2023?
+  [228/242] ✅ (adversarial) [adversarial_masked] What kind of game did Tim have a career-high in assists in?
+  [229/242] ✅ (adversarial) [adversarial_masked] What was Tim's way of dealing with doubts and stress when he was younger?
+  [230/242] ❌ (adversarial) [adversarial_masked] Where was the photoshoot done for John's fragrance deal?
+  [231/242] ✅ (adversarial) [adversarial_masked] In which area has Tim's team seen the most growth during training?
+  [232/242] ✅ (adversarial) [adversarial_masked] What type of seminars is Tim conducting?
+  [233/242] ✅ (adversarial) [adversarial_masked] What is one cause that John opposes with his influence and resources?
+  [234/242] ❌ (adversarial) [adversarial_masked] What new fantasy TV series is John excited about?
+  [235/242] ✅ (adversarial) [adversarial_masked] Which language is John learning?
+  [236/242] ❌ (adversarial) [adversarial_masked] According to John, who is his least favorite character from Lord of the Rings?
+  [237/242] ✅ (adversarial) [adversarial_masked] Why does Tim like Aragorn from Lord of the Rings?
+  [238/242] ✅ (adversarial) [adversarial_masked] What kind of painting does Tim have in his room as a reminder?
+  [239/242] ✅ (adversarial) [adversarial_masked] What is the sculpture of Aragorn a reminder for John to be in everything he does
+  [240/242] ✅ (adversarial) [adversarial_masked] Which city in Ireland will John be staying in during his semester abroad?
+  [241/242] ✅ (adversarial) [adversarial_masked] What charity event did Tim organize recently in 2024?
+  [242/242] ✅ (adversarial) [adversarial_masked] What was Tims's reaction to sealing the deal with the beverage company?
+
+============================================================
+Processing conversation: conv-44 (Audrey & Andrew)
+============================================================
+Ingesting 28 sessions...
+  Ingesting session_1 (1:10 pm on 27 March, 2023)...
+  Ingesting session_2 (2:42 pm on 2 April, 2023)...
+  Ingesting session_3 (4:19 pm on 16 April, 2023)...
+  Ingesting session_4 (5:41 pm on 3 May, 2023)...
+  Ingesting session_5 (10:47 am on 6 May, 2023)...
+  Ingesting session_6 (2:03 pm on 11 May, 2023)...
+  Ingesting session_7 (11:27 am on 2 June, 2023)...
+  Ingesting session_8 (5:23 pm on 13 June, 2023)...
+  Ingesting session_9 (1:51 pm on 26 June, 2023)...
+  Ingesting session_10 (8:32 pm on 3 July, 2023)...
+  Ingesting session_11 (9:48 am on 8 July, 2023)...
+  Ingesting session_12 (10:05 am on 11 July, 2023)...
+  Ingesting session_13 (3:52 pm on 27 July, 2023)...
+  Ingesting session_14 (11:05 am on 4 August, 2023)...
+  Ingesting session_15 (9:58 pm on 16 August, 2023)...
+  Ingesting session_16 (9:19 pm on 19 August, 2023)...
+  Ingesting session_17 (12:24 am on 24 August, 2023)...
+  Ingesting session_18 (7:49 pm on 6 September, 2023)...
+  Ingesting session_19 (5:53 pm on 24 September, 2023)...
+  Ingesting session_20 (7:09 pm on 1 October, 2023)...
+  Ingesting session_21 (4:18 pm on 4 October, 2023)...
+  Ingesting session_22 (9:41 pm on 6 October, 2023)...
+  Ingesting session_23 (4:22 pm on 13 October, 2023)...
+  Ingesting session_24 (6:12 pm on 19 October, 2023)...
+  Ingesting session_25 (10:14 am on 24 October, 2023)...
+  Ingesting session_26 (2:36 pm on 28 October, 2023)...
+  Ingesting session_27 (7:59 pm on 4 November, 2023)...
+  Ingesting session_28 (9:02 am on 22 November, 2023)...
+Ingestion complete. Profiles: 2, Episodes: 28
+  [1/158] ✅ (temporal) [B] Which year did Audrey adopt the first three of her dogs?
+  [2/158] ✅ (temporal) [B] When did Andrew start his new job as a financial analyst?
+  [3/158] ❌ (single-hop) [B] What kind of indoor activities has Andrew pursued with his girlfriend?
+  [4/158] ❌ (single-hop) [B] What kind of places have Andrew and his girlfriend checked out around the city?
+  [5/158] ✅ (temporal) [B] When did Audrey make muffins for herself?
+  [6/158] ❌ (temporal) [B] When did Audrey see a hummingbird?
+  [7/158] ✅ (temporal) [B] When did Audrey adopt Pixie?
+  [8/158] ✅ (temporal) [B] How many years passed between Audrey adopting Pixie and her other three dogs?
+  [9/158] ✅ (temporal) [B] Did Andrew have a pet dog during March 2023?
+  [10/158] ✅ (single-hop) [B] What kind of classes or groups has Audrey joined to take better care of her dogs
+  [11/158] ✅ (temporal) [B] When did Audrey's positive reinforcement training course for dogs take place?
+  [12/158] ✅ (temporal) [B] When did Andrew go rock climbing?
+  [13/158] ❌ (single-hop) [multihop(A,A,A)] What outdoor activities has Andrew done other than hiking in nature?
+  [14/158] ✅ (temporal) [B] When did Audrey move to a new place?
+  [15/158] ✅ (single-hop) [B] What is something that Andrew really misses while working in the city?
+  [16/158] ✅ (single-hop) [B] What is a shared frustration regarding dog ownership for Audrey and Andrew?
+  [17/158] ✅ (temporal) [B] When is Andrew going to go hiking with Audrey?
+  [18/158] ❌ (single-hop) [multihop(A,A,C)] How many times did Audrey and Andew plan to hike together?
+  [19/158] ✅ (single-hop) [C] Where did Audrey get Pixie from?
+  [20/158] ❌ (open-domain) [multihop(A,A,C)] What is an indoor activity that Andrew would enjoy doing while make his dog happ
+  [21/158] ✅ (open-domain) [C] Which meat does Audrey prefer eating more than others?
+  [22/158] ✅ (single-hop) [B] What are the classes that Audrey took for her dogs to?
+  [23/158] ✅ (temporal) [B] Where did Andrew go during the first weekend of August 2023?
+  [24/158] ✅ (single-hop) [multihop(A,A,B,A,B)] What are some problems that Andrew faces before he adopted Toby?
+  [25/158] ✅ (single-hop) [C] Did Audrey and Andrew grow up with a pet dog?
+  [26/158] ✅ (temporal) [B] When did Andrew and his girlfriend go fishing?
+  [27/158] ✅ (single-hop) [B] What is the biggest stressor in Andrew's life besides not being able to hike fre
+  [28/158] ✅ (single-hop) [B] How does Andrew feel about his current work?
+  [29/158] ✅ (single-hop) [B] What is something that Audrey often dresses up her dogs with?
+  [30/158] ✅ (single-hop) [B] What are the names of Audrey's dogs?
+  [31/158] ✅ (temporal) [B] When is Andrew planning to go to the beach with his girlfriend?
+  [32/158] ✅ (single-hop) [B] What has Andrew done with his dogs?
+  [33/158] ✅ (single-hop) [B] What kind of tattoo does Audrey have on her arm?
+  [34/158] ❌ (open-domain) [multihop(A,A,B,C)] What can Andrew potentially do to improve his stress and accomodate his living s
+  [35/158] ✅ (temporal) [B] How many months passed between Andrew adopting Toby and Buddy?
+  [36/158] ✅ (single-hop) [B] What are the names of Andrew's dogs?
+  [37/158] ✅ (single-hop) [B] What are some foods that Audrey likes eating?
+  [38/158] ❌ (temporal) [B] When did Audrey get into an accident in the park?
+  [39/158] ✅ (temporal) [B] When did Andrew and his girlfriend go on a wine tasting trip?
+  [40/158] ❌ (single-hop) [D] What did Audrey get wtih having so many dogs?
+  [41/158] ✅ (single-hop) [B] What is a good place for dogs to run around freely and meet new friends?
+  [42/158] ✅ (single-hop) [B] What are the breeds of Audrey's dogs?
+  [43/158] ✅ (single-hop) [B] What technique is Audrey using to discipline her dogs?
+  [44/158] ❌ (open-domain) [D] Which US state do Audrey and Andrew potentially live in?
+  [45/158] ❌ (open-domain) [multihop(C,C,A,B)] Which national park could Audrey and Andrew be referring to in their conversatio
+  [46/158] ✅ (temporal) [B] How many pets will Andrew have, as of December 2023?
+  [47/158] ✅ (temporal) [B] How many pets did Andrew have, as of September 2023?
+  [48/158] ✅ (temporal) [B] How many months passed between Andrew adopting Buddy and Scout
+  [49/158] ✅ (single-hop) [B] What does Andrew view his pets as?
+  [50/158] ✅ (single-hop) [B] What does Audrey view her pets as?
+  [51/158] ✅ (single-hop) [B] What is a skill that Audrey learned to take care of her dogs?
+  [52/158] ❌ (single-hop) [multihop(A,A,C)] What items has Audrey bought or made for her dogs?
+  [53/158] ❌ (open-domain) [multihop(A,B,C,A,B,C)] What is something that Andrew could do to make birdwatching hobby to fit in his 
+  [54/158] ✅ (open-domain) [multihop(A,B,C,A,B,A,B,C)] What is a career that Andrew could potentially pursue with his love for animals 
+  [55/158] ✅ (single-hop) [B] What activity do Audrey's dogs like to do in the dog park?
+  [56/158] ❌ (temporal) [C] When did Andrew make his dogs a fun indoor area?
+  [57/158] ✅ (single-hop) [C] Has Andrew moved into a new apartment for his dogs?
+  [58/158] ✅ (temporal) [B] When did Andrew adopt Scout?
+  [59/158] ❌ (temporal) [B] What did Audrey eat for dinner on October 24, 2023?
+  [60/158] ✅ (temporal) [B] How long has it been since Andrew adopted his first pet, as of November 2023?
+  [61/158] ✅ (single-hop) [B] How many dogs does Andrew have?
+  [62/158] ✅ (multi-hop) [multihop(A,A,B,A,B)] Which specific type of bird mesmerizes Andrew?
+  [63/158] ❌ (multi-hop) [multihop(A,A,A)] What did Andrew express missing about exploring nature trails with his family's 
+  [64/158] ✅ (multi-hop) [multihop(A,A,B,A,B)] What kind of pastries did Andrew and his girlfriend have at the cafe?
+  [65/158] ❌ (multi-hop) [multihop(A,A,A,B,C)] What kind of flowers does Audrey have a tattoo of?
+  [66/158] ❌ (multi-hop) [multihop(A,B,A,A)] What does Audrey do during dog playdates in the park?
+  [67/158] ✅ (multi-hop) [multihop(A,B,C,C,A,B)] What type of dog was Andrew looking to adopt based on his living space?
+  [68/158] ✅ (multi-hop) [multihop(A,A,A,B)] Where does Andrew want to live to give their dog a large, open space to run arou
+  [69/158] ✅ (multi-hop) [multihop(A,A,B,A,B)] Why did Audrey sign up for a workshop about bonding with pets?
+  [70/158] ✅ (multi-hop) [multihop(A,B,A,A,B)] How did Audrey hear about the workshop on bonding with pets?
+  [71/158] ✅ (multi-hop) [multihop(B,B,A,B)] What type of training was the workshop Audrey signed up for in May 2023?
+  [72/158] ✅ (multi-hop) [multihop(A,B,A,B,C,A,B)] How did Audrey describe she dog he met at the pet store?
+  [73/158] ❌ (multi-hop) [multihop(A,A,C)] Why did Audrey think positive reinforcement training is important for pets?
+  [74/158] ✅ (multi-hop) [multihop(A,B,A,B,A,B)] What challenge is Andrew facing in their search for a pet?
+  [75/158] ❌ (multi-hop) [multihop(A,B,A,B,A,B)] How does Andrew feel about their search for a pet-friendly place?
+  [76/158] ✅ (multi-hop) [multihop(A,A,B,A,B)] What outdoor activities does Andrew plan on trying after the rock climbing class
+  [77/158] ✅ (multi-hop) [multihop(A,A,A,B)] How long does Audrey typically walk her dogs for?
+  [78/158] ✅ (multi-hop) [multihop(B,B,A)] What did Audrey set up in the backyard for their dogs on June 26, 2023?
+  [79/158] ✅ (multi-hop) [multihop(C,B,A,B)] What did Audrey and her friends stumble across during a hike a few years back, a
+  [80/158] ✅ (multi-hop) [multihop(A,A,B,B,C)] What is Audrey's favorite recipe that she shares with Andrew on 3 July, 2023?
+  [81/158] ❌ (multi-hop) [multihop(A,B,A,B,B)] What dish is one of Audrey's favorite dishes that includes garlic and is shared 
+  [82/158] ❌ (multi-hop) [multihop(B,B,B)] What did Andrew and his GF do on the Monday before July 24, 2023?
+  [83/158] ✅ (multi-hop) [multihop(A,A,A)] What is the name of Audrey's childhood dog?
+  [84/158] ✅ (multi-hop) [multihop(A,A,A)] What special memories does Audrey have with her childhood dog, Max?
+  [85/158] ✅ (multi-hop) [multihop(A,A,A,B)] What are some of the personalities of Audrey's four fur babies?
+  [86/158] ✅ (multi-hop) [multihop(A,A,B)] What type of classes did Audrey start with her pups recently on 4 August, 2023?
+  [87/158] ✅ (multi-hop) [multihop(A,A,A)] How often does Audrey take her pups to the park for practice?
+  [88/158] ✅ (multi-hop) [multihop(A,B,A,B,A)] How long did the trail hike that Audrey went on with her pups take?
+  [89/158] ✅ (multi-hop) [multihop(C,A,C)] What advice did Audrey give to Andrew regarding grooming Toby?
+  [90/158] ❌ (multi-hop) [multihop(A,A,A)] What is essential to keep the dogs looking good according to Audrey?
+  [91/158] ✅ (multi-hop) [multihop(A,A,B,A)] What did Audrey organize with the neighbors' dogs?
+  [92/158] ✅ (multi-hop) [multihop(A,A,C)] What did Audrey do to give her dogs extra comfort as the weather cooled down?
+  [93/158] ✅ (multi-hop) [multihop→C] How does Audrey describe the new beds for her dogs?
+  [94/158] ✅ (multi-hop) [multihop(B,B,A)] How did Audrey calm down her dog after the leash incident?
+  [95/158] ✅ (multi-hop) [multihop(A,A,A)] How often does Audrey take her dogs for walks?
+  [96/158] ✅ (multi-hop) [multihop(A,A,B,A,B)] What kind of flowers does Audrey take care of?
+  [97/158] ❌ (multi-hop) [multihop(C,A,B,C)] What did Andrew learn from reading books about ecological systems?
+  [98/158] ✅ (multi-hop) [multihop(A,A,B,A,B)] What did Andrew suggest as a way to reduce carbon footprint?
+  [99/158] ✅ (multi-hop) [multihop(A,B,A,C)] How does Andrew suggest helping the planet while also training the body?
+  [100/158] ✅ (multi-hop) [multihop(A,B,B)] What did Audrey do with her pups over the weekend before 4th October, 2023?
+  [101/158] ✅ (multi-hop) [multihop(A,A,A)] What was the reason Audrey couldn't walk her dogs for a period of time?
+  [102/158] ✅ (multi-hop) [multihop(A,A,A)] What type of jewelry does Audrey make?
+  [103/158] ❌ (multi-hop) [multihop(A,A,A)] Why does Audrey make jewelry out of recycled objects?
+  [104/158] ✅ (multi-hop) [multihop(A,A,A)] What organization does Audrey donate a portion of his profits to?
+  [105/158] ✅ (multi-hop) [multihop(A,B,C,A,B,C,C)] How does Audrey help out the animal shelter?
+  [106/158] ❌ (multi-hop) [multihop(A,A,A)] What type of games do Audrey's dogs like to play at the park?
+  [107/158] ✅ (multi-hop) [multihop(A,C,A)] What did Audrey make to thank her neighbors?
+  [108/158] ✅ (multi-hop) [multihop(A,A,B,A,B)] How do Audrey's dogs react to snow?
+  [109/158] ✅ (multi-hop) [multihop(A,A,B,A,B)] How does Audrey describe her dogs' response to snow?
+  [110/158] ✅ (multi-hop) [multihop(A,A,A)] What kind of experiences are Audrey's dogs the best companions for?
+  [111/158] ✅ (multi-hop) [multihop(A,A,A)] What activity do Andrew and Buddy enjoy doing together?
+  [112/158] ✅ (multi-hop) [multihop(A,A,C)] What do Andrew and Buddy like doing on walks?
+  [113/158] ✅ (multi-hop) [multihop(A,B,A,B,C)] What cuisine did Andrew recently try at a new spot in town?
+  [114/158] ✅ (multi-hop) [multihop(A,A,B,A)] Which type of sushi did Audrey suggest trying first to someone new to sushi?
+  [115/158] ✅ (multi-hop) [multihop(B,C,B)] What type of date is Andrew going on Sunday?
+  [116/158] ✅ (multi-hop) [multihop(B,B,B)] What did Andrew and Audrey plan to do on the Saturday after October 28, 2023?
+  [117/158] ✅ (multi-hop) [multihop(A,A,B,A)] What aspect of autumn does Andrew find beautiful?
+  [118/158] ✅ (multi-hop) [multihop(B,B,C,D,B)] What did Audrey do in November 2023 to better take care of her dogs?
+  [119/158] ✅ (multi-hop) [multihop(A,A,A)] How often does Audrey meet up with other dog owners for tips and playdates?
+  [120/158] ❌ (multi-hop) [multihop(A,A,A)] What did Audrey share to show ways to keep dogs active in the city?
+  [121/158] ✅ (multi-hop) [multihop(A,A,A)] What type of activities does Audrey suggest for mental stimulation of the dogs?
+  [122/158] ✅ (multi-hop) [multihop(A,A,C)] What is Andrew planning to do with Scout, Toby, and Buddy?
+  [123/158] ✅ (multi-hop) [multihop(A,A,C)] What did Andrew get for Scout to create a safe and fun space for them?
+  [124/158] ✅ (adversarial) [adversarial_masked] Which specific type of bird mesmerizes Audrey?
+  [125/158] ❌ (adversarial) [adversarial_masked] What kind of flowers does Andrew have a tattoo of?
+  [126/158] ✅ (adversarial) [adversarial_masked] What type of dog was Audrey looking to adopt based on her living space?
+  [127/158] ✅ (adversarial) [adversarial_masked] Why did Audrey sign up for a workshop about car maintenance?
+  [128/158] ✅ (adversarial) [adversarial_masked] How did Andrew hear about the workshop on bonding with pets?
+  [129/158] ✅ (adversarial) [adversarial_masked] What type of training was the workshop Andrew signed up for in May 2023?
+  [130/158] ✅ (adversarial) [adversarial_masked] How did Andrew describe the dog he met at the pet store?
+  [131/158] ✅ (adversarial) [adversarial_masked] What challenge is Audrey facing in their search for a pet?
+  [132/158] ❌ (adversarial) [adversarial_masked] What indoor activities does Andrew plan on trying after the rock climbing class?
+  [133/158] ✅ (adversarial) [adversarial_masked] What did Andrew set up in the backyard for their dogs on June 26, 2023?
+  [134/158] ❌ (adversarial) [adversarial_masked] What did Audrey and her GF do on the Monday before July 24, 2023?
+  [135/158] ✅ (adversarial) [adversarial_masked] What is the name of Andrew's childhood dog?
+  [136/158] ✅ (adversarial) [adversarial_masked] What special memories does Andrew have with his childhood dog, Max?
+  [137/158] ✅ (adversarial) [adversarial_masked] What are some of the personalities of Andrew's four fur babies?
+  [138/158] ✅ (adversarial) [adversarial_masked] What type of classes did Andrew start with his pups recently on 4 August, 2023?
+  [139/158] ✅ (adversarial) [adversarial_masked] What is essential to keep the dogs looking good according to Andrew?
+  [140/158] ❌ (adversarial) [adversarial_masked] What did Audrey organize with the neighbors' cats?
+  [141/158] ✅ (adversarial) [adversarial_masked] What did Andrew do to give his dogs extra comfort as the weather cooled down?
+  [142/158] ✅ (adversarial) [adversarial_masked] How does Andrew describe the new beds for his dogs?
+  [143/158] ✅ (adversarial) [adversarial_masked] How did Andrew calm down his dog after the leash incident?
+  [144/158] ✅ (adversarial) [adversarial_masked] How often does Andrew take his dogs for walks?
+  [145/158] ❌ (adversarial) [adversarial_masked] What kind of vegetables does Audrey take care of?
+  [146/158] ❌ (adversarial) [adversarial_masked] What did Andrew learn from reading books about economic systems?
+  [147/158] ✅ (adversarial) [adversarial_masked] What was the reason Andrew couldn't walk his dogs for a period of time?
+  [148/158] ✅ (adversarial) [adversarial_masked] What type of jewelry does Andrew make?
+  [149/158] ✅ (adversarial) [adversarial_masked] Why does Andrew make jewelry out of recycled objects?
+  [150/158] ✅ (adversarial) [adversarial_masked] What type of games do Andrew's dogs like to play at the park?
+  [151/158] ✅ (adversarial) [adversarial_masked] What did Andrew make to thank his neighbors?
+  [152/158] ✅ (adversarial) [adversarial_masked] How do Andrew's dogs react to snow?
+  [153/158] ✅ (adversarial) [adversarial_masked] How does Andrew describe his dogs' response to snow?
+  [154/158] ✅ (adversarial) [adversarial_masked] What kind of experiences are Audrey's cats the best companions for?
+  [155/158] ✅ (adversarial) [adversarial_masked] What activity do Audrey and Buddy enjoy doing together?
+  [156/158] ❌ (adversarial) [adversarial_masked] What type of drink did Andrew recently try at a new spot in town?
+  [157/158] ❌ (adversarial) [adversarial_masked] Which type of pizza did Audrey suggest trying first to someone new to Italian cu
+  [158/158] ✅ (adversarial) [adversarial_masked] How often does Andrew meet up with other dog owners for tips and playdates?
+
+============================================================
+Processing conversation: conv-47 (James & John)
+============================================================
+Ingesting 31 sessions...
+  Ingesting session_1 (3:47 pm on 17 March, 2022)...
+  Ingesting session_2 (9:26 pm on 20 March, 2022)...
+  Ingesting session_3 (12:40 am on 27 March, 2022)...
+  Ingesting session_4 (2:13 pm on 4 April, 2022)...
+  Ingesting session_5 (9:52 am on 12 April, 2022)...
+  Ingesting session_6 (9:32 pm on 20 April, 2022)...
+  Ingesting session_7 (11:04 am on 23 April, 2022)...
+  Ingesting session_8 (2:36 pm on 29 April, 2022)...
+  Ingesting session_9 (7:01 pm on 4 May, 2022)...
+  Ingesting session_10 (12:45 am on 8 May, 2022)...
+  Ingesting session_11 (5:00 pm on 11 May, 2022)...
+  Ingesting session_12 (7:33 pm on 23 May, 2022)...
+  Ingesting session_13 (4:30 pm on 13 June, 2022)...
+  Ingesting session_14 (5:07 pm on 16 June, 2022)...
+  Ingesting session_15 (9:59 pm on 19 June, 2022)...
+  Ingesting session_16 (5:13 pm on 9 July, 2022)...
+  Ingesting session_17 (9:49 am on 22 July, 2022)...
+  Ingesting session_18 (1:45 pm on 6 August, 2022)...
+  Ingesting session_19 (9:16 am on 10 August, 2022)...
+  Ingesting session_20 (3:57 pm on 21 August, 2022)...
+  Ingesting session_21 (9:18 pm on 26 August, 2022)...
+  Ingesting session_22 (6:53 pm on 1 September, 2022)...
+  Ingesting session_23 (9:23 pm on 4 September, 2022)...
+  Ingesting session_24 (6:02 pm on 18 September, 2022)...
+  Ingesting session_25 (8:56 pm on 20 September, 2022)...
+  Ingesting session_26 (9:20 am on 3 October, 2022)...
+  Ingesting session_27 (2:14 pm on 13 October, 2022)...
+  Ingesting session_28 (7:36 pm on 21 October, 2022)...
+  Ingesting session_29 (12:37 am on 31 October, 2022)...
+  Ingesting session_30 (5:20 pm on 5 November, 2022)...
+  Ingesting session_31 (8:57 pm on 7 November, 2022)...
+Ingestion complete. Profiles: 2, Episodes: 31
+  [1/190] ❌ (open-domain) [D] What are John's suspected health problems?
+  [2/190] ✅ (temporal) [B] Which recreational activity was James pursuing on March 16, 2022?
+  [3/190] ✅ (single-hop) [multihop(C,C,B)] Which places or events have John and James planned to meet at?
+  [4/190] ❌ (single-hop) [B] Do both James and John have pets?
+  [5/190] ✅ (temporal) [B] When did John resume playing drums in his adulthood?
+  [6/190] ❌ (single-hop) [B] What are John and James' favorite games?
+  [7/190] ✅ (open-domain) [D] Does James live in Connecticut?
+  [8/190] ✅ (open-domain) [A] In which state is the shelter from which James adopted the puppy?
+  [9/190] ✅ (single-hop) [B] How many pets does James have?
+  [10/190] ❌ (single-hop) [B] What are the names of James's dogs?
+  [11/190] ✅ (temporal) [B] When did James adopt Ned?
+  [12/190] ❌ (temporal) [C] How was John feeling on April 10, 2022?
+  [13/190] ✅ (open-domain) [C] Did James have a girlfriend during April 2022?
+  [14/190] ✅ (temporal) [B] When did James visit Italy?
+  [15/190] ✅ (temporal) [B] When did James buy himself a new adventure book?
+  [16/190] ✅ (temporal) [B] When did James start playing Civilization VI?
+  [17/190] ❌ (open-domain) [multihop(A,B,C,A,C)] What is the game with different colored cards that was John talking about with J
+  [18/190] ❌ (open-domain) [multihop(A,A,B,A,B,C)] What is the board game where you have to find the imposter that John mentions to
+  [19/190] ✅ (single-hop) [multihop(A,A,A)] Which books has John recommended to James?
+  [20/190] ✅ (open-domain) [multihop(A,C,A)] Was James feeling lonely before meeting Samantha?
+  [21/190] ✅ (single-hop) [B] How many charity tournaments has John organized till date?
+  [22/190] ✅ (temporal) [B] When did John first organize a charity tournament with his friends?
+  [23/190] ❌ (single-hop) [B] Who or which organizations have been the beneficiaries of John's charity tournam
+  [24/190] ✅ (temporal) [B] When will John start his new job?
+  [25/190] ❌ (single-hop) [B] What kind of games has James tried to develop?
+  [26/190] ✅ (open-domain) [A] Are John and James fans of the same football team?
+  [27/190] ✅ (single-hop) [B] Which countries has James visited?
+  [28/190] ✅ (single-hop) [B] What kind of classes has James joined?
+  [29/190] ✅ (temporal) [B] When did James volunteer at an organization?
+  [30/190] ✅ (temporal) [B] When did James depart for his trip to Canada?
+  [31/190] ✅ (open-domain) [B] Which country did James book tickets for in July 2022?
+  [32/190] ❌ (temporal) [A] How many days did James plan to spend on his trip in Canada?
+  [33/190] ✅ (temporal) [C] Where was James at on July 12, 2022?
+  [34/190] ❌ (open-domain) [C] Did John and James study together?
+  [35/190] ❌ (single-hop) [B] Which countries did James visit in July 2022?
+  [36/190] ✅ (open-domain) [multihop(A,C,C)] What additional country did James visit during his trip to Canada?
+  [37/190] ❌ (open-domain) [A] Who is Jill?
+  [38/190] ✅ (temporal) [B] When did John spend time with his sister and dogs?
+  [39/190] ❌ (single-hop) [B] What happened to John's job situation in 2022?
+  [40/190] ❌ (temporal) [B] When did John start his job in IT?
+  [41/190] ✅ (single-hop) [B] What kind of tricks do James's pets know?
+  [42/190] ✅ (temporal) [B] When did James meet Samantha?
+  [43/190] ❌ (temporal) [B] When did James take his 3 dogs to the beach?
+  [44/190] ✅ (temporal) [B] When did John plan his next meeting with his siblings?
+  [45/190] ✅ (open-domain) [A] Why didn't John want to go to Starbucks?
+  [46/190] ✅ (single-hop) [B] What kind of beer does McGee's bar serve?
+  [47/190] ✅ (temporal) [B] When did John and James meet at McGee's bar?
+  [48/190] ✅ (temporal) [B] When did James ask Samantha to be his girlfriend?
+  [49/190] ✅ (temporal) [B] When did James, Samantha and John go to the baseball game together?
+  [50/190] ✅ (single-hop) [B] What gaming equipments did John buy or refurbish?
+  [51/190] ✅ (temporal) [B] When did James start taking cooking classes?
+  [52/190] ❌ (single-hop) [multihop(C,A,A)] Which new games did John start play during the course of the conversation with J
+  [53/190] ✅ (temporal) [B] When did John start working on his 2D Adventure mobile game?
+  [54/190] ✅ (temporal) [C] How long did it take for James to complete his Witcher-inspired game?
+  [55/190] ✅ (single-hop) [B] What kind of programming-related events has John hosted?
+  [56/190] ✅ (temporal) [B] When did John and his programming friends host an online programming competition
+  [57/190] ❌ (single-hop) [B] Which of James's family members have visited him in the last year?
+  [58/190] ✅ (temporal) [B] When did James' mother and her friend visit him?
+  [59/190] ✅ (temporal) [B] When did James try Cyberpunk 2077 game?
+  [60/190] ❌ (temporal) [B] When did John and his gaming friends organize the charity tournament?
+  [61/190] ❌ (single-hop) [multihop(C,C,C)] What games has John played with his friends at charity tournaments?
+  [62/190] ❌ (temporal) [D] What was James' big moment with Samantha in October 2023?
+  [63/190] ✅ (temporal) [multihop(B,B,B)] How long did James and Samantha date for before deciding to move in together?
+  [64/190] ✅ (temporal) [B] When did James, his family and his dogs start on a road trip together?
+  [65/190] ✅ (temporal) [multihop(B,B,B)] How long did John practice chess for before winning the chess tournament?
+  [66/190] ✅ (temporal) [B] When did James and his family visit Mark and Josh?
+  [67/190] ✅ (temporal) [B] When did John work with a game developer on a project?
+  [68/190] ✅ (multi-hop) [multihop(A,B,A,B,A,B,C)] What programming languages has James worked with?
+  [69/190] ✅ (multi-hop) [multihop(A,B,A,B,A)] What type of mobile application does James plan to build with John?
+  [70/190] ✅ (multi-hop) [multihop(A,B,A,B,A,B,C)] How does James plan to make his dog-sitting app unique?
+  [71/190] ✅ (multi-hop) [multihop(A,B,A,C)] What has John mostly found with the metal detector so far?
+  [72/190] ✅ (multi-hop) [multihop(A,C,A)] What did James offer to do for John regarding pets?
+  [73/190] ✅ (multi-hop) [multihop(A,A,A,B)] What instrument is John learning to play as of 27 March, 2022?
+  [74/190] ❌ (multi-hop) [multihop(B,B,B)] How long has John been playing the drums as of 27 March, 2022?
+  [75/190] ✅ (multi-hop) [multihop(B,A,B,A)] What game did John play in an intense tournament at the gaming convention in Mar
+  [76/190] ✅ (multi-hop) [multihop(B,A,A)] What game was James playing in the online gaming tournament in April 2022?
+  [77/190] ✅ (multi-hop) [multihop(A,A,A)] How does James communicate with his gaming team?
+  [78/190] ✅ (multi-hop) [multihop(C,C,C)] What advice did James receive from the famous players he met at the tournament?
+  [79/190] ✅ (multi-hop) [multihop(A,B,B)] What did James adopt in April 2022?
+  [80/190] ✅ (multi-hop) [multihop(A,A,A)] What is the name of the pup that was adopted by James?
+  [81/190] ✅ (multi-hop) [multihop(A,A,C)] Why did James embody the appearance of the game character from the woman he saw 
+  [82/190] ✅ (multi-hop) [multihop(A,A,B,A)] What inspired James to create the game character in the virtual world?
+  [83/190] ✅ (multi-hop) [multihop(A,B,C)] Which country did James visit in 2021?
+  [84/190] ✅ (multi-hop) [multihop(A,B,A,B,A,B)] What impresses John about Japan?
+  [85/190] ✅ (multi-hop) [multihop(A,A,B,C)] What kind of assignment was giving John a hard time at work?
+  [86/190] ✅ (multi-hop) [multihop(A,A,A)] What breed is Daisy, one of James' dogs?
+  [87/190] ✅ (multi-hop) [multihop(A,A,B,A,B)] What type of pizza is James' favorite?
+  [88/190] ✅ (multi-hop) [multihop(A,A,B,A,B)] What type of pizza is John's favorite?
+  [89/190] ❌ (multi-hop) [multihop(A,A,B)] What did John organize with his friends on May 8, 2022?
+  [90/190] ✅ (multi-hop) [multihop(A,B,C,A,B,C,C)] What did John and his friends do with the remaining money after helping the dog 
+  [91/190] ✅ (multi-hop) [multihop(B,A,B,C,A)] What was the main goal of the money raised from the charity tournament organized
+  [92/190] ✅ (multi-hop) [multihop(A,A,C)] What did the system John created help the charitable foundation with?
+  [93/190] ✅ (multi-hop) [multihop(A,C,C)] What did John create for the charitable foundation that helped generate reports 
+  [94/190] ✅ (multi-hop) [multihop(A,A,A)] What did John receive for achieving second place in the tournament?
+  [95/190] ✅ (multi-hop) [multihop(A,B,A,B,A)] What project is James working on in his game design course?
+  [96/190] ✅ (multi-hop) [multihop(A,A,A)] Who does James support in football matches?
+  [97/190] ❌ (multi-hop) [multihop(A,A,B,A)] Which football club does John support?
+  [98/190] ❌ (multi-hop) [multihop(C,C,C)] What disagreement do James and John have about their football teams?
+  [99/190] ❌ (multi-hop) [multihop(A,A,A)] What is Max good at doing according to James?
+  [100/190] ✅ (multi-hop) [multihop(A,B,C,A,A)] What is the main focus of the organization that James volunteered with?
+  [101/190] ✅ (multi-hop) [multihop(A,B,C,A,A)] Will there be an interview required to volunteer with the organization James vol
+  [102/190] ✅ (multi-hop) [multihop(B,A,A)] How did John relax in his free time on 9 July, 2022?
+  [103/190] ✅ (multi-hop) [multihop(A,A,B,A,B)] What did James enjoy doing on cold winter days?
+  [104/190] ✅ (multi-hop) [multihop(A,B,B)] What new hobby did James become interested in on 9 July, 2022?
+  [105/190] ✅ (multi-hop) [multihop(C,C,A)] Where did James plan to visit after Toronto?
+  [106/190] ✅ (multi-hop) [multihop(B,B,B,C)] When did James plan to return from his trip to Toronto and Vancouver?
+  [107/190] ❌ (multi-hop) [multihop(B,A,A)] What online game did John start playing recently for improving strategy?
+  [108/190] ✅ (multi-hop) [multihop(C,B,C)] What made John leave his IT job?
+  [109/190] ❌ (multi-hop) [multihop(A,A,C)] Which game tournaments does John plan to organize besides CS:GO?
+  [110/190] ✅ (multi-hop) [multihop(C,A,B,A,B)] What happened to James's puppy during the recent visit to the clinic?
+  [111/190] ✅ (multi-hop) [multihop(A,A,A,B)] What game genre did John start exploring instead of shooters?
+  [112/190] ✅ (multi-hop) [multihop(B,A,C)] Which RPG game is John playing and enjoying on 10 August, 2022?
+  [113/190] ✅ (multi-hop) [multihop(A,A,A,B)] What aspect of "The Witcher 3" does John find immersive?
+  [114/190] ✅ (multi-hop) [multihop(C,A,C)] Whose phone number did James receive during the beach outing?
+  [115/190] ✅ (multi-hop) [multihop(C,C,A)] What is James planning to do after receiving Samantha's phone number?
+  [116/190] ❌ (multi-hop) [multihop(A,A,A,B,C)] What is John organizing with his siblings?
+  [117/190] ✅ (multi-hop) [multihop(A,A,B,C,A)] What type of beer does John not like?
+  [118/190] ❌ (multi-hop) [multihop(C,A,C)] What were some difficulties James faced during the development of his game?
+  [119/190] ✅ (multi-hop) [multihop(A,A,C)] What has John been teaching his siblings?
+  [120/190] ✅ (multi-hop) [multihop(A,A,C)] What kind of programs are John's siblings making?
+  [121/190] ✅ (multi-hop) [multihop(A,A,B,C,A,B)] Which company's headphones did John choose for gaming?
+  [122/190] ✅ (multi-hop) [multihop(A,A,B,A,B)] What did James and Samantha discover they both enjoy at McGee's bar?
+  [123/190] ✅ (multi-hop) [multihop(A,B,C,A,B,C,A,B)] How much does James pay per cooking class?
+  [124/190] ✅ (multi-hop) [multihop(A,B,A,B,A,B)] What did James learn to make in the cooking class besides omelette and meringue?
+  [125/190] ✅ (multi-hop) [multihop(A,A,B,C)] Why did James sign up for a cooking class?
+  [126/190] ✅ (multi-hop) [multihop(A,B,A,B,B)] What did James prepare for the first time in the cooking class?
+  [127/190] ✅ (multi-hop) [multihop(B,B,A)] What is the name of the board game John tried in September 2022?
+  [128/190] ❌ (multi-hop) [multihop(A,A,B,A)] Where does James get his ideas from?
+  [129/190] ✅ (multi-hop) [multihop(A,B,A,B)] What kind of dream did James have recently?
+  [130/190] ✅ (multi-hop) [multihop(A,A,B,A,B)] What kind of music does John like?
+  [131/190] ✅ (multi-hop) [multihop(A,A,B,A,B)] What instrument did James used to play when he was younger?
+  [132/190] ❌ (multi-hop) [multihop(A,A,A)] What did John use to play when he was younger to let off steam?
+  [133/190] ✅ (multi-hop) [multihop(A,C,B)] What career milestone did John achieve recently in September 2022?
+  [134/190] ✅ (multi-hop) [multihop(A,B,A,B,A,B)] What type of game is John's upcoming mobile game?
+  [135/190] ❌ (multi-hop) [multihop(A,A,A)] What does John do to stay informed and constantly learn about game design?
+  [136/190] ✅ (multi-hop) [multihop(A,B,C,A,B,A,B)] What kind of gig was John offered at the game dev non-profit organization?
+  [137/190] ✅ (multi-hop) [multihop(A,B,A,B,A,B)] What does John feel about starting the journey as a programming mentor for game 
+  [138/190] ✅ (multi-hop) [multihop(A,B,C,A,A)] What kind of games is James excited to play with his new video card?
+  [139/190] ✅ (multi-hop) [multihop(A,A,C)] What inspired James to create his game?
+  [140/190] ❌ (multi-hop) [multihop(A,B,C,C)] What sparked James' passion for gaming when he was a kid?
+  [141/190] ✅ (multi-hop) [multihop(A,A,C)] What did James lose progress on due to a power outage?
+  [142/190] ✅ (multi-hop) [multihop(B,B,C)] What games were played at the gaming tournament organized by John on 31 October,
+  [143/190] ❌ (multi-hop) [multihop(B,B,A)] What was the purpose of the gaming tournament organized by John on 31 October, 2
+  [144/190] ✅ (multi-hop) [multihop(A,B,B)] What decision did James and Samantha make on 31 October, 2022?
+  [145/190] ✅ (multi-hop) [multihop(A,B,B)] Where did James and Samantha decide to live together on 31 October, 2022?
+  [146/190] ✅ (multi-hop) [multihop(C,A,B,A,B)] Why did James and Samantha choose an apartment near McGee's bar?
+  [147/190] ✅ (multi-hop) [multihop(A,A,B)] What game is John hooked on playing on 5 November, 2022?
+  [148/190] ❌ (multi-hop) [multihop(A,A,C)] What did John suggest James practice before playing FIFA 23 together?
+  [149/190] ✅ (multi-hop) [multihop(B,A,B,B)] What project did John work on with a game developer by 7 November, 2022?
+  [150/190] ✅ (multi-hop) [multihop(A,B,C,A,B,C)] What is the name of John's cousin's dog?
+  [151/190] ✅ (adversarial) [adversarial_masked] What did John adopt in April 2022?
+  [152/190] ❌ (adversarial) [adversarial_masked] What is the name of the kitten that was adopted by James?
+  [153/190] ✅ (adversarial) [adversarial_masked] What inspired John to create the game character in the virtual world?
+  [154/190] ✅ (adversarial) [adversarial_masked] Which country did John visit in 2021?
+  [155/190] ✅ (adversarial) [adversarial_masked] What kind of assignment was giving James a hard time at work?
+  [156/190] ✅ (adversarial) [adversarial_masked] What did James and his friends do with the remaining money after helping the dog
+  [157/190] ✅ (adversarial) [adversarial_masked] What was the main goal of the money raised from the political campaign organized
+  [158/190] ❌ (adversarial) [adversarial_masked] What did the system John created help the illegal organization with?
+  [159/190] ✅ (adversarial) [adversarial_masked] What did James create for the charitable foundation that helped generate reports
+  [160/190] ❌ (adversarial) [adversarial_masked] Who does James support in cricket matches?
+  [161/190] ✅ (adversarial) [adversarial_masked] What is Max good at doing according to John?
+  [162/190] ✅ (adversarial) [adversarial_masked] Will there be a background check required to volunteer with the organization Jam
+  [163/190] ✅ (adversarial) [adversarial_masked] How did James relax in his free time on 9 July, 2022?
+  [164/190] ✅ (adversarial) [adversarial_masked] What new hobby did John become interested in on 9 July, 2022?
+  [165/190] ✅ (adversarial) [adversarial_masked] When did John plan to return from his trip to Toronto and Vancouver?
+  [166/190] ✅ (adversarial) [adversarial_masked] What made James leave his IT job?
+  [167/190] ✅ (adversarial) [adversarial_masked] Which game tournaments does James plan to organize besides CS:GO?
+  [168/190] ❌ (adversarial) [adversarial_masked] What happened to James's kitten during the recent visit to the clinic?
+  [169/190] ❌ (adversarial) [adversarial_masked] What aspect of "The Witcher 3" does John find boring?
+  [170/190] ✅ (adversarial) [adversarial_masked] What is John planning to do after receiving Samantha's phone number?
+  [171/190] ✅ (adversarial) [adversarial_masked] What has James been teaching his siblings?
+  [172/190] ❌ (adversarial) [adversarial_masked] How much does James pay per dance class?
+  [173/190] ✅ (adversarial) [adversarial_masked] What did James learn to make in the chemistry class besides omelette and meringu
+  [174/190] ❌ (adversarial) [adversarial_masked] Why did James sign up for a ballet class?
+  [175/190] ✅ (adversarial) [adversarial_masked] What did John prepare for the first time in the cooking class?
+  [176/190] ✅ (adversarial) [adversarial_masked] What is the name of the board game James tried in September 2022?
+  [177/190] ✅ (adversarial) [adversarial_masked] Where does John get his ideas from?
+  [178/190] ✅ (adversarial) [adversarial_masked] What did James use to play when he was younger to let off steam?
+  [179/190] ✅ (adversarial) [adversarial_masked] What does James do to stay informed and constantly learn about game design?
+  [180/190] ✅ (adversarial) [adversarial_masked] What kind of gig was James offered at the game dev non-profit organization?
+  [181/190] ✅ (adversarial) [adversarial_masked] What does James feel about starting the journey as a programming mentor for game
+  [182/190] ❌ (adversarial) [adversarial_masked] What inspired James to create his painting?
+  [183/190] ✅ (adversarial) [adversarial_masked] What games were played at the gaming tournament organized by James on 31 October
+  [184/190] ❌ (adversarial) [adversarial_masked] What was the purpose of the gaming tournament organized by James on 31 October, 
+  [185/190] ✅ (adversarial) [adversarial_masked] What decision did John and Samantha make on 31 October, 2022?
+  [186/190] ✅ (adversarial) [adversarial_masked] Where did John and Samantha decide to live together on 31 October, 2022?
+  [187/190] ✅ (adversarial) [adversarial_masked] Why did John and Samantha choose an apartment near McGee's bar?
+  [188/190] ✅ (adversarial) [adversarial_masked] What game is James hooked on playing on 5 November, 2022?
+  [189/190] ✅ (adversarial) [adversarial_masked] What project did James work on with a game developer by 7 November, 2022?
+  [190/190] ✅ (adversarial) [adversarial_masked] What is the name of James's cousin's dog?
+
+============================================================
+Processing conversation: conv-48 (Deborah & Jolene)
+============================================================
+Ingesting 30 sessions...
+  Ingesting session_1 (4:06 pm on 23 January, 2023)...
+  Ingesting session_2 (9:49 am on 27 January, 2023)...
+  Ingesting session_3 (7:03 pm on 1 February, 2023)...
+  Ingesting session_4 (9:48 am on 4 February, 2023)...
+  Ingesting session_5 (9:03 pm on 9 February, 2023)...
+  Ingesting session_6 (4:12 pm on 22 February, 2023)...
+  Ingesting session_7 (4:50 pm on 25 February, 2023)...
+  Ingesting session_8 (7:18 pm on 2 March, 2023)...
+  Ingesting session_9 (11:22 am on 13 March, 2023)...
+  Ingesting session_10 (5:35 pm on 22 March, 2023)...
+  Ingesting session_11 (4:03 pm on 28 March, 2023)...
+  Ingesting session_12 (4:30 pm on 9 April, 2023)...
+  Ingesting session_13 (3:56 pm on 6 June, 2023)...
+  Ingesting session_14 (9:17 am on 26 June, 2023)...
+  Ingesting session_15 (7:37 pm on 9 July, 2023)...
+  Ingesting session_16 (9:26 am on 1 August, 2023)...
+  Ingesting session_17 (8:50 pm on 12 August, 2023)...
+  Ingesting session_18 (2:58 pm on 16 August, 2023)...
+  Ingesting session_19 (12:52 am on 19 August, 2023)...
+  Ingesting session_20 (9:11 am on 21 August, 2023)...
+  Ingesting session_21 (9:34 am on 24 August, 2023)...
+  Ingesting session_22 (5:33 pm on 26 August, 2023)...
+  Ingesting session_23 (11:46 am on 30 August, 2023)...
+  Ingesting session_24 (2:14 pm on 3 September, 2023)...
+  Ingesting session_25 (8:31 pm on 6 September, 2023)...
+  Ingesting session_26 (7:39 pm on 8 September, 2023)...
+  Ingesting session_27 (2:18 pm on 12 September, 2023)...
+  Ingesting session_28 (3:09 pm on 15 September, 2023)...
+  Ingesting session_29 (1:24 pm on 17 September, 2023)...
+  Ingesting session_30 (10:17 am on 20 September, 2023)...
+Ingestion complete. Profiles: 2, Episodes: 30
+  [1/239] ✅ (temporal) [B] What kind of project was Jolene working on in the beginning of January 2023?
+  [2/239] ✅ (single-hop) [multihop(A,B,A,C)] Which of Deborah`s family and friends have passed away?
+  [3/239] ✅ (temporal) [B] When did Deborah`s mother pass away?
+  [4/239] ✅ (temporal) [B] When did Jolene`s mother pass away?
+  [5/239] ✅ (temporal) [B] When did Jolene's mom gift her a pendant?
+  [6/239] ✅ (open-domain) [B] In what country did Jolene's mother buy her the pendant?
+  [7/239] ✅ (single-hop) [B] What symbolic gifts do Deborah and Jolene have from their mothers?
+  [8/239] ✅ (temporal) [B] Which country were Jolene and her mother visiting in 2010?
+  [9/239] ✅ (single-hop) [B] What helped Deborah find peace when grieving deaths of her loved ones?
+  [10/239] ✅ (temporal) [B] When did Deborah's father pass away?
+  [11/239] ✅ (temporal) [B] When was Deborah's parents' wedding?
+  [12/239] ✅ (open-domain) [A] Is Deborah married?
+  [13/239] ✅ (temporal) [B] When did Deborah receive an appreciation letter from her community?
+  [14/239] ✅ (single-hop) [B] What places give Deborah peace?
+  [15/239] ❌ (single-hop) [B] What were Deborah's mother's hobbies?
+  [16/239] ❌ (multi-hop) [multihop(A,A,A)] What pets does Jolene have?
+  [17/239] ❌ (multi-hop) [multihop(A,A,A)] What are the names of Jolene's snakes?
+  [18/239] ✅ (temporal) [B] When did Jolene buy her pet Seraphim?
+  [19/239] ✅ (open-domain) [B] In what country did Jolene buy snake Seraphim?
+  [20/239] ❌ (single-hop) [B] How many times has Jolene been to France?
+  [21/239] ❌ (single-hop) [multihop(A,B,A,C)] Which games have Jolene and her partner played together?
+  [22/239] ✅ (temporal) [C] When do Jolene and her partner plan to complete the game "Walking Dead"?
+  [23/239] ✅ (temporal) [B] When did Deborah meet Anna?
+  [24/239] ❌ (open-domain) [A] Why did Jolene sometimes put off doing yoga?
+  [25/239] ❌ (single-hop) [B] What new yoga poses did Deborah try?
+  [26/239] ✅ (multi-hop) [multihop(A,A,B,A,B)] What are Jolene's favorite books?
+  [27/239] ✅ (temporal) [B] Which book did Jolene read in January 2023?
+  [28/239] ✅ (temporal) [B] When was Jolene in Bogota?
+  [29/239] ✅ (open-domain) [B] In what country was Jolene during summer 2022?
+  [30/239] ✅ (temporal) [B] When did Jolene have a mini-retreat to reflect on her career?
+  [31/239] ✅ (temporal) [B] When did Jolene have a dinner and drinks with her friends?
+  [32/239] ✅ (temporal) [B] When was the last photo of Deborah and Karlie taken?
+  [33/239] ✅ (temporal) [B] When was Deborah in Bali?
+  [34/239] ✅ (multi-hop) [multihop(B,A,B)] How long have Jolene and her partner been together?
+  [35/239] ✅ (temporal) [B] Which year did Jolene and her partner start dating?
+  [36/239] ✅ (temporal) [B] When did Deborah go for her first morning jog in a nearby park?
+  [37/239] ❌ (open-domain) [D] How old is Jolene?
+  [38/239] ✅ (temporal) [B] When did Jolene take Seraphim to the park?
+  [39/239] ✅ (temporal) [B] When did Deborah start the yoga class in the neighborhood?
+  [40/239] ✅ (single-hop) [multihop(A,A,C)] What time management techniques do Deborah and Jolene use?
+  [41/239] ✅ (open-domain) [C] Does Deborah live close to the beach or the mountains?
+  [42/239] ❌ (single-hop) [multihop(A,A,C)] What ways do Deborah and Jolene use to enhance their yoga practice?
+  [43/239] ✅ (multi-hop) [multihop(A,A,C)] What music pieces does Deborah listen to during her yoga practice?
+  [44/239] ✅ (temporal) [B] When did Deborah go for a bicycle ride with Anna?
+  [45/239] ❌ (temporal) [B] When did Deborah go to an art show with Anna?
+  [46/239] ✅ (temporal) [B] When did Jolene finish her robotics project?
+  [47/239] ✅ (temporal) [B] How long did Jolene work on the robotics project given to her by her Professor?
+  [48/239] ✅ (temporal) [B] When did Jolene do yoga at Talkeetna?
+  [49/239] ✅ (open-domain) [C] Which US state did Jolene visit during her internship?
+  [50/239] ✅ (multi-hop) [multihop(B,B,B)] How long has Jolene been doing yoga and meditation?
+  [51/239] ✅ (temporal) [B] Which year did Jolene start practicing yoga?
+  [52/239] ✅ (temporal) [B] When did Jolene buy a new aquarium for Seraphim?
+  [53/239] ✅ (temporal) [B] When did Jolene lose a lot of progress in her work?
+  [54/239] ✅ (temporal) [C] When did Jolene adopt her snake Susie?
+  [55/239] ✅ (temporal) [multihop(A,A,B,C)] Which pet did Jolene adopt first - Susie or Seraphim?
+  [56/239] ✅ (temporal) [multihop(B,B,B)] Which pet did Jolene adopt more recently - Susie or Seraphim?
+  [57/239] ✅ (temporal) [B] When did Deborah lead a meditation session during the sunset?
+  [58/239] ✅ (temporal) [B] When did Jolene gift her partner a new console?
+  [59/239] ✅ (multi-hop) [multihop(A,A,A)] What games does Jolene recommend for Deborah?
+  [60/239] ❌ (multi-hop) [multihop(A,B,C,A,A)] What do Deborah and her husband do together?
+  [61/239] ✅ (temporal) [B] When did Deborah go to a yoga retreat near her mom's place?
+  [62/239] ❌ (multi-hop) [multihop(B,C,A,A,B,C)] What projects is Jolene planning for next year?
+  [63/239] ✅ (multi-hop) [multihop(A,A,B,A,B)] Where did Deborah get her cats?
+  [64/239] ✅ (multi-hop) [multihop(A,B,A,B,A,B)] How old are Deborah's cats?
+  [65/239] ✅ (multi-hop) [multihop(A,A,A)] Does Deborah like cats?
+  [66/239] ✅ (temporal) [B] Which country was Jolene located in during the last week of August 2023?
+  [67/239] ✅ (temporal) [B] When did Jolene and her partner return home from Rio de Janeiro?
+  [68/239] ✅ (multi-hop) [multihop(A,B,A,A)] What was Jolene doing with her partner in Rio de Janeiro?
+  [69/239] ✅ (temporal) [B] When did Deborah visit Brazil?
+  [70/239] ✅ (multi-hop) [multihop(A,B,A)] Have Deborah and Jolene been to Rio de Janeiro?
+  [71/239] ✅ (open-domain) [multihop(C,D,A,A,B)] Is the friend who wrote Deborah the motivational quote no longer alive?
+  [72/239] ❌ (temporal) [B] When did Deborah go to a community meetup?
+  [73/239] ✅ (multi-hop) [multihop(A,A,B,B)] When did Jolene's parents give her first console?
+  [74/239] ✅ (single-hop) [B] Did Jolene teach herself how to play the console?
+  [75/239] ❌ (multi-hop) [multihop(A,A,A)] What do Deborah and Jolene plan to try when they meet in a new cafe?
+  [76/239] ❌ (open-domain) [A] What card game is Deborah talking about?
+  [77/239] ✅ (temporal) [B] When did Jolene and her partner try scuba diving lessons?
+  [78/239] ❌ (single-hop) [B] Where did Jolene and her partner find a cool diving spot?
+  [79/239] ✅ (temporal) [B] Where did Jolene and her partner spend most of September 2023?
+  [80/239] ✅ (single-hop) [B] Has Deborah tried surfing?
+  [81/239] ✅ (single-hop) [B] Has Jolene tried surfing?
+  [82/239] ✅ (temporal) [B] When did the Deboran and Jolene agree to go surfing?
+  [83/239] ✅ (single-hop) [B] Which locations does Deborah practice her yoga at?
+  [84/239] ✅ (single-hop) [B] What kind of professional activities does Jolene participate in to gain more exp
+  [85/239] ✅ (single-hop) [B] What kind of engineering projects has Jolene worked on?
+  [86/239] ❌ (single-hop) [multihop(A,A)] Which community activities have Deborah and Anna participated in?
+  [87/239] ❌ (single-hop) [B] What gifts has Deborah received?
+  [88/239] ❌ (single-hop) [B] Which countries has Deborah traveled to?
+  [89/239] ✅ (single-hop) [B] What activities does Deborah pursue besides practicing and teaching yoga?
+  [101/239] ✅ (multi-hop) [multihop(B,B,B)] What project did Jolene finish last week before 23 January, 2023?
+  [102/239] ❌ (multi-hop) [multihop(A,A,B)] When did Jolene buy her pet snake?
+  [103/239] ✅ (multi-hop) [multihop(A,B,B)] What project was Jolene working on as of 1 February, 2023?
+  [104/239] ✅ (multi-hop) [multihop(A,A,A)] Where did Deborah meet her new neighbor Anna?
+  [105/239] ❌ (multi-hop) [multihop(A,B,A,C)] What activity did Jolene and her partner plan to do together instead of resuming
+  [106/239] ✅ (multi-hop) [multihop(A,B,B)] What milestone did Jolene achieve recently on 4 February, 2023?
+  [107/239] ✅ (multi-hop) [multihop→C] What is Jolene's favorite book which she mentioned on 4 February, 2023?
+  [108/239] ❌ (multi-hop) [multihop(A,B,B,A)] What does Deborah bring with her whenever she comes to reflect on her mom?
+  [109/239] ✅ (multi-hop) [multihop(B,C,A)] What new outlook did Jolene gain after her mini retreat on 9 February, 2023?
+  [110/239] ❌ (multi-hop) [multihop(B,C,C)] What cool stuff did Jolene accomplish at the retreat on 9 February, 2023?
+  [111/239] ✅ (multi-hop) [multihop(A,B,C)] What idea did Jolene have to help underprivileged kids learn about STEM subjects
+  [112/239] ✅ (multi-hop) [multihop(A,A,C)] How does Jolene plan to involve local engineers in her idea of teaching STEM to 
+  [113/239] ✅ (multi-hop) [multihop(A,A,B,C)] What gave Deborah peace in the garden she visited?
+  [114/239] ✅ (multi-hop) [multihop(C,A,C)] Why did Deborah spend time in the garden?
+  [115/239] ✅ (multi-hop) [multihop(A,B,A,C)] How did Jolene and her partner initially meet?
+  [116/239] ❌ (multi-hop) [multihop(A,A,A)] What activity does Deborah incorporate into her daily routine after going for a 
+  [117/239] ❌ (multi-hop) [multihop(A,A,A)] According to Jolene, what does exercise help her to feel?
+  [118/239] ❌ (multi-hop) [multihop(A,A,B,A)] What did Deb share a photo of, which brought a smile to Jolene's face?
+  [119/239] ✅ (multi-hop) [multihop(A,A,B,A,B)] What is one of Jolene's favorite dishes?
+  [120/239] ❌ (multi-hop) [multihop(A,A,A,B)] What picture did Jolene share related to feeling overwhelmed?
+  [121/239] ❌ (multi-hop) [multihop(A,A,A)] What did Jolene and Deb discuss as a helpful strategy for studying and time mana
+  [122/239] ✅ (multi-hop) [multihop(A,A,B)] What did Jolene ask Deb to help with on 13 March, 2023?
+  [123/239] ✅ (multi-hop) [multihop(A,A,A)] What method does Deb suggest Jolene to try for organizing tasks based on importa
+  [124/239] ❌ (multi-hop) [multihop(A,A,A)] What did Jolene and Anna discuss while watching the sunset by the sea?
+  [125/239] ✅ (multi-hop) [multihop(C,A,A)] How does Jolene plan to pursue her dream of learning to surf?
+  [126/239] ✅ (multi-hop) [multihop(A,B,A,B,C)] What did Deborah buy to enhance her yoga practice besides the props?
+  [127/239] ✅ (multi-hop) [multihop(A,B,A,B,A)] What type of music does Deborah find helpful during her yoga practice?
+  [128/239] ✅ (multi-hop) [multihop(A,A,A)] Who are the musicians mentioned by Jolene that she enjoys listening to during he
+  [129/239] ✅ (multi-hop) [multihop(A,A,A)] What album does Deborah recommend for meditation and deep relaxation?
+  [130/239] ✅ (multi-hop) [multihop(B,B,B)] Which show did Deborah go to with a friend on 9 April, 2023?
+  [131/239] ✅ (multi-hop) [multihop(A,B,A,B,C)] What does Deborah find comforting about going to art shows?
+  [132/239] ✅ (multi-hop) [multihop(A,A,C)] How does Jolene describe the time spent with her snakes and partner?
+  [133/239] ✅ (multi-hop) [multihop(A,B,A,A)] What does Jolene enjoy doing with her partner after a long day?
+  [134/239] ✅ (multi-hop) [multihop(A,B,A)] What is Jolene currently doing in June 2023?
+  [135/239] ✅ (multi-hop) [multihop(A,A,B)] For how long has Jolene had Seraphim as a pet?
+  [136/239] ✅ (multi-hop) [multihop(A,C,C)] How does Jolene feel when spending time with Seraphim?
+  [137/239] ❌ (multi-hop) [multihop(A,A,A)] Which new yoga pose did Deborah share a photo of?
+  [138/239] ✅ (multi-hop) [multihop(A,A,A)] What group activity did Deborah start with Anna?
+  [139/239] ✅ (multi-hop) [multihop(A,C,A,B)] What made being part of the running group easy for Deborah to stay motivated?
+  [140/239] ✅ (multi-hop) [multihop(A,A,C)] Why did Jolene decide to get a snake as a pet?
+  [141/239] ✅ (multi-hop) [multihop(A,B,A,A)] What is the favorite game Jolene plays with her partner?
+  [142/239] ✅ (multi-hop) [multihop(A,A,B,A)] What activity does Deborah do with her cats?
+  [143/239] ✅ (multi-hop) [multihop(A,A,A)] How does Jolene describe the feeling of finding her snake snuggled under the bed
+  [144/239] ✅ (multi-hop) [multihop(A,B,C,A,C)] Why does Deborah take her cats out for a run in the park every day?
+  [145/239] ✅ (multi-hop) [multihop(A,A,C)] How did Jolene come to have her pet, Susie?
+  [146/239] ❌ (multi-hop) [multihop(A,A,A)] What activities have been helping Jolene stay distracted during tough times?
+  [147/239] ✅ (multi-hop) [multihop(A,A,B,A)] What kind of yoga routine does Deborah recommend to Jolene?
+  [148/239] ❌ (multi-hop) [multihop(A,A,A)] What did Jolene design inspired by their love for space and engines?
+  [149/239] ✅ (multi-hop) [multihop(A,A,A)] What journal has Jolene been using to help track tasks and stay organized?
+  [150/239] ✅ (multi-hop) [multihop(A,A,A)] What game did Jolene recommend for being calming and cute?
+  [151/239] ✅ (multi-hop) [multihop(A,A,A)] What game did Jolene suggest as an awesome open-world game for the Nintendo Swit
+  [152/239] ✅ (multi-hop) [multihop(A,B,C,A,A)] What did Deborah and her husband use to play to bond and make memories?
+  [153/239] ✅ (multi-hop) [multihop(A,B,A,B,A,B)] What is special about the bench at the park near Deborah's house?
+  [154/239] ❌ (multi-hop) [multihop(A,B,C,C)] What did Deborah and her mom chat about at their special bench in the park?
+  [155/239] ✅ (multi-hop) [multihop(A,B,B,A)] What feeling does Deborah get when she thinks about the time spent with her mom 
+  [156/239] ❌ (multi-hop) [multihop(A,C,A)] What habits does Jolene practice to feel balanced?
+  [157/239] ✅ (multi-hop) [multihop(A,A,A,B)] Which yoga pose is Jolene a fan of for rest and calmness?
+  [158/239] ✅ (multi-hop) [multihop(B,A,C)] How long has Jolene been doing yoga?
+  [159/239] ✅ (multi-hop) [multihop(B,C,C)] What did Jolene participate in recently that provided her with a rewarding exper
+  [160/239] ✅ (multi-hop) [multihop(A,A,A)] How did Jolene feel after receiving positive feedback at the virtual conference?
+  [161/239] ✅ (multi-hop) [multihop(A,B,B)] What kind of event did Jolene present at recently?
+  [162/239] ❌ (multi-hop) [multihop(A,C,C)] What did Jolene's mom stress the value of, which she wants to keep in mind for h
+  [163/239] ✅ (multi-hop) [multihop(A,A,A)] What type of projects is Jolene interested in getting involved in the future?
+  [164/239] ✅ (multi-hop) [multihop(A,A,B,C)] How did Deborah get Luna, one of her cats?
+  [165/239] ✅ (multi-hop) [multihop(A,B,A,B,C)] How old is Max?
+  [166/239] ✅ (multi-hop) [multihop(C,B,A)] What type of classes did Jolene and her partner check out during their trip to R
+  [167/239] ✅ (multi-hop) [multihop(A,A,A)] What type of place does Jolene visit to meditate?
+  [168/239] ✅ (multi-hop) [multihop(B,C,D,A,B,B)] What was the new plant Jolene got used as a reminder for on 30 August, 2023?
+  [169/239] ✅ (multi-hop) [multihop(B,C,D,C,B)] Why did Jolene get the new plant on 30 August, 2023?
+  [170/239] ❌ (multi-hop) [multihop(A,A,A)] What has Jolene been focusing on lately besides studying?
+  [171/239] ✅ (multi-hop) [multihop(A,A,A,B,C)] How did Deborah's mom support her yoga practice when she first started?
+  [172/239] ❌ (multi-hop) [multihop→D] What was the video game console that Jolene's parents got her at age 10?
+  [173/239] ❌ (multi-hop) [multihop(A,A,B,C,A)] What was one of Jolene's favorite games to play with her mom on the nintendo wii
+  [174/239] ✅ (multi-hop) [multihop(A,B,B)] What course did Jolene sign up for on 6 September 2023?
+  [175/239] ❌ (multi-hop) [multihop(B,A,B,B)] Why did Jolene have to reschedule their meeting with Deborah on September 8, 202
+  [176/239] ✅ (multi-hop) [multihop(B,B,B)] Where did Jolene and her partner travel for a few weeks in September 2023?
+  [177/239] ❌ (multi-hop) [multihop(B,C,A,B,C)] What was the main focus of the session that stood out to Jolene during the retre
+  [178/239] ✅ (multi-hop) [multihop(A,A,A)] How did Jolene feel about her progress in practicing mindfulness and gratitude?
+  [179/239] ✅ (multi-hop) [multihop(A,A,C)] What positive change did Jolene experience during the retreat?
+  [180/239] ❌ (multi-hop) [multihop(A,A,C)] What did Jolene recently play that she described to Deb?
+  [181/239] ✅ (multi-hop) [multihop(C,D,C,C)] What did Deborah do with their mom's old friends?
+  [182/239] ✅ (multi-hop) [multihop(A,A,B,C,A,B)] Where did Deborah get married?
+  [183/239] ✅ (multi-hop) [multihop(A,A,A)] What does yoga on the beach provide for Deborah?
+  [184/239] ✅ (multi-hop) [multihop(A,A,B,C,A,B)] How does Jolene describe their home room?
+  [185/239] ✅ (multi-hop) [multihop(B,A,B)] What new activity did Deborah and her neighbor organize for the community on 16 
+  [186/239] ✅ (multi-hop) [multihop(A,B,A,A)] What was Deborah's mom passionate about?
+  [187/239] ✅ (multi-hop) [multihop(A,B,A,A)] What food did Deborah's mom make for her on birthdays?
+  [188/239] ✅ (multi-hop) [multihop(A,B,C,A,B,A,B,C)] What kind of cookies did Jolene used to bake with someone close to her?
+  [189/239] ✅ (multi-hop) [multihop(A,A,A)] What outdoor activity did Jolene suggest doing together with Deborah?
+  [190/239] ✅ (multi-hop) [multihop(B,C,B,B)] What activity did Deborah enjoy at the music festival with their pals on Septemb
+  [191/239] ❌ (multi-hop) [multihop(B,A,A,B)] What did Deborah find freeing at the music festival?
+  [192/239] ✅ (adversarial) [adversarial_masked] What are the names of Deborah's snakes?
+  [193/239] ❌ (adversarial) [adversarial_masked] What are Deborah's favorite books?
+  [194/239] ❌ (adversarial) [adversarial_masked] Where did Deborah get her dogs?
+  [195/239] ✅ (adversarial) [adversarial_masked] How old are Jolene's cats?
+  [196/239] ✅ (adversarial) [adversarial_masked] When did Deborah's parents give her first console?
+  [197/239] ❌ (adversarial) [adversarial_masked] When did Jolene release her pet snake?
+  [198/239] ✅ (adversarial) [adversarial_masked] Where did Jolene meet her new friend Anna?
+  [199/239] ✅ (adversarial) [adversarial_masked] What is Deborah's favorite book which she mentioned on 4 February, 2023?
+  [200/239] ❌ (adversarial) [adversarial_masked] What cool stuff did Deborah accomplish at the retreat on 9 February, 2023?
+  [201/239] ✅ (adversarial) [adversarial_masked] How does Deborah plan to involve local engineers in her idea of teaching STEM to
+  [202/239] ❌ (adversarial) [adversarial_masked] What gave Deborah anxiety in the garden she visited?
+  [203/239] ✅ (adversarial) [adversarial_masked] Why did Jolene spend time in the garden?
+  [204/239] ❌ (adversarial) [adversarial_masked] How did Jolene and her rival initially meet?
+  [205/239] ✅ (adversarial) [adversarial_masked] What activity does Jolene incorporate into her daily routine after going for a m
+  [206/239] ❌ (adversarial) [adversarial_masked] What method does Jolene suggest Deborah to try for organizing tasks based on imp
+  [207/239] ❌ (adversarial) [adversarial_masked] How does Jolene plan to pursue her dream of climbing mountains?
+  [208/239] ❌ (adversarial) [adversarial_masked] Who are the authors mentioned by Jolene that she enjoys reading during her yoga 
+  [209/239] ✅ (adversarial) [adversarial_masked] Which show did Jolene go to with a friend on 9 April, 2023?
+  [210/239] ❌ (adversarial) [adversarial_masked] What does Deborah find comforting about going to horror movie screenings?
+  [211/239] ✅ (adversarial) [adversarial_masked] How does Deborah describe the time spent with her snakes and partner?
+  [212/239] ❌ (adversarial) [adversarial_masked] For how long has Jolene had Lucifer as a pet?
+  [213/239] ✅ (adversarial) [adversarial_masked] How does Deborah feel when spending time with Seraphim?
+  [214/239] ✅ (adversarial) [adversarial_masked] What made being part of the running group easy for Jolene to stay motivated?
+  [215/239] ❌ (adversarial) [adversarial_masked] Why did Jolene decide to get a tarantula as a pet?
+  [216/239] ✅ (adversarial) [adversarial_masked] How did Deborah come to have her pet, Susie?
+  [217/239] ✅ (adversarial) [adversarial_masked] What did Deborah design inspired by their love for space and engines?
+  [218/239] ✅ (adversarial) [adversarial_masked] What journal has Deborah been using to help track tasks and stay organized?
+  [219/239] ❌ (adversarial) [adversarial_masked] What game did Jolene recommend to Deborah for being thrilling and intense?
+  [220/239] ✅ (adversarial) [adversarial_masked] What game did Deborah suggest as an awesome open-world game for the Nintendo Swi
+  [221/239] ✅ (adversarial) [adversarial_masked] What is special about the bench at the park near Jolene's house?
+  [222/239] ✅ (adversarial) [adversarial_masked] What did Jolene and her mom chat about at their special bench in the park?
+  [223/239] ✅ (adversarial) [adversarial_masked] How did Deborah feel after receiving positive feedback at the virtual conference
+  [224/239] ✅ (adversarial) [adversarial_masked] What kind of event did Deborah present at recently?
+  [225/239] ✅ (adversarial) [adversarial_masked] What did Deborah's mom stress the value of, which she wants to keep in mind for 
+  [226/239] ✅ (adversarial) [adversarial_masked] What type of projects is Deborah interested in getting involved in the future?
+  [227/239] ✅ (adversarial) [adversarial_masked] How did Jolene get Luna, one of her cats?
+  [228/239] ✅ (adversarial) [adversarial_masked] What type of classes did Deborah and her partner check out during their trip to 
+  [229/239] ✅ (adversarial) [adversarial_masked] Why did Deborah get the new plant on 30 August, 2023?
+  [230/239] ✅ (adversarial) [adversarial_masked] How did Jolene's mom support her yoga practice when she first started?
+  [231/239] ❌ (adversarial) [adversarial_masked] What was the video game console that Deborah's parents got her at age 10?
+  [232/239] ✅ (adversarial) [adversarial_masked] What was one of Deborah's favorite games to play with her mom on the PlayStation
+  [233/239] ✅ (adversarial) [adversarial_masked] Where did Deborah and her partner travel for a few weeks in September 2023?
+  [234/239] ✅ (adversarial) [adversarial_masked] What did Jolene do with their mom's old friends?
+  [235/239] ✅ (adversarial) [adversarial_masked] Where did Jolene get married?
+  [236/239] ✅ (adversarial) [adversarial_masked] What new activity did Jolene and her neighbor organize for the community on 16 S
+  [237/239] ✅ (adversarial) [adversarial_masked] What food did Jolene's mom make for her on holidays?
+  [238/239] ✅ (adversarial) [adversarial_masked] What kind of cookies did Deborah used to bake with someone close to her?
+  [239/239] ✅ (adversarial) [adversarial_masked] What activity did Jolene enjoy at the music festival with their pals on Septembe
+
+============================================================
+Processing conversation: conv-49 (Evan & Sam)
+============================================================
+Ingesting 25 sessions...
+  Ingesting session_1 (1:47 pm on 18 May, 2023)...
+  Ingesting session_2 (7:11 pm on 24 May, 2023)...
+  Ingesting session_3 (3:55 pm on 6 June, 2023)...
+  Ingesting session_4 (10:52 am on 27 July, 2023)...
+  Ingesting session_5 (7:52 pm on 7 August, 2023)...
+  Ingesting session_6 (4:09 pm on 13 August, 2023)...
+  Ingesting session_7 (4:20 pm on 15 August, 2023)...
+  Ingesting session_8 (6:17 pm on 19 August, 2023)...
+  Ingesting session_9 (10:18 am on 27 August, 2023)...
+  Ingesting session_10 (9:28 am on 11 September, 2023)...
+  Ingesting session_11 (8:57 pm on 6 October, 2023)...
+  Ingesting session_12 (3:09 pm on 8 October, 2023)...
+  Ingesting session_13 (4:07 pm on 14 October, 2023)...
+  Ingesting session_14 (1:50 pm on 17 October, 2023)...
+  Ingesting session_15 (2:56 pm on 25 October, 2023)...
+  Ingesting session_16 (9:13 pm on 9 November, 2023)...
+  Ingesting session_17 (7:30 pm on 21 November, 2023)...
+  Ingesting session_18 (8:16 pm on 5 December, 2023)...
+  Ingesting session_19 (1:45 pm on 9 December, 2023)...
+  Ingesting session_20 (6:48 pm on 17 December, 2023)...
+  Ingesting session_21 (4:25 pm on 26 December, 2023)...
+  Ingesting session_22 (11:00 am on 31 December, 2023)...
+  Ingesting session_23 (1:32 pm on 6 January, 2024)...
+  Ingesting session_24 (12:17 am on 10 January, 2024)...
+  Ingesting session_25 (9:37 pm on 11 January, 2024)...
+Ingestion complete. Profiles: 2, Episodes: 25
+  [1/196] ✅ (single-hop) [B] What kind of car does Evan drive?
+  [2/196] ❌ (single-hop) [B] What kinds of things did Evan have broken?
+  [3/196] ✅ (single-hop) [B] Where has Evan been on roadtrips with his family?
+  [4/196] ✅ (single-hop) [B] How many Prius has Evan owned?
+  [5/196] ❌ (temporal) [B] Which hobby did Sam take up in May 2023?
+  [6/196] ✅ (open-domain) [B] Which country was Evan visiting in May 2023?
+  [7/196] ❌ (single-hop) [B] How many roadtrips did Evan take in May 2023?
+  [8/196] ❌ (single-hop) [B] What new hobbies did Sam consider trying?
+  [9/196] ✅ (single-hop) [B] What hobby did Evan start practicing a few years ago that he enjoys?
+  [10/196] ✅ (temporal) [B] When did Evan go to Jasper with his family?
+  [11/196] ✅ (open-domain) [B] Which type of vacation would Evan prefer with his family, walking tours in metro
+  [12/196] ✅ (single-hop) [B] What health issue did Sam face that motivated him to change his lifestyle?
+  [13/196] ❌ (temporal) [B] When did Sam first go to the doctor and find out he had a weight problem?
+  [14/196] ✅ (temporal) [B] When did Evan have his sudden heart palpitation incident that really shocked him
+  [15/196] ✅ (single-hop) [B] What is Evan's favorite food?
+  [16/196] ✅ (single-hop) [B] What kind of unhealthy snacks does Sam enjoy eating?
+  [17/196] ✅ (single-hop) [B] What recurring issue frustrates Sam at the grocery store?
+  [18/196] ✅ (temporal) [B] When did Sam's friends mock him for being overweight?
+  [19/196] ❌ (single-hop) [multihop(C,A,A)] What kind of healthy food suggestions has Evan given to Sam?
+  [20/196] ✅ (open-domain) [multihop(C,C,C)] Considering their conversations and personal growth, what advice might Evan and 
+  [21/196] ❌ (open-domain) [multihop(A,A,C)] In light of the health and dietary changes discussed, what would be an appropria
+  [22/196] ✅ (single-hop) [multihop(A,A,C)] How does Evan describe the woman and his feelings for her that he met in Canada?
+  [23/196] ❌ (temporal) [B] When Evan did meet his future wife?
+  [24/196] ✅ (temporal) [B] When did Sam start working out at the gym?
+  [25/196] ❌ (temporal) [B] What significant event happened in Sam's life towards the end of summer 2023?
+  [26/196] ✅ (temporal) [B] Which year did Evan start taking care of his health seriously?
+  [27/196] ❌ (single-hop) [B] What motivates Evan to take care of his health?
+  [28/196] ✅ (open-domain) [multihop(A,A,B,C,C)] What electronic device could Evan gift Sam to help him keep up with his fitness 
+  [29/196] ✅ (single-hop) [B] What kind of writing does Sam do to relax and cope with his health issues?
+  [30/196] ✅ (single-hop) [multihop(A,A)] Who did Evan meet on his trip to Canada, and who did he come back from Canada wi
+  [31/196] ✅ (temporal) [B] When Evan get back from a vacation with his SO?
+  [32/196] ✅ (open-domain) [multihop(C,C,C)] How might Evan and Sam's experiences with health and lifestyle changes influence
+  [33/196] ✅ (single-hop) [B] What recurring frustration does Evan experience?
+  [34/196] ✅ (single-hop) [B] What is the recurring dream that Sam keeps having?
+  [35/196] ✅ (single-hop) [B] What accidents has Evan's son faced lately?
+  [36/196] ✅ (temporal) [B] When was Evan's son injured at soccer?
+  [37/196] ❌ (single-hop) [multihop(C,A,A)] What kind of foods or recipes has Sam recommended to Evan?
+  [38/196] ✅ (single-hop) [multihop(A,B,A,B,C)] What kind of healthy meals did Sam start eating after getting a health scare?
+  [39/196] ✅ (open-domain) [multihop(A,C,C)] What role does nature and the outdoors play in Evan and Sam's mental well-being?
+  [40/196] ✅ (temporal) [B] How many months lapsed between Sam's first and second doctor's appointment?
+  [41/196] ✅ (temporal) [B] When did Evan start taking painting classes?
+  [42/196] ✅ (temporal) [B] Which classes did Evan join in mid-August 2023?
+  [43/196] ✅ (single-hop) [B] How did Evan get into painting?
+  [44/196] ❌ (open-domain) [B] How often does Sam get health checkups?
+  [45/196] ❌ (single-hop) [B] What kind of subjects does Evan enjoy painting?
+  [46/196] ✅ (temporal) [B] Which places in Canada was Evan visiting in July 2023?
+  [47/196] ✅ (open-domain) [multihop(A,A,C)] How do Evan and Sam use creative outlets to cope with life's challenges?
+  [48/196] ✅ (temporal) [B] When did Evan go skiing in Banff?
+  [49/196] ✅ (single-hop) [multihop(A,B,A,C)] What new diet and lifestyle change did Sam adopt over time?
+  [50/196] ❌ (single-hop) [B] Who was injured in Evan's family?
+  [51/196] ❌ (single-hop) [B] What kind of hobbies does Evan pursue?
+  [52/196] ❌ (open-domain) [multihop(C,C,A)] What challenges does Sam face in his quest for a healthier lifestyle, and how do
+  [53/196] ✅ (temporal) [B] Which activity do Evan and Sam plan on doing together during September 2023?
+  [54/196] ✅ (temporal) [B] When did Evan and Sam decide to paint together?
+  [55/196] ❌ (single-hop) [B] What personal health incidents does Evan face in 2023?
+  [56/196] ✅ (single-hop) [B] What recurring adventure does Evan have with strangers?
+  [57/196] ✅ (single-hop) [B] What is Sam's persistent problem with his phone?
+  [58/196] ✅ (open-domain) [B] Which US state was Sam travelling in during October 2023?
+  [59/196] ✅ (temporal) [B] When did Evan start lifting weights?
+  [60/196] ✅ (temporal) [B] When did Sam and his friend decide to try kayaking?
+  [61/196] ✅ (temporal) [B] Which new activity does Sam take up in October 2023?
+  [62/196] ❌ (temporal) [B] What kind of stress was Sam dealing with in October 2023?
+  [63/196] ❌ (single-hop) [multihop(A,A,A)] What health scares did Sam and Evan experience?
+  [64/196] ✅ (temporal) [B] When was Sam in the ER?
+  [65/196] ✅ (single-hop) [B] Which ailment does Sam have to face due to his weight?
+  [66/196] ❌ (open-domain) [A] Does Evan live close to a beach or mountains?
+  [67/196] ✅ (temporal) [B] When did Evan lose his job?
+  [68/196] ✅ (temporal) [B] When did Evan and Sam planned a trip to the beach together?
+  [69/196] ✅ (temporal) [B] What was Sam doing on December 4, 2023?
+  [70/196] ✅ (single-hop) [B] Which two significant life events occur in Evan's life in December 2023 with his
+  [71/196] ✅ (temporal) [B] How long did Evan and his partner date before getting married?
+  [72/196] ✅ (open-domain) [B] Which major holiday season conincides with Evan's wedding?
+  [73/196] ✅ (single-hop) [B] Which activity did Sam resume in December 2023 after a long time?
+  [74/196] ✅ (temporal) [B] When is Evan planning a big family reunion?
+  [75/196] ❌ (temporal) [B] When did Evan's son fall off his bike?
+  [76/196] ✅ (temporal) [B] When did Evan announce his marriage to his extended family?
+  [77/196] ✅ (temporal) [B] When did Evan finish the painting that's hanging in the exhibit?
+  [78/196] ✅ (single-hop) [multihop(A,A,A)] How does Evan spend his time with his bride after the wedding?
+  [79/196] ❌ (single-hop) [B] Who did Evan tell about his marriage?
+  [80/196] ✅ (temporal) [B] When will Evan and his partner have their honeymoon in Canada?
+  [81/196] ❌ (temporal) [B] When did Evan have a drunken night with his friends?
+  [82/196] ✅ (single-hop) [B] What is a stress reliever for Evan?
+  [83/196] ❌ (single-hop) [B] What is a stress reliever for Sam?
+  [84/196] ✅ (multi-hop) [multihop(A,B,A,A)] What type of car did Evan get after his old Prius broke down?
+  [85/196] ✅ (multi-hop) [multihop(B,A,A,B,C)] How did Evan get into watercolor painting?
+  [86/196] ✅ (multi-hop) [multihop(A,B,A)] What did Evan start doing a few years back as a stress-buster?
+  [87/196] ❌ (multi-hop) [multihop(A,A,A)] What advice did Evan give Sam about finding a passion?
+  [88/196] ❌ (multi-hop) [multihop(A,B,B)] Where did Evan take his family for a road trip on 24 May, 2023?
+  [89/196] ✅ (multi-hop) [multihop(A,A,A)] What did Evan find relaxing about his road trip to Jasper?
+  [90/196] ✅ (multi-hop) [multihop(A,A,B,C)] What habit is Sam trying to change in terms of diet?
+  [91/196] ✅ (multi-hop) [multihop(C,C,A,B)] What new suggestion did Evan give to Sam regarding his soda and candy consumptio
+  [92/196] ❌ (multi-hop) [multihop(A,B,A,A)] What did Sam agree to try instead of soda and candy?
+  [93/196] ✅ (multi-hop) [multihop(B,A,B,C)] What frustrating issue did Sam face at the supermarket?
+  [94/196] ✅ (multi-hop) [multihop(A,A,B,A,B)] What novel is Evan reading that he finds gripping?
+  [95/196] ✅ (multi-hop) [multihop(A,B,A,C)] What kind of water does Evan suggest Sam try as an alternative to soda?
+  [96/196] ✅ (multi-hop) [multihop(A,B,C,A,B,A,B)] What does the smartwatch help Evan with?
+  [97/196] ✅ (multi-hop) [multihop(A,B,C,A,B,C,C)] What does the bonsai tree symbolize for Evan?
+  [98/196] ❌ (multi-hop) [multihop(A,B,A,B,C,C,D)] Why did Evan decide to get the bonsai tree?
+  [99/196] ✅ (multi-hop) [multihop(A,A,C)] According to Sam, what is more important than perfection?
+  [100/196] ✅ (multi-hop) [multihop(A,A,A,B)] What did Evan suggest Sam to check out for insights into his dream?
+  [101/196] ✅ (multi-hop) [multihop(A,A,B)] What did Evan mention he had been searching for fruitlessly for half an hour?
+  [102/196] ✅ (multi-hop) [multihop(A,A,B,A)] What class is Sam taking to learn how to make healthier meals?
+  [103/196] ✅ (multi-hop) [multihop(B,C,B,C)] What dish did Sam make on 18 August, 2023 that turned out flavorful?
+  [104/196] ❌ (multi-hop) [multihop(A,B,A)] What kind of recipe did Evan request from Sam on 19 August, 2023?
+  [105/196] ❌ (multi-hop) [multihop(B,B,C,B)] What food did Sam share a photo of on 19 August, 2023?
+  [106/196] ✅ (multi-hop) [multihop(B,B,A)] What type of painting classes did Evan start taking in 2023?
+  [107/196] ✅ (multi-hop) [multihop(A,A,C)] What did Evan start painting years ago due to being inspired by a friend's gift?
+  [108/196] ✅ (multi-hop) [multihop(A,A,A)] What nature concept do watercolor painting classes emphasize according to Evan?
+  [109/196] ❌ (multi-hop) [multihop(A,A,A)] What type of landscapes does Evan love painting the most?
+  [110/196] ❌ (multi-hop) [multihop(A,B,A)] What fun activity did Evan mention doing in July 2023?
+  [111/196] ✅ (multi-hop) [multihop(A,B,B)] What injury did Evan suffer from in August 2023?
+  [112/196] ✅ (multi-hop) [multihop(A,A,A)] What sports activity has Evan been doing to stay active while dealing with the k
+  [113/196] ✅ (multi-hop) [multihop(A,A,A)] What suggestion did Sam give to Evan to help with his knee issue?
+  [114/196] ✅ (multi-hop) [multihop(A,A,C)] What did Evan suggest Sam try as a calming hobby?
+  [115/196] ✅ (multi-hop) [multihop(A,A,C)] What did Evan recommend Sam acquire to get started with painting?
+  [116/196] ❌ (multi-hop) [multihop(A,A,A)] What activity does Evan do to keep himself busy while healing his knee?
+  [117/196] ❌ (multi-hop) [multihop(A,B,A)] What painting did Evan share with Sam in October?
+  [118/196] ✅ (multi-hop) [multihop(A,B,A,B,A,B)] What kind of writing does Sam enjoy as a form of expression?
+  [119/196] ✅ (multi-hop) [multihop(A,A,B,C)] What electronics issue has been frustrating Sam lately?
+  [120/196] ✅ (multi-hop) [multihop(A,B,B)] What activity did Evan start one year ago?
+  [121/196] ✅ (multi-hop) [multihop(A,C,A)] What advice did Evan give to Sam to avoid injuries while starting weightlifting?
+  [122/196] ✅ (multi-hop) [multihop(A,B,A,A)] Where did Sam and his mate plan to try kayaking?
+  [123/196] ✅ (multi-hop) [multihop(A,B,A,B)] What digestive issue did Sam experience lately?
+  [124/196] ✅ (multi-hop) [multihop(A,C,A)] What adventurous theme is emerging in Evan's life as mentioned by Sam?
+  [125/196] ✅ (multi-hop) [multihop(A,A,A)] What does Evan mention about his progress at the gym to Sam?
+  [126/196] ❌ (multi-hop) [multihop(B,A,A)] How did Evan start his transformation journey two years ago?
+  [127/196] ✅ (multi-hop) [multihop(A,B,C,A)] What gift did Evan receive from a close friend?
+  [128/196] ✅ (multi-hop) [multihop(B,C,A)] Why had Evan been going through a tough time lately?
+  [129/196] ✅ (multi-hop) [multihop(A,B,A,B,A,B)] How does Evan describe the island he grew up on?
+  [130/196] ✅ (multi-hop) [multihop(A,C,C)] What was the main reason for Evan's frustration with his new Prius breaking down
+  [131/196] ✅ (multi-hop) [multihop(A,A,C)] How did Sam suggest Evan view the setback with his broken Prius?
+  [132/196] ✅ (multi-hop) [multihop(A,A,A)] What did Sam suggest Evan try for stress relief and flexibility?
+  [133/196] ✅ (multi-hop) [multihop(A,A,A)] What did Sam offer Evan regarding yoga?
+  [134/196] ✅ (multi-hop) [multihop(B,A,B)] What news did Evan share with Sam on 9th December 2023?
+  [135/196] ✅ (multi-hop) [multihop(A,A,B)] What family event is Evan planning for next summer?
+  [136/196] ✅ (multi-hop) [multihop(A,A,B,C,A)] What is the motto of Evan's family?
+  [137/196] ✅ (multi-hop) [multihop(A,A,B,A)] According to Evan, what is important for Sam to believe in concerning his weight
+  [138/196] ✅ (multi-hop) [multihop(A,A,A,B)] Who helped Evan get the painting published in the exhibition?
+  [139/196] ❌ (multi-hop) [multihop(A,B,C)] What did Sam recently start enjoying to clear his head?
+  [140/196] ✅ (multi-hop) [multihop(C,A,C)] What did Sam suggest Evan should do with his keys?
+  [141/196] ✅ (multi-hop) [multihop(A,A,C,D)] How did Evan feel when he painted the piece with the bird flying over it?
+  [142/196] ❌ (multi-hop) [multihop(A,A,C)] What did Evan suggest Sam should keep doing to find his own version of love?
+  [143/196] ❌ (multi-hop) [multihop(C,A,B,C,C)] How did Evan describe the process of creating the painting with the bird flying 
+  [144/196] ✅ (multi-hop) [multihop(A,B,C,A,C)] What did Evan want to share with his work friends?
+  [145/196] ❌ (multi-hop) [multihop(A,A,C)] What did Evan share with Sam after their hiking trip?
+  [146/196] ✅ (multi-hop) [multihop(A,A,C)] What did Evan offer to share with Sam after talking about healthy snacks?
+  [147/196] ✅ (multi-hop) [multihop(A,B,B,A,B,C)] What did Evan and his partner share with their extended family on January 5, 202
+  [148/196] ✅ (multi-hop) [multihop(A,A,A)] What was Evan limiting himself to on his new diet?
+  [149/196] ✅ (multi-hop) [multihop(A,B,A,B,B)] What sports activity did Evan and his partner try in a recent weekend?
+  [150/196] ✅ (multi-hop) [multihop(A,A,A,B)] What advice did Evan suggest Sam seek from a doctor?
+  [151/196] ✅ (multi-hop) [multihop(A,A,A)] What suggestions did Evan give for low-impact exercises?
+  [152/196] ✅ (multi-hop) [multihop(A,A,B,C)] What movie did Sam watch that motivated him to keep up with his routine?
+  [153/196] ✅ (multi-hop) [multihop(A,A,A)] What activity helped Evan with stress and flexibility?
+  [154/196] ❌ (multi-hop) [multihop(A,B,C)] What did Evan share a photo of that was taken on a camping trip?
+  [155/196] ✅ (multi-hop) [multihop(A,C,C)] Why did Evan apologize to his partner?
+  [156/196] ✅ (multi-hop) [multihop(A,A,B,C)] How does Evan describe being out on the water while kayaking and watching the su
+  [157/196] ✅ (adversarial) [adversarial_masked] What type of car did Sam get after his old Prius broke down?
+  [158/196] ✅ (adversarial) [adversarial_masked] How did Sam get into watercolor painting?
+  [159/196] ✅ (adversarial) [adversarial_masked] What did Sam start doing a few years back as a stress-buster?
+  [160/196] ✅ (adversarial) [adversarial_masked] Where did Sam take his family for a road trip on 24 May, 2023?
+  [161/196] ✅ (adversarial) [adversarial_masked] What did Sam find relaxing about his road trip to Jasper?
+  [162/196] ✅ (adversarial) [adversarial_masked] What habit is Evan trying to change in terms of diet?
+  [163/196] ✅ (adversarial) [adversarial_masked] What frustrating issue did Evan face at the supermarket?
+  [164/196] ✅ (adversarial) [adversarial_masked] What novel is Sam reading that he finds gripping?
+  [165/196] ✅ (adversarial) [adversarial_masked] What does the smartwatch help Sam with?
+  [166/196] ✅ (adversarial) [adversarial_masked] Why did Sam decide to get the bonsai tree?
+  [167/196] ✅ (adversarial) [adversarial_masked] What did Sam mention he had been searching for fruitlessly for half an hour?
+  [168/196] ✅ (adversarial) [adversarial_masked] What class is Evan taking to learn how to make healthier meals?
+  [169/196] ❌ (adversarial) [adversarial_masked] What dish did Sam make on 18 August, 2023 that turned out bland?
+  [170/196] ❌ (adversarial) [adversarial_masked] What food did Evan share a photo of on 19 August, 2023?
+  [171/196] ❌ (adversarial) [adversarial_masked] What did Evan start sculpting years ago due to being inspired by a friend's gift
+  [172/196] ✅ (adversarial) [adversarial_masked] What nature concept do watercolor painting classes emphasize according to Sam?
+  [173/196] ❌ (adversarial) [adversarial_masked] What type of landscapes does Sam love painting the most?
+  [174/196] ✅ (adversarial) [adversarial_masked] What sports activity has Sam been doing to stay active while dealing with the kn
+  [175/196] ✅ (adversarial) [adversarial_masked] What activity does Sam do to keep himself busy while healing his knee?
+  [176/196] ✅ (adversarial) [adversarial_masked] What kind of writing does Evan enjoy as a form of expression?
+  [177/196] ✅ (adversarial) [adversarial_masked] What electronics issue has been frustrating Evan lately?
+  [178/196] ✅ (adversarial) [adversarial_masked] What activity did Evan quit one year ago?
+  [179/196] ❌ (adversarial) [adversarial_masked] Where did Sam and his mate plan to try skydiving?
+  [180/196] ✅ (adversarial) [adversarial_masked] What digestive issue did Evan experience lately?
+  [181/196] ✅ (adversarial) [adversarial_masked] How did Sam start his transformation journey two years ago?
+  [182/196] ✅ (adversarial) [adversarial_masked] What gift did Sam receive from a close friend?
+  [183/196] ✅ (adversarial) [adversarial_masked] How does Sam describe the island he grew up on?
+  [184/196] ❌ (adversarial) [adversarial_masked] What was the main reason for Evan's frustration with his new Prius getting stole
+  [185/196] ✅ (adversarial) [adversarial_masked] What family event is Sam planning for next summer?
+  [186/196] ✅ (adversarial) [adversarial_masked] What is the motto of Sam's family?
+  [187/196] ✅ (adversarial) [adversarial_masked] Who helped Sam get the painting published in the exhibition?
+  [188/196] ✅ (adversarial) [adversarial_masked] How did Sam feel when he painted the piece with the bird flying over it?
+  [189/196] ❌ (adversarial) [adversarial_masked] How did Sam describe the process of creating the painting with the bird flying o
+  [190/196] ❌ (adversarial) [adversarial_masked] What did Evan and his partner keep from their extended family on January 5, 2024
+  [191/196] ✅ (adversarial) [adversarial_masked] What was Sam limiting himself to on his new diet?
+  [192/196] ❌ (adversarial) [adversarial_masked] What dance activity did Evan and his partner try in a recent weekend?
+  [193/196] ❌ (adversarial) [adversarial_masked] What suggestions did Evan give for high-impact exercises?
+  [194/196] ✅ (adversarial) [adversarial_masked] What movie did Evan watch that motivated him to keep up with his routine?
+  [195/196] ❌ (adversarial) [adversarial_masked] What activity hindered Evan's stress and flexibility?
+  [196/196] ❌ (adversarial) [adversarial_masked] What did Sam share a photo of that was taken on a camping trip?
+
+============================================================
+Processing conversation: conv-50 (Calvin & Dave)
+============================================================
+Ingesting 30 sessions...
+  Ingesting session_1 (11:53 am on 23 March, 2023)...
+  Ingesting session_2 (4:45 pm on 26 March, 2023)...
+  Ingesting session_3 (4:15 pm on 20 April, 2023)...
+  Ingesting session_4 (6:24 pm on 1 May, 2023)...
+  Ingesting session_5 (1:16 pm on 3 May, 2023)...
+  Ingesting session_6 (11:50 am on 16 May, 2023)...
+  Ingesting session_7 (6:06 pm on 31 May, 2023)...
+  Ingesting session_8 (2:31 pm on 9 June, 2023)...
+  Ingesting session_9 (3:15 pm on 21 June, 2023)...
+  Ingesting session_10 (7:56 pm on 7 July, 2023)...
+  Ingesting session_11 (6:38 pm on 21 July, 2023)...
+  Ingesting session_12 (1:12 pm on 3 August, 2023)...
+  Ingesting session_13 (5:22 pm on 11 August, 2023)...
+  Ingesting session_14 (12:35 am on 14 August, 2023)...
+  Ingesting session_15 (11:06 am on 22 August, 2023)...
+  Ingesting session_16 (2:55 pm on 31 August, 2023)...
+  Ingesting session_17 (9:19 am on 2 September, 2023)...
+  Ingesting session_18 (10:56 am on 13 September, 2023)...
+  Ingesting session_19 (12:13 am on 15 September, 2023)...
+  Ingesting session_20 (8:57 pm on 22 September, 2023)...
+  Ingesting session_21 (2:44 pm on 4 October, 2023)...
+  Ingesting session_22 (3:13 pm on 8 October, 2023)...
+  Ingesting session_23 (9:39 am on 15 October, 2023)...
+  Ingesting session_24 (10:11 am on 19 October, 2023)...
+  Ingesting session_25 (2:17 pm on 23 October, 2023)...
+  Ingesting session_26 (8:25 pm on 25 October, 2023)...
+  Ingesting session_27 (10:49 am on 29 October, 2023)...
+  Ingesting session_28 (5:46 pm on 2 November, 2023)...
+  Ingesting session_29 (9:15 pm on 13 November, 2023)...
+  Ingesting session_30 (10:54 am on 17 November, 2023)...
+Ingestion complete. Profiles: 2, Episodes: 30
+  [1/204] ✅ (temporal) [B] When did Calvin first travel to Tokyo?
+  [2/204] ❌ (single-hop) [B] What items did Calvin buy in March 2023?
+  [3/204] ✅ (temporal) [B] When did Dave see Aerosmith perform live?
+  [4/204] ✅ (single-hop) [B] Which bands has Dave enjoyed listening to?
+  [5/204] ✅ (open-domain) [A] Which country do Calvin and Dave want to meet in?
+  [6/204] ❌ (single-hop) [B] What are Dave's dreams?
+  [7/204] ✅ (single-hop) [B] Which types of cars does Dave like the most?
+  [8/204] ❌ (open-domain) [D] Does Dave's shop employ a lot of people?
+  [9/204] ✅ (temporal) [B] When did Dave start his car maintenance shop?
+  [10/204] ✅ (temporal) [B] When did a mishap occur with Calvin's musical gear and favorite mic?
+  [11/204] ✅ (temporal) [B] When did Calvin's place get flooded in Tokyo?
+  [12/204] ✅ (single-hop) [multihop(A,B,C)] What mishaps has Calvin run into?
+  [13/204] ✅ (temporal) [B] When was Calvin's concert in Tokyo?
+  [14/204] ✅ (open-domain) [C] Would Calvin enjoy performing at the Hollywood Bowl?
+  [15/204] ✅ (temporal) [B] When did Calvin meet with the creative team for his new album?
+  [16/204] ✅ (single-hop) [B] Why does Dave regularly visit parks?
+  [17/204] ✅ (temporal) [B] When did Dave take a trip to mountainous regions?
+  [18/204] ✅ (temporal) [B] When did Calvin have a car incident?
+  [19/204] ❌ (single-hop) [B] How many times has Calvin had to deal with insurance paperwork?
+  [20/204] ❌ (single-hop) [multihop(A,C,B)] Which places or events has Calvin visited in Tokyo?
+  [21/204] ✅ (single-hop) [B] Who inspired Dave's passion for car engineering?
+  [22/204] ✅ (open-domain) [A] Does Calvin wish to become more popular?
+  [23/204] ✅ (single-hop) [B] Does Calvin want to expand his brand?
+  [24/204] ✅ (single-hop) [B] What is Dave's main passion?
+  [25/204] ✅ (single-hop) [B] Can Dave work with engines?
+  [26/204] ✅ (temporal) [B] When did Dave host a card-playing night with his friends?
+  [27/204] ✅ (temporal) [B] When did Calvin record a podcast with his friends?
+  [28/204] ❌ (temporal) [B] Which city was Calvin visiting in August 2023?
+  [29/204] ❌ (single-hop) [B] What does Calvin do to relax?
+  [30/204] ❌ (single-hop) [B] What are Dave's hobbies other than fixing cars?
+  [31/204] ❌ (single-hop) [B] What kind of music does Dave listen to?
+  [32/204] ❌ (temporal) [B] Where was Dave in the last two weeks of August 2023?
+  [33/204] ✅ (single-hop) [B] Where did Dave return from with new knowledge of different techniques of car res
+  [34/204] ✅ (single-hop) [B] What was Dave doing in San Francisco?
+  [35/204] ✅ (temporal) [B] When did Dave return from San Francisco?
+  [36/204] ✅ (temporal) [B] When did Calvin book flight tickets to Boston?
+  [37/204] ✅ (temporal) [B] When was Calvin's album released?
+  [38/204] ✅ (open-domain) [A] Does Calvin love music tours?
+  [39/204] ✅ (temporal) [B] When did Dave have a great jam session with his band?
+  [40/204] ✅ (open-domain) [C] Would Dave prefer working on a Dodge Charger or a Subaru Forester?
+  [41/204] ✅ (single-hop) [B] What was the artists Calvin used to listen to when he was a kid?
+  [42/204] ✅ (single-hop) [B] Which of their family member do Calvin and Dave have nostalgic memories about?
+  [43/204] ❌ (open-domain) [B] Based on the conversation, did Calvin and Dave have a meeting in Boston between 
+  [44/204] ✅ (temporal) [B] Which city was Calvin at on October 3, 2023?
+  [45/204] ✅ (temporal) [B] When did Calvin met with local artists in Boston?
+  [46/204] ❌ (single-hop) [multihop(A,A,C)] What shared activities do Dave and Calvin have?
+  [47/204] ✅ (single-hop) [B] What is Dave's favorite activity?
+  [48/204] ❌ (single-hop) [B] How many car shows has Dave attended?
+  [49/204] ✅ (temporal) [B] What was Dave doing in the first weekend of October 2023?
+  [50/204] ✅ (single-hop) [multihop(A,B,C,C,A)] When Dave was a child, what did he and his father do in the garage?
+  [51/204] ✅ (temporal) [C] When did Calvin buy his second Ferrari?
+  [52/204] ❌ (temporal) [B] When did Calvin and Frank Ocean start collaborating?
+  [53/204] ✅ (temporal) [B] When did Calvin plan on travelling to Tokyo the second time?
+  [54/204] ❌ (single-hop) [B] Who supports Calvin in tough times?
+  [55/204] ❌ (single-hop) [B] What does help Calvin stay connected to the creative process?
+  [56/204] ✅ (temporal) [B] When did Calvin visit some of the sights in Boston with a former high school fri
+  [57/204] ❌ (single-hop) [B] Which cities did Dave travel to in 2023?
+  [58/204] ✅ (temporal) [B] Which hobby did Dave pick up in October 2023?
+  [59/204] ❌ (single-hop) [multihop(C,C,A)] Which events in Dave's life inspired him to take up auto engineering?
+  [60/204] ❌ (single-hop) [B] How many Ferraris does Calvin own?
+  [61/204] ❌ (single-hop) [multihop(A,A,B,A)] What gifts has Calvin received from his artist friends?
+  [62/204] ❌ (temporal) [B] How long did Dave's work on the Ford Mustang take?
+  [63/204] ❌ (temporal) [D] How long was the car modification workshop in San Francisco?
+  [64/204] ✅ (single-hop) [B] What style of guitars does Calvin own?
+  [65/204] ❌ (single-hop) [multihop(A,B,A)] What activities has Dave participated in with his friends?
+  [66/204] ✅ (temporal) [B] When did Dave take a photo of a Boston clock tower?
+  [67/204] ✅ (single-hop) [multihop(A,C,C)] Do all of Dave's car restoration projects go smoothly?
+  [68/204] ✅ (temporal) [B] Where was Calvin located in the last week of October 2023?
+  [69/204] ✅ (temporal) [B] When did Dave find the car he repaired and started sharing in his blog?
+  [70/204] ✅ (temporal) [B] When did Dave buy a vintage camera?
+  [71/204] ✅ (temporal) [B] When did Calvin attend a gala in Boston?
+  [72/204] ✅ (multi-hop) [multihop(A,A,B)] How long did Calvin plan to stay in Japan?
+  [73/204] ❌ (multi-hop) [multihop(B,A,A)] Which band was Dave's favorite at the music festival in April 2023?
+  [74/204] ✅ (multi-hop) [multihop(A,B,B)] Where did Calvin attend a music festival in April 2023?
+  [75/204] ✅ (multi-hop) [multihop(A,A,C)] What advice did Calvin receive from the producer at the music festival?
+  [76/204] ✅ (multi-hop) [multihop(A,B,C,B)] What is Dave's new business venture as of 1 May, 2023?
+  [77/204] ✅ (multi-hop) [multihop(A,B,C,A,A)] What type of cars does Dave work on at his shop?
+  [78/204] ✅ (multi-hop) [multihop(A,A,A)] What did Calvin receive as a gift from another artist?
+  [79/204] ✅ (multi-hop) [multihop(A,A,C)] What was the necklace Calvin received meant to remind him of?
+  [80/204] ✅ (multi-hop) [multihop(A,B,C,A,B,C,A)] What does Dave do when he feels his creativity is frozen?
+  [81/204] ❌ (multi-hop) [multihop(A,A,C)] How does Calvin plan to jumpstart his inspiration?
+  [82/204] ✅ (multi-hop) [multihop(A,C,C)] What did Calvin manage to save during the flood incident?
+  [83/204] ✅ (multi-hop) [multihop(A,A,B)] What did Dave open in May 2023?
+  [84/204] ✅ (multi-hop) [multihop(A,A,C)] What gives Dave a sense of achievement and purpose?
+  [85/204] ❌ (multi-hop) [multihop(A,A,A)] What fuels Calvin's soul?
+  [86/204] ✅ (multi-hop) [multihop(A,A,A)] What is Dave doing to relax on weekends?
+  [87/204] ✅ (multi-hop) [multihop(A,B,C,A)] What sports activity is Calvin planning to try after the tour with Frank Ocean?
+  [88/204] ✅ (multi-hop) [multihop(B,B,A)] What was Calvin excited to do after getting his car fixed on 7 July, 2023?
+  [89/204] ❌ (multi-hop) [multihop(A,B,C)] What did Calvin and his friends arrange for in the park?
+  [90/204] ✅ (multi-hop) [multihop(A,A,A)] What kind of music has Calvin been creating lately?
+  [91/204] ❌ (multi-hop) [multihop(A,A,A,B)] How does Calvin describe his process of adding electronic elements to his songs?
+  [92/204] ✅ (multi-hop) [multihop(A,A,A)] What car brand does Calvin own that he is proud of?
+  [93/204] ❌ (multi-hop) [multihop(A,A,A)] What is Calvin's biggest current goal?
+  [94/204] ❌ (multi-hop) [multihop(A,A,A,B)] What is Dave's advice to Calvin regarding his dreams?
+  [95/204] ✅ (multi-hop) [multihop(A,B,B)] What workshop did Dave get picked for on 11 August, 2023?
+  [96/204] ✅ (multi-hop) [multihop(A,A,B,A)] What kind of modifications has Dave been working on in the car mod workshop?
+  [97/204] ✅ (multi-hop) [multihop(A,B,A)] What type of car did Dave work on during the workshop?
+  [98/204] ✅ (multi-hop) [multihop(A,B,A,A)] What does Dave say is important for making his custom cars unique?
+  [99/204] ❌ (multi-hop) [multihop(A,A,A)] How did the audience in Tokyo react when Calvin sang one of his songs?
+  [100/204] ✅ (multi-hop) [multihop(A,A,B,C)] How did Calvin meet Frank Ocean?
+  [101/204] ❌ (multi-hop) [multihop(A,C,D,A)] Where did Calvin and Frank Ocean record a song together?
+  [102/204] ✅ (multi-hop) [multihop(A,B,B)] What did Calvin and his friends record in August 2023?
+  [103/204] ✅ (multi-hop) [multihop(A,A,B,A)] Where did Calvin start shooting a video for his new album?
+  [104/204] ✅ (multi-hop) [multihop(A,A,A)] What design is featured on Calvin's guitar?
+  [105/204] ✅ (multi-hop) [multihop(A,A,A)] Why did Calvin get his guitar customized with a shiny finish?
+  [106/204] ✅ (multi-hop) [multihop(A,A,A)] What color glow did Calvin customize his guitar with?
+  [107/204] ✅ (multi-hop) [multihop(B,A,A)] Where did Dave come back from with insights on car modification on 1st September
+  [108/204] ✅ (multi-hop) [multihop(A,A,A)] What emotion does Dave mention feeling when he sees the relief of someone whose 
+  [109/204] ✅ (multi-hop) [multihop(A,B,C)] What did Calvin book a flight ticket for on 1st September 2023?
+  [110/204] ❌ (multi-hop) [multihop(A,A,C)] What is Calvin excited about after the tour?
+  [111/204] ❌ (multi-hop) [multihop(B,C,C)] What plans do Calvin and Dave have for when Calvin visits Boston?
+  [112/204] ✅ (multi-hop) [multihop(A,A,B,C,A,B)] Which Disney movie did Dave mention as one of his favorites?
+  [113/204] ✅ (multi-hop) [multihop(C,A,B,A)] How does Dave feel about the reactions of people when they see the finished rest
+  [114/204] ❌ (multi-hop) [multihop(A,A,A)] What activity did Calvin enjoy during his summer drives?
+  [115/204] ✅ (multi-hop) [multihop(A,A,A)] Which song from the childhood of Calvin brings back memories of a road trip with
+  [116/204] ❌ (multi-hop) [multihop(A,A,A)] What project did Calvin work on to chill out?
+  [117/204] ✅ (multi-hop) [multihop(A,A,B,A)] What car did Dave work on in the junkyard?
+  [118/204] ❌ (multi-hop) [multihop(A,A,A)] What does Dave find satisfying about restoring old cars?
+  [119/204] ❌ (multi-hop) [multihop(A,A,C)] What do Calvin and Dave use to reach their goals?
+  [120/204] ✅ (multi-hop) [multihop(A,A,C)] What does working on cars represent for Dave?
+  [121/204] ✅ (multi-hop) [multihop(A,A,A)] What does Dave aim to do with his passion for cars?
+  [122/204] ✅ (multi-hop) [multihop(A,A,C)] What did Calvin recently get that is a "masterpiece on wheels"?
+  [123/204] ✅ (multi-hop) [multihop(B,B,C)] Who headlined the music festival that Dave attended in October?
+  [124/204] ✅ (multi-hop) [multihop(A,A,C)] How does Calvin stay motivated when faced with setbacks?
+  [125/204] ✅ (multi-hop) [multihop(A,A,C)] What activity does Dave find fulfilling, similar to Calvin's passion for music f
+  [126/204] ✅ (multi-hop) [multihop(A,A,C)] Where did Calvin and Dave meet Frank Ocean to start collaborating?
+  [127/204] ✅ (multi-hop) [multihop(A,A,B,A)] Which part of Tokyo is described as Tokyo's Times Square by Calvin?
+  [128/204] ✅ (multi-hop) [multihop(A,A,A)] What specific location in Tokyo does Calvin mention being excited to explore?
+  [129/204] ✅ (multi-hop) [multihop(C,A,A,B)] What dish does Dave recommend Calvin to try in Tokyo?
+  [130/204] ✅ (multi-hop) [multihop(A,A,A)] What does Calvin find energizing during the tour?
+  [131/204] ✅ (multi-hop) [multihop(C,A,A)] How does Calvin balance his job and personal life?
+  [132/204] ❌ (multi-hop) [multihop(A,A,C)] What inspired Calvin's recent music?
+  [133/204] ✅ (multi-hop) [multihop(A,A,A)] How does Calvin describe his music in relation to capturing feelings?
+  [134/204] ✅ (multi-hop) [multihop(C,A,A)] Why did Dave start working on cars?
+  [135/204] ✅ (multi-hop) [multihop(A,A,A)] What is the toughest part of car restoration according to Dave?
+  [136/204] ❌ (multi-hop) [multihop(A,A,A)] What does Calvin believe makes an artist create something extraordinary?
+  [137/204] ❌ (multi-hop) [multihop(B,B,B)] When did Dave sell the car he restored last year?
+  [138/204] ❌ (multi-hop) [multihop(A,A,B,C,D)] When did Calvin first get interested in cars?
+  [139/204] ✅ (multi-hop) [multihop(A,C,A)] How did Calvin feel about performing with someone he admires?
+  [140/204] ✅ (multi-hop) [multihop(A,B,C,C,A,B,C)] What realization did the nightclub experience bring to Calvin?
+  [141/204] ✅ (multi-hop) [multihop(A,A,C)] What do Dave and Calvin agree on regarding their pursuits?
+  [142/204] ✅ (multi-hop) [multihop(A,A,A)] Which city is featured in the photograph Dave showed Calvin?
+  [143/204] ✅ (multi-hop) [multihop(A,B,B)] What did Calvin do recently at his Japanese house?
+  [144/204] ✅ (multi-hop) [multihop(A,B,A)] What did Dave recently start a blog about?
+  [145/204] ✅ (multi-hop) [multihop(A,A,A)] What is Dave's way to share his passion with others?
+  [146/204] ✅ (multi-hop) [multihop(A,B,A,B,A,B)] What type of videos does Calvin usually watch on his television?
+  [147/204] ✅ (multi-hop) [multihop(A,A,A)] What type of music has Dave been getting into lately?
+  [148/204] ❌ (multi-hop) [multihop(A,B,C,A)] What tools does Calvin use to boost his motivation for music?
+  [149/204] ✅ (multi-hop) [multihop(A,A,A)] What type of content does Dave post on his blog that inspired others to start th
+  [150/204] ✅ (multi-hop) [multihop(A,A,B,C,C)] What kind of impact does Dave's blog on car mods have on people?
+  [151/204] ✅ (multi-hop) [multihop(A,B,B)] Who did Calvin invite to see him perform in Boston on 13 November, 2023?
+  [152/204] ❌ (multi-hop) [multihop(A,B,A,B,C)] What hobby did Calvin take up recently?
+  [153/204] ✅ (multi-hop) [multihop(A,B,C,D)] What new item did Dave buy recently?
+  [154/204] ❌ (multi-hop) [multihop(A,A,A)] What type of photos does Dave like to capture with his new camera?
+  [155/204] ❌ (multi-hop) [multihop(A,A,B,C,B)] What event did Calvin attend in Boston?
+  [156/204] ❌ (multi-hop) [multihop(C,D,C,C)] What did Calvin discuss with the cool artist he met at the gala?
+  [157/204] ✅ (multi-hop) [multihop(A,A,A)] Where did Dave take a stunning photo of a waterfall?
+  [158/204] ❌ (multi-hop) [multihop(A,B,C,A)] What positive impact does Calvin mention nature has on tough times?
+  [159/204] ❌ (adversarial) [adversarial_masked] Which DJ was Dave's favorite at the music festival in April 2023?
+  [160/204] ❌ (adversarial) [adversarial_masked] What advice did Calvin receive from the chef at the music festival?
+  [161/204] ✅ (adversarial) [adversarial_masked] What is Calvin's new business venture as of 1 May, 2023?
+  [162/204] ✅ (adversarial) [adversarial_masked] What type of cars does Calvin work on at his shop?
+  [163/204] ✅ (adversarial) [adversarial_masked] What did Dave receive as a gift from another artist?
+  [164/204] ✅ (adversarial) [adversarial_masked] What was the necklace Dave received meant to remind him of?
+  [165/204] ✅ (adversarial) [adversarial_masked] What did Calvin open in May 2023?
+  [166/204] ✅ (adversarial) [adversarial_masked] What gives Calvin a sense of achievement and purpose?
+  [167/204] ✅ (adversarial) [adversarial_masked] What sports activity is Dave planning to try after the tour with Frank Ocean?
+  [168/204] ✅ (adversarial) [adversarial_masked] How does Calvin describe his process of adding acoustic elements to his songs?
+  [169/204] ❌ (adversarial) [adversarial_masked] What clothing brand does Calvin own that he is proud of?
+  [170/204] ✅ (adversarial) [adversarial_masked] What workshop did Calvin get picked for on 11 August, 2023?
+  [171/204] ✅ (adversarial) [adversarial_masked] What kind of modifications has Calvin been working on in the car mod workshop?
+  [172/204] ✅ (adversarial) [adversarial_masked] What type of car did Calvin work on during the workshop?
+  [173/204] ✅ (adversarial) [adversarial_masked] What did Dave and his friends record in August 2023?
+  [174/204] ✅ (adversarial) [adversarial_masked] Where did Dave start shooting a video for his new album?
+  [175/204] ✅ (adversarial) [adversarial_masked] What design is featured on Dave's guitar?
+  [176/204] ✅ (adversarial) [adversarial_masked] Why did Dave get his guitar customized with a shiny finish?
+  [177/204] ✅ (adversarial) [adversarial_masked] What color glow did Dave customize his guitar with?
+  [178/204] ✅ (adversarial) [adversarial_masked] Where did Calvin come back from with insights on car modification on 1st Septemb
+  [179/204] ✅ (adversarial) [adversarial_masked] What emotion does Calvin mention feeling when he sees the relief of someone whos
+  [180/204] ✅ (adversarial) [adversarial_masked] What did Dave book a flight ticket for on 1st September 2023?
+  [181/204] ❌ (adversarial) [adversarial_masked] Which horror movie did Dave mention as one of his favorites?
+  [182/204] ✅ (adversarial) [adversarial_masked] Which song from the childhood of Dave brings back memories of a road trip with h
+  [183/204] ✅ (adversarial) [adversarial_masked] What car did Calvin work on in the junkyard?
+  [184/204] ❌ (adversarial) [adversarial_masked] What does Dave find satisfying about destroying old cars?
+  [185/204] ❌ (adversarial) [adversarial_masked] What does working on boats represent for Dave?
+  [186/204] ❌ (adversarial) [adversarial_masked] What does Dave aim to do with his passion for cooking?
+  [187/204] ❌ (adversarial) [adversarial_masked] What did Calvin recently get that is a "masterpiece on canvas"?
+  [188/204] ✅ (adversarial) [adversarial_masked] Who headlined the music festival that Calvin attended in October?
+  [189/204] ✅ (adversarial) [adversarial_masked] Which part of Tokyo is described as Tokyo's Times Square by Dave?
+  [190/204] ❌ (adversarial) [adversarial_masked] What specific location in Tokyo does Calvin mention being excited to avoid?
+  [191/204] ✅ (adversarial) [adversarial_masked] When did Calvin sell the car he restored last year?
+  [192/204] ❌ (adversarial) [adversarial_masked] When did Calvin first get interested in motorcycles?
+  [193/204] ✅ (adversarial) [adversarial_masked] What realization did the nightclub experience bring to Dave?
+  [194/204] ✅ (adversarial) [adversarial_masked] What did Dave do recently at his Japanese house?
+  [195/204] ✅ (adversarial) [adversarial_masked] What did Calvin recently start a blog about?
+  [196/204] ✅ (adversarial) [adversarial_masked] What type of videos does Dave usually watch on his television?
+  [197/204] ❌ (adversarial) [adversarial_masked] What type of art has Dave been getting into lately?
+  [198/204] ❌ (adversarial) [adversarial_masked] What type of content does Dave post on his blog that inspired others to start th
+  [199/204] ❌ (adversarial) [adversarial_masked] What kind of impact does Dave's blog on vegan recipes have on people?
+  [200/204] ✅ (adversarial) [adversarial_masked] Who did Dave invite to see him perform in Boston on 13 November, 2023?
+  [201/204] ✅ (adversarial) [adversarial_masked] What new item did Calvin buy recently?
+  [202/204] ✅ (adversarial) [adversarial_masked] What type of photos does Calvin like to capture with his new camera?
+  [203/204] ✅ (adversarial) [adversarial_masked] What did Dave discuss with the cool artist he met at the gala?
+  [204/204] ✅ (adversarial) [adversarial_masked] Where did Calvin take a stunning photo of a waterfall?
+
+============================================================
+RESULTS SUMMARY
+============================================================
+Overall: 1485/1974 (75.2%)
+
+Per Category:
+  adversarial: 331/445 (74.4%)
+  multi-hop: 647/830 (78.0%)
+  open-domain: 58/96 (60.4%)
+  single-hop: 175/282 (62.1%)
+  temporal: 274/321 (85.4%)
+
+Strategy Distribution:
+  A: 26
+  B: 527
+  C: 34
+  D: 16
+  adversarial_masked: 445
+  multihop(A,A): 3
+  multihop(A,A,A): 174
+  multihop(A,A,A,B): 24
+  multihop(A,A,A,B,C): 4
+  multihop(A,A,B): 20
+  multihop(A,A,B,A): 19
+  multihop(A,A,B,A,B): 47
+  multihop(A,A,B,A,B,C): 2
+  multihop(A,A,B,B): 5
+  multihop(A,A,B,B,C): 2
+  multihop(A,A,B,C): 20
+  multihop(A,A,B,C,A): 4
+  multihop(A,A,B,C,A,B): 9
+  multihop(A,A,B,C,A,B,C): 1
+  multihop(A,A,B,C,B): 1
+  multihop(A,A,B,C,C): 6
+  multihop(A,A,B,C,D): 1
+  multihop(A,A,C): 93
+  multihop(A,A,C,D): 1
+  multihop(A,B,A): 20
+  multihop(A,B,A,A): 19
+  multihop(A,B,A,A,B): 6
+  multihop(A,B,A,A,B,C): 1
+  multihop(A,B,A,B): 6
+  multihop(A,B,A,B,A): 10
+  multihop(A,B,A,B,A,B): 27
+  multihop(A,B,A,B,A,B,C): 6
+  multihop(A,B,A,B,B): 3
+  multihop(A,B,A,B,C): 9
+  multihop(A,B,A,B,C,A): 1
+  multihop(A,B,A,B,C,A,B): 3
+  multihop(A,B,A,B,C,C): 1
+  multihop(A,B,A,B,C,C,D): 1
+  multihop(A,B,A,C): 13
+  multihop(A,B,B): 31
+  multihop(A,B,B,A): 4
+  multihop(A,B,B,A,B,C): 1
+  multihop(A,B,B,B): 1
+  multihop(A,B,B,C): 5
+  multihop(A,B,C): 8
+  multihop(A,B,C,A): 4
+  multihop(A,B,C,A,A): 10
+  multihop(A,B,C,A,A,B,C): 1
+  multihop(A,B,C,A,B): 1
+  multihop(A,B,C,A,B,A,B): 5
+  multihop(A,B,C,A,B,A,B,C): 3
+  multihop(A,B,C,A,B,C): 4
+  multihop(A,B,C,A,B,C,A): 1
+  multihop(A,B,C,A,B,C,A,B): 2
+  multihop(A,B,C,A,B,C,A,B,C): 1
+  multihop(A,B,C,A,B,C,C): 5
+  multihop(A,B,C,A,B,C,D): 1
+  multihop(A,B,C,A,C): 6
+  multihop(A,B,C,B): 2
+  multihop(A,B,C,B,B,C): 2
+  multihop(A,B,C,C): 6
+  multihop(A,B,C,C,A): 1
+  multihop(A,B,C,C,A,B): 1
+  multihop(A,B,C,C,A,B,C): 1
+  multihop(A,B,C,D): 2
+  multihop(A,B,D,A): 1
+  multihop(A,C,A): 22
+  multihop(A,C,A,B): 4
+  multihop(A,C,A,B,C): 1
+  multihop(A,C,B): 4
+  multihop(A,C,C): 26
+  multihop(A,C,D,A): 1
+  multihop(A,D,A,B): 1
+  multihop(A,D,C): 2
+  multihop(A,D,D): 1
+  multihop(B,A,A): 11
+  multihop(B,A,A,B): 2
+  multihop(B,A,A,B,C): 1
+  multihop(B,A,B): 13
+  multihop(B,A,B,A): 1
+  multihop(B,A,B,B): 2
+  multihop(B,A,B,C): 4
+  multihop(B,A,B,C,A): 1
+  multihop(B,A,B,C,C): 1
+  multihop(B,A,C): 2
+  multihop(B,B,A): 13
+  multihop(B,B,A,B): 2
+  multihop(B,B,B): 24
+  multihop(B,B,B,C): 3
+  multihop(B,B,B,C,D): 1
+  multihop(B,B,C): 4
+  multihop(B,B,C,B): 1
+  multihop(B,B,C,D,B): 1
+  multihop(B,B,C,D,C): 1
+  multihop(B,C,A): 4
+  multihop(B,C,A,A,B,C): 1
+  multihop(B,C,A,B,C): 1
+  multihop(B,C,B): 4
+  multihop(B,C,B,B): 1
+  multihop(B,C,B,B,C): 1
+  multihop(B,C,B,C): 1
+  multihop(B,C,C): 9
+  multihop(B,C,D,A,B,B): 1
+  multihop(B,C,D,C,B): 1
+  multihop(B,D,C): 1
+  multihop(C,A,A): 13
+  multihop(C,A,A,B): 1
+  multihop(C,A,A,B,C): 1
+  multihop(C,A,B): 2
+  multihop(C,A,B,A): 1
+  multihop(C,A,B,A,B): 3
+  multihop(C,A,B,B): 2
+  multihop(C,A,B,C): 3
+  multihop(C,A,B,C,C): 1
+  multihop(C,A,C): 11
+  multihop(C,B,A): 1
+  multihop(C,B,A,B): 1
+  multihop(C,B,C): 3
+  multihop(C,C,A): 6
+  multihop(C,C,A,B): 2
+  multihop(C,C,B): 1
+  multihop(C,C,C): 14
+  multihop(C,D,A,A,B): 1
+  multihop(C,D,C,C): 2
+  multihop(D,A,C): 2
+  multihop→C: 6
+  multihop→D: 2
+
+Results saved to results/run7

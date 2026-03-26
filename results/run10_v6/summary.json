@@ -1,0 +1,140 @@
+{
+  "overall": {
+    "total": 461,
+    "correct": 369,
+    "accuracy": 0.8004338394793926
+  },
+  "per_category": {
+    "temporal": {
+      "total": 87,
+      "correct": 79,
+      "accuracy": 0.9080459770114943
+    },
+    "open-domain": {
+      "total": 20,
+      "correct": 12,
+      "accuracy": 0.6
+    },
+    "single-hop": {
+      "total": 73,
+      "correct": 52,
+      "accuracy": 0.7123287671232876
+    },
+    "multi-hop": {
+      "total": 176,
+      "correct": 140,
+      "accuracy": 0.7954545454545454
+    },
+    "adversarial": {
+      "total": 105,
+      "correct": 86,
+      "accuracy": 0.819047619047619
+    }
+  },
+  "strategy_distribution": {
+    "B": 143,
+    "A": 6,
+    "D": 5,
+    "multihop(A,C,C)": 2,
+    "C": 7,
+    "multihop(C,A,C)": 1,
+    "multihop(A,B,A)": 1,
+    "multihop(A,A,C)": 6,
+    "temporal_A": 134,
+    "temporal_C": 21,
+    "temporal_B": 21,
+    "adversarial_masked": 105,
+    "multihop(A,B,A,B,C)": 2,
+    "multihop(A,B,A,B,A,B)": 3,
+    "multihop(A,C,A)": 1,
+    "multihop(A,A,A)": 2,
+    "multihop(C,C,A)": 1
+  },
+  "strategy_accuracy": {
+    "B": {
+      "total": 143,
+      "correct": 126,
+      "accuracy": 0.8811188811188811
+    },
+    "A": {
+      "total": 6,
+      "correct": 5,
+      "accuracy": 0.8333333333333334
+    },
+    "D": {
+      "total": 5,
+      "correct": 1,
+      "accuracy": 0.2
+    },
+    "multihop(A,C,C)": {
+      "total": 2,
+      "correct": 1,
+      "accuracy": 0.5
+    },
+    "C": {
+      "total": 7,
+      "correct": 4,
+      "accuracy": 0.5714285714285714
+    },
+    "multihop(C,A,C)": {
+      "total": 1,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "multihop(A,B,A)": {
+      "total": 1,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "multihop(A,A,C)": {
+      "total": 6,
+      "correct": 3,
+      "accuracy": 0.5
+    },
+    "temporal_A": {
+      "total": 134,
+      "correct": 108,
+      "accuracy": 0.8059701492537313
+    },
+    "temporal_C": {
+      "total": 21,
+      "correct": 16,
+      "accuracy": 0.7619047619047619
+    },
+    "temporal_B": {
+      "total": 21,
+      "correct": 16,
+      "accuracy": 0.7619047619047619
+    },
+    "adversarial_masked": {
+      "total": 105,
+      "correct": 86,
+      "accuracy": 0.819047619047619
+    },
+    "multihop(A,B,A,B,C)": {
+      "total": 2,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "multihop(A,B,A,B,A,B)": {
+      "total": 3,
+      "correct": 3,
+      "accuracy": 1.0
+    },
+    "multihop(A,C,A)": {
+      "total": 1,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "multihop(A,A,A)": {
+      "total": 2,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "multihop(C,C,A)": {
+      "total": 1,
+      "correct": 0,
+      "accuracy": 0.0
+    }
+  }
+}

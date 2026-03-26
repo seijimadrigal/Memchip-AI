@@ -76,14 +76,8 @@ class RetrievalEngine:
         if agentic and candidates:
             candidates = self._agentic_retrieval(query, candidates, user_id, top_k)
 
-        # Stage 3: Score-adaptive truncation (keep all within 70% of top score)
-        if candidates:
-            top_score = candidates[0]["rrf_score"]
-            threshold = top_score * 0.7
-            ranked = [c for c in candidates if c["rrf_score"] >= threshold]
-            ranked = ranked[:20]  # cap to avoid token explosion
-        else:
-            ranked = []
+        # Stage 3: Take top-k by RRF score (no LLM rerank — saves tokens, RRF is sufficient)
+        ranked = candidates[:top_k]
 
         # Get session dates for temporal context
         session_dates = self.store.get_session_dates(user_id)
@@ -130,7 +124,6 @@ class RetrievalEngine:
 
         # 2. Extract entities using LLM for better coverage
         entities = self._extract_query_entities(query)
-        self._current_query_entities = entities  # cache for NER-weighted scoring
         
         for entity in entities:
             # Direct triple lookup (searches subject, object, and predicate)
@@ -316,10 +309,10 @@ class RetrievalEngine:
 
         return merged[:top_k * 2]
 
-    def _assemble_context(self, memories: List[Dict], max_tokens: int = 3000, session_dates: Dict[str, str] = None) -> str:
+    def _assemble_context(self, memories: List[Dict], max_tokens: int = 1500, session_dates: Dict[str, str] = None) -> str:
         """Assemble memories into a context string within token budget."""
         lines = []
-        char_budget = max_tokens * 5  # generous ~5 chars per token to include more context
+        char_budget = max_tokens * 4  # ~4 chars per token
 
         # Add session timeline for temporal date resolution
         if session_dates:
@@ -393,14 +386,6 @@ class RetrievalEngine:
                 score += 1.0 / (k + 5)
             elif s == "raw_text":
                 score += 1.0 / (k + 4)
-        # NER-weighted boost: entities from query matching candidate content
-        query_entities = getattr(self, "_current_query_entities", [])
-        if query_entities:
-            content_lower = candidate.get("content", "").lower()
-            entity_matches = sum(1 for e in query_entities if e.lower() in content_lower)
-            if entity_matches > 0:
-                score *= (1 + entity_matches * 2.0)  # 3x for 1 match, 5x for 2
-
         return score
 
     def _extract_query_entities(self, query: str) -> List[str]:

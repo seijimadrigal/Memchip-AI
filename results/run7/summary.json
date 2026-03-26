@@ -1,0 +1,800 @@
+{
+  "overall": {
+    "total": 1974,
+    "correct": 1485,
+    "accuracy": 0.7522796352583586
+  },
+  "per_category": {
+    "temporal": {
+      "total": 321,
+      "correct": 274,
+      "accuracy": 0.8535825545171339
+    },
+    "open-domain": {
+      "total": 96,
+      "correct": 58,
+      "accuracy": 0.6041666666666666
+    },
+    "single-hop": {
+      "total": 282,
+      "correct": 175,
+      "accuracy": 0.6205673758865248
+    },
+    "multi-hop": {
+      "total": 830,
+      "correct": 647,
+      "accuracy": 0.7795180722891566
+    },
+    "adversarial": {
+      "total": 445,
+      "correct": 331,
+      "accuracy": 0.7438202247191011
+    }
+  },
+  "strategy_distribution": {
+    "B": 527,
+    "A": 26,
+    "D": 16,
+    "multihop(B,B,B)": 24,
+    "C": 34,
+    "multihop(A,C,C)": 26,
+    "multihop(C,A,C)": 11,
+    "multihop(A,B,B,A)": 4,
+    "multihop(A,A,C)": 93,
+    "multihop(A,C,A)": 22,
+    "multihop(A,B,A)": 20,
+    "multihop(A,A,A)": 174,
+    "multihop(A,A,B,C,A)": 4,
+    "multihop(A,B,C,A,A)": 10,
+    "multihop(A,A,B,C,C)": 6,
+    "multihop(A,A,B,C)": 20,
+    "multihop(B,A,B)": 13,
+    "multihop(C,C,C)": 14,
+    "multihop(A,B,A,B,A,B)": 27,
+    "multihop(A,B,A,B,A)": 10,
+    "multihop(A,B,A,B)": 6,
+    "multihop(A,B,A,B,C,A)": 1,
+    "multihop(C,C,A)": 6,
+    "multihop(A,B,A,A,B,C)": 1,
+    "multihop(A,A,B,A,B)": 47,
+    "multihop(C,A,A)": 13,
+    "multihop(B,B,A)": 13,
+    "multihop(A,B,C,A,B,A,B)": 5,
+    "multihop(B,C,A)": 4,
+    "multihop(B,A,A)": 11,
+    "multihop(A,A,B,C,A,B)": 9,
+    "multihop(A,A,B,A)": 19,
+    "multihop(A,B,A,B,A,B,C)": 6,
+    "multihop(B,D,C)": 1,
+    "multihop(A,B,C,A,B,C,A,B)": 2,
+    "multihop(B,C,C)": 9,
+    "multihop(B,C,B)": 4,
+    "multihop(A,B,A,A,B)": 6,
+    "multihop(A,A,A,B)": 24,
+    "adversarial_masked": 445,
+    "multihop\u2192C": 6,
+    "multihop(A,C,A,B)": 4,
+    "multihop(A,B,A,C)": 13,
+    "multihop(A,D,C)": 2,
+    "multihop(A,D,A,B)": 1,
+    "multihop(A,B,B)": 31,
+    "multihop(A,B,C,A,B,C,C)": 5,
+    "multihop(C,A,A,B,C)": 1,
+    "multihop(A,B,A,B,C,A,B)": 3,
+    "multihop\u2192D": 2,
+    "multihop(D,A,C)": 2,
+    "multihop(A,B,A,A)": 19,
+    "multihop(C,A,B,B)": 2,
+    "multihop(A,B,C,A,C)": 6,
+    "multihop(A,B,A,B,C)": 9,
+    "multihop(B,A,B,C)": 4,
+    "multihop(B,C,B,B,C)": 1,
+    "multihop(A,A,A,B,C)": 4,
+    "multihop(A,C,B)": 4,
+    "multihop(A,A,B)": 20,
+    "multihop(A,A,B,C,A,B,C)": 1,
+    "multihop(A,B,C)": 8,
+    "multihop(C,A,B)": 2,
+    "multihop(C,B,C)": 3,
+    "multihop(B,B,C)": 4,
+    "multihop(B,B,B,C)": 3,
+    "multihop(A,B,B,B)": 1,
+    "multihop(C,A,B,A,B)": 3,
+    "multihop(C,A,B,C)": 3,
+    "multihop(A,C,A,B,C)": 1,
+    "multihop(A,A,B,A,B,C)": 2,
+    "multihop(A,B,C,A,B,C,A,B,C)": 1,
+    "multihop(A,B,B,C)": 5,
+    "multihop(A,A,B,B)": 5,
+    "multihop(A,B,D,A)": 1,
+    "multihop(B,A,A,B)": 2,
+    "multihop(A,D,D)": 1,
+    "multihop(B,B,A,B)": 2,
+    "multihop(A,A,B,B,C)": 2,
+    "multihop(A,B,C,A,B,A,B,C)": 3,
+    "multihop(A,B,C,A,B,C)": 4,
+    "multihop(A,B,A,B,C,C)": 1,
+    "multihop(A,B,C,B)": 2,
+    "multihop(A,A)": 3,
+    "multihop(A,B,C,A,B,C,D)": 1,
+    "multihop(A,B,C,D)": 2,
+    "multihop(B,B,C,D,C)": 1,
+    "multihop(A,B,C,C)": 6,
+    "multihop(A,B,C,B,B,C)": 2,
+    "multihop(A,B,C,A,A,B,C)": 1,
+    "multihop(B,B,B,C,D)": 1,
+    "multihop(B,A,B,C,C)": 1,
+    "multihop(A,B,C,A,B)": 1,
+    "multihop(C,C,A,B)": 2,
+    "multihop(A,B,C,C,A,B)": 1,
+    "multihop(C,B,A,B)": 1,
+    "multihop(A,B,A,B,B)": 3,
+    "multihop(B,B,C,D,B)": 1,
+    "multihop(C,C,B)": 1,
+    "multihop(B,A,B,A)": 1,
+    "multihop(B,A,B,C,A)": 1,
+    "multihop(B,A,C)": 2,
+    "multihop(B,A,B,B)": 2,
+    "multihop(B,C,A,A,B,C)": 1,
+    "multihop(C,D,A,A,B)": 1,
+    "multihop(C,B,A)": 1,
+    "multihop(B,C,D,A,B,B)": 1,
+    "multihop(B,C,D,C,B)": 1,
+    "multihop(B,C,A,B,C)": 1,
+    "multihop(C,D,C,C)": 2,
+    "multihop(B,C,B,B)": 1,
+    "multihop(B,A,A,B,C)": 1,
+    "multihop(A,B,A,B,C,C,D)": 1,
+    "multihop(B,C,B,C)": 1,
+    "multihop(B,B,C,B)": 1,
+    "multihop(A,B,C,A)": 4,
+    "multihop(A,A,C,D)": 1,
+    "multihop(C,A,B,C,C)": 1,
+    "multihop(A,B,B,A,B,C)": 1,
+    "multihop(A,B,C,C,A)": 1,
+    "multihop(A,B,C,A,B,C,A)": 1,
+    "multihop(A,C,D,A)": 1,
+    "multihop(C,A,B,A)": 1,
+    "multihop(C,A,A,B)": 1,
+    "multihop(A,A,B,C,D)": 1,
+    "multihop(A,B,C,C,A,B,C)": 1,
+    "multihop(A,A,B,C,B)": 1
+  },
+  "strategy_accuracy": {
+    "B": {
+      "total": 527,
+      "correct": 413,
+      "accuracy": 0.7836812144212524
+    },
+    "A": {
+      "total": 26,
+      "correct": 15,
+      "accuracy": 0.5769230769230769
+    },
+    "D": {
+      "total": 16,
+      "correct": 4,
+      "accuracy": 0.25
+    },
+    "multihop(B,B,B)": {
+      "total": 24,
+      "correct": 18,
+      "accuracy": 0.75
+    },
+    "C": {
+      "total": 34,
+      "correct": 25,
+      "accuracy": 0.7352941176470589
+    },
+    "multihop(A,C,C)": {
+      "total": 26,
+      "correct": 19,
+      "accuracy": 0.7307692307692307
+    },
+    "multihop(C,A,C)": {
+      "total": 11,
+      "correct": 9,
+      "accuracy": 0.8181818181818182
+    },
+    "multihop(A,B,B,A)": {
+      "total": 4,
+      "correct": 2,
+      "accuracy": 0.5
+    },
+    "multihop(A,A,C)": {
+      "total": 93,
+      "correct": 67,
+      "accuracy": 0.7204301075268817
+    },
+    "multihop(A,C,A)": {
+      "total": 22,
+      "correct": 20,
+      "accuracy": 0.9090909090909091
+    },
+    "multihop(A,B,A)": {
+      "total": 20,
+      "correct": 15,
+      "accuracy": 0.75
+    },
+    "multihop(A,A,A)": {
+      "total": 174,
+      "correct": 123,
+      "accuracy": 0.7068965517241379
+    },
+    "multihop(A,A,B,C,A)": {
+      "total": 4,
+      "correct": 2,
+      "accuracy": 0.5
+    },
+    "multihop(A,B,C,A,A)": {
+      "total": 10,
+      "correct": 9,
+      "accuracy": 0.9
+    },
+    "multihop(A,A,B,C,C)": {
+      "total": 6,
+      "correct": 4,
+      "accuracy": 0.6666666666666666
+    },
+    "multihop(A,A,B,C)": {
+      "total": 20,
+      "correct": 18,
+      "accuracy": 0.9
+    },
+    "multihop(B,A,B)": {
+      "total": 13,
+      "correct": 11,
+      "accuracy": 0.8461538461538461
+    },
+    "multihop(C,C,C)": {
+      "total": 14,
+      "correct": 10,
+      "accuracy": 0.7142857142857143
+    },
+    "multihop(A,B,A,B,A,B)": {
+      "total": 27,
+      "correct": 24,
+      "accuracy": 0.8888888888888888
+    },
+    "multihop(A,B,A,B,A)": {
+      "total": 10,
+      "correct": 8,
+      "accuracy": 0.8
+    },
+    "multihop(A,B,A,B)": {
+      "total": 6,
+      "correct": 5,
+      "accuracy": 0.8333333333333334
+    },
+    "multihop(A,B,A,B,C,A)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(C,C,A)": {
+      "total": 6,
+      "correct": 4,
+      "accuracy": 0.6666666666666666
+    },
+    "multihop(A,B,A,A,B,C)": {
+      "total": 1,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "multihop(A,A,B,A,B)": {
+      "total": 47,
+      "correct": 43,
+      "accuracy": 0.9148936170212766
+    },
+    "multihop(C,A,A)": {
+      "total": 13,
+      "correct": 7,
+      "accuracy": 0.5384615384615384
+    },
+    "multihop(B,B,A)": {
+      "total": 13,
+      "correct": 9,
+      "accuracy": 0.6923076923076923
+    },
+    "multihop(A,B,C,A,B,A,B)": {
+      "total": 5,
+      "correct": 4,
+      "accuracy": 0.8
+    },
+    "multihop(B,C,A)": {
+      "total": 4,
+      "correct": 3,
+      "accuracy": 0.75
+    },
+    "multihop(B,A,A)": {
+      "total": 11,
+      "correct": 8,
+      "accuracy": 0.7272727272727273
+    },
+    "multihop(A,A,B,C,A,B)": {
+      "total": 9,
+      "correct": 8,
+      "accuracy": 0.8888888888888888
+    },
+    "multihop(A,A,B,A)": {
+      "total": 19,
+      "correct": 13,
+      "accuracy": 0.6842105263157895
+    },
+    "multihop(A,B,A,B,A,B,C)": {
+      "total": 6,
+      "correct": 4,
+      "accuracy": 0.6666666666666666
+    },
+    "multihop(B,D,C)": {
+      "total": 1,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "multihop(A,B,C,A,B,C,A,B)": {
+      "total": 2,
+      "correct": 1,
+      "accuracy": 0.5
+    },
+    "multihop(B,C,C)": {
+      "total": 9,
+      "correct": 7,
+      "accuracy": 0.7777777777777778
+    },
+    "multihop(B,C,B)": {
+      "total": 4,
+      "correct": 3,
+      "accuracy": 0.75
+    },
+    "multihop(A,B,A,A,B)": {
+      "total": 6,
+      "correct": 5,
+      "accuracy": 0.8333333333333334
+    },
+    "multihop(A,A,A,B)": {
+      "total": 24,
+      "correct": 19,
+      "accuracy": 0.7916666666666666
+    },
+    "adversarial_masked": {
+      "total": 445,
+      "correct": 331,
+      "accuracy": 0.7438202247191011
+    },
+    "multihop\u2192C": {
+      "total": 6,
+      "correct": 4,
+      "accuracy": 0.6666666666666666
+    },
+    "multihop(A,C,A,B)": {
+      "total": 4,
+      "correct": 4,
+      "accuracy": 1.0
+    },
+    "multihop(A,B,A,C)": {
+      "total": 13,
+      "correct": 10,
+      "accuracy": 0.7692307692307693
+    },
+    "multihop(A,D,C)": {
+      "total": 2,
+      "correct": 1,
+      "accuracy": 0.5
+    },
+    "multihop(A,D,A,B)": {
+      "total": 1,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "multihop(A,B,B)": {
+      "total": 31,
+      "correct": 28,
+      "accuracy": 0.9032258064516129
+    },
+    "multihop(A,B,C,A,B,C,C)": {
+      "total": 5,
+      "correct": 4,
+      "accuracy": 0.8
+    },
+    "multihop(C,A,A,B,C)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(A,B,A,B,C,A,B)": {
+      "total": 3,
+      "correct": 3,
+      "accuracy": 1.0
+    },
+    "multihop\u2192D": {
+      "total": 2,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "multihop(D,A,C)": {
+      "total": 2,
+      "correct": 2,
+      "accuracy": 1.0
+    },
+    "multihop(A,B,A,A)": {
+      "total": 19,
+      "correct": 14,
+      "accuracy": 0.7368421052631579
+    },
+    "multihop(C,A,B,B)": {
+      "total": 2,
+      "correct": 1,
+      "accuracy": 0.5
+    },
+    "multihop(A,B,C,A,C)": {
+      "total": 6,
+      "correct": 4,
+      "accuracy": 0.6666666666666666
+    },
+    "multihop(A,B,A,B,C)": {
+      "total": 9,
+      "correct": 7,
+      "accuracy": 0.7777777777777778
+    },
+    "multihop(B,A,B,C)": {
+      "total": 4,
+      "correct": 3,
+      "accuracy": 0.75
+    },
+    "multihop(B,C,B,B,C)": {
+      "total": 1,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "multihop(A,A,A,B,C)": {
+      "total": 4,
+      "correct": 2,
+      "accuracy": 0.5
+    },
+    "multihop(A,C,B)": {
+      "total": 4,
+      "correct": 3,
+      "accuracy": 0.75
+    },
+    "multihop(A,A,B)": {
+      "total": 20,
+      "correct": 17,
+      "accuracy": 0.85
+    },
+    "multihop(A,A,B,C,A,B,C)": {
+      "total": 1,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "multihop(A,B,C)": {
+      "total": 8,
+      "correct": 5,
+      "accuracy": 0.625
+    },
+    "multihop(C,A,B)": {
+      "total": 2,
+      "correct": 2,
+      "accuracy": 1.0
+    },
+    "multihop(C,B,C)": {
+      "total": 3,
+      "correct": 3,
+      "accuracy": 1.0
+    },
+    "multihop(B,B,C)": {
+      "total": 4,
+      "correct": 4,
+      "accuracy": 1.0
+    },
+    "multihop(B,B,B,C)": {
+      "total": 3,
+      "correct": 3,
+      "accuracy": 1.0
+    },
+    "multihop(A,B,B,B)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(C,A,B,A,B)": {
+      "total": 3,
+      "correct": 3,
+      "accuracy": 1.0
+    },
+    "multihop(C,A,B,C)": {
+      "total": 3,
+      "correct": 2,
+      "accuracy": 0.6666666666666666
+    },
+    "multihop(A,C,A,B,C)": {
+      "total": 1,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "multihop(A,A,B,A,B,C)": {
+      "total": 2,
+      "correct": 1,
+      "accuracy": 0.5
+    },
+    "multihop(A,B,C,A,B,C,A,B,C)": {
+      "total": 1,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "multihop(A,B,B,C)": {
+      "total": 5,
+      "correct": 4,
+      "accuracy": 0.8
+    },
+    "multihop(A,A,B,B)": {
+      "total": 5,
+      "correct": 5,
+      "accuracy": 1.0
+    },
+    "multihop(A,B,D,A)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(B,A,A,B)": {
+      "total": 2,
+      "correct": 1,
+      "accuracy": 0.5
+    },
+    "multihop(A,D,D)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(B,B,A,B)": {
+      "total": 2,
+      "correct": 2,
+      "accuracy": 1.0
+    },
+    "multihop(A,A,B,B,C)": {
+      "total": 2,
+      "correct": 1,
+      "accuracy": 0.5
+    },
+    "multihop(A,B,C,A,B,A,B,C)": {
+      "total": 3,
+      "correct": 3,
+      "accuracy": 1.0
+    },
+    "multihop(A,B,C,A,B,C)": {
+      "total": 4,
+      "correct": 2,
+      "accuracy": 0.5
+    },
+    "multihop(A,B,A,B,C,C)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(A,B,C,B)": {
+      "total": 2,
+      "correct": 1,
+      "accuracy": 0.5
+    },
+    "multihop(A,A)": {
+      "total": 3,
+      "correct": 2,
+      "accuracy": 0.6666666666666666
+    },
+    "multihop(A,B,C,A,B,C,D)": {
+      "total": 1,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "multihop(A,B,C,D)": {
+      "total": 2,
+      "correct": 2,
+      "accuracy": 1.0
+    },
+    "multihop(B,B,C,D,C)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(A,B,C,C)": {
+      "total": 6,
+      "correct": 3,
+      "accuracy": 0.5
+    },
+    "multihop(A,B,C,B,B,C)": {
+      "total": 2,
+      "correct": 1,
+      "accuracy": 0.5
+    },
+    "multihop(A,B,C,A,A,B,C)": {
+      "total": 1,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "multihop(B,B,B,C,D)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(B,A,B,C,C)": {
+      "total": 1,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "multihop(A,B,C,A,B)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(C,C,A,B)": {
+      "total": 2,
+      "correct": 1,
+      "accuracy": 0.5
+    },
+    "multihop(A,B,C,C,A,B)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(C,B,A,B)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(A,B,A,B,B)": {
+      "total": 3,
+      "correct": 2,
+      "accuracy": 0.6666666666666666
+    },
+    "multihop(B,B,C,D,B)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(C,C,B)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(B,A,B,A)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(B,A,B,C,A)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(B,A,C)": {
+      "total": 2,
+      "correct": 2,
+      "accuracy": 1.0
+    },
+    "multihop(B,A,B,B)": {
+      "total": 2,
+      "correct": 1,
+      "accuracy": 0.5
+    },
+    "multihop(B,C,A,A,B,C)": {
+      "total": 1,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "multihop(C,D,A,A,B)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(C,B,A)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(B,C,D,A,B,B)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(B,C,D,C,B)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(B,C,A,B,C)": {
+      "total": 1,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "multihop(C,D,C,C)": {
+      "total": 2,
+      "correct": 1,
+      "accuracy": 0.5
+    },
+    "multihop(B,C,B,B)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(B,A,A,B,C)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(A,B,A,B,C,C,D)": {
+      "total": 1,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "multihop(B,C,B,C)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(B,B,C,B)": {
+      "total": 1,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "multihop(A,B,C,A)": {
+      "total": 4,
+      "correct": 2,
+      "accuracy": 0.5
+    },
+    "multihop(A,A,C,D)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(C,A,B,C,C)": {
+      "total": 1,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "multihop(A,B,B,A,B,C)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(A,B,C,C,A)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(A,B,C,A,B,C,A)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(A,C,D,A)": {
+      "total": 1,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "multihop(C,A,B,A)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(C,A,A,B)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(A,A,B,C,D)": {
+      "total": 1,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "multihop(A,B,C,C,A,B,C)": {
+      "total": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "multihop(A,A,B,C,B)": {
+      "total": 1,
+      "correct": 0,
+      "accuracy": 0.0
+    }
+  }
+}

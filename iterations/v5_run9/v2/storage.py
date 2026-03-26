@@ -64,12 +64,6 @@ class Storage:
         """)
         c.execute("CREATE INDEX IF NOT EXISTS idx_temporal_date ON temporal_events(event_date_iso)")
         c.execute("CREATE INDEX IF NOT EXISTS idx_temporal_entity ON temporal_events(entity)")
-        # FTS5 for raw engram text (v8)
-        c.execute("""
-            CREATE VIRTUAL TABLE IF NOT EXISTS engrams_fts USING fts5(
-                session_id, raw_text, tokenize='porter'
-            )
-        """)
         c.commit()
 
     def upsert_profile(self, entity: str, profile_text: str):
@@ -188,11 +182,6 @@ class Storage:
             "INSERT OR REPLACE INTO engrams (session_id, date, raw_text, token_count) VALUES (?, ?, ?, ?)",
             (session_id, date, raw_text, token_count),
         )
-        # Also index in FTS5 (v8)
-        self.conn.execute(
-            "INSERT OR REPLACE INTO engrams_fts (session_id, raw_text) VALUES (?, ?)",
-            (session_id, raw_text),
-        )
         self.conn.commit()
 
     def get_engram(self, session_id: str) -> str | None:
@@ -212,50 +201,6 @@ class Storage:
     def get_all_engrams(self) -> list[dict]:
         rows = self.conn.execute("SELECT session_id, date, raw_text FROM engrams ORDER BY date").fetchall()
         return [{"session_id": r["session_id"], "date": r["date"], "raw_text": r["raw_text"]} for r in rows]
-
-    def search_engrams(self, query: str, limit: int = 5) -> list[dict]:
-        """FTS5 search on raw engram text (v8)."""
-        stop = {"what","when","where","who","how","did","does","do","is","are","was","were",
-                "the","a","an","in","on","at","to","for","of","with","has","have","had",
-                "and","or","but","not","this","that","they","their","it","its","about","from","by"}
-        words = re.findall(r'\b\w+\b', query.lower())
-        keywords = [w for w in words if w not in stop and len(w) > 2]
-        if not keywords:
-            return []
-        fts_query = " OR ".join(keywords)
-        try:
-            rows = self.conn.execute(
-                "SELECT session_id, raw_text, rank FROM engrams_fts WHERE engrams_fts MATCH ? ORDER BY rank LIMIT ?",
-                (fts_query, limit),
-            ).fetchall()
-            return [{"session_id": r["session_id"], "raw_text": r["raw_text"], "rank": r["rank"]} for r in rows]
-        except Exception:
-            return []
-
-    def get_engram_snippets(self, session_id: str, query: str, window: int = 500) -> str:
-        """Extract best snippet window from a raw engram around keyword matches (v8)."""
-        row = self.conn.execute("SELECT raw_text FROM engrams WHERE session_id = ?", (session_id,)).fetchone()
-        if not row:
-            return ""
-        text = row["raw_text"]
-        if len(text) <= window:
-            return text
-        # Find best window around first keyword match
-        words = re.findall(r'\b\w+\b', query.lower())
-        stop = {"what","when","where","who","how","did","does","do","is","are","was","were",
-                "the","a","an","in","on","at","to","for","of","with","has","have","had",
-                "and","or","but","not","this","that","they","their","it","its","about","from","by"}
-        keywords = [w for w in words if w not in stop and len(w) > 2]
-        text_lower = text.lower()
-        best_pos = 0
-        for kw in keywords:
-            pos = text_lower.find(kw)
-            if pos >= 0:
-                best_pos = pos
-                break
-        start = max(0, best_pos - window // 2)
-        end = min(len(text), start + window)
-        return text[start:end]
 
     def close(self):
         self.conn.close()

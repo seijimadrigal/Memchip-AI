@@ -183,45 +183,6 @@ Answer (thorough, specific, accurate):"""
     return _llm_call(api_key, [{"role": "user", "content": prompt}], max_tokens=400)
 
 
-def answer_strategy_open_domain(api_key: str, question: str, profiles: list[dict], episodes: list[dict], raw_sessions: list[dict]) -> str:
-    """Open-domain recall (v8): answer questions requiring INFERENCE from personality, preferences, life events."""
-    profile_text = "\n\n".join(f"## {p['entity']}\n{p['profile_text']}" for p in profiles)
-    episode_text = "\n\n".join(f"### {ep['session_id']} ({ep['date']})\n{ep['summary']}" for ep in episodes)
-    compressed_raw = []
-    for rs in raw_sessions:
-        text = rs['raw_text']
-        if len(text) > 3000:
-            text = text[:3000] + "\n... [truncated]"
-        compressed_raw.append(f"### {rs['session_id']} ({rs['date']})\n{text}")
-    raw_text = "\n\n".join(compressed_raw) if compressed_raw else "(none)"
-
-    prompt = f"""You must answer a question about a person by INFERRING from their personality, preferences, life history, and behavior patterns.
-
-The answer may NOT be stated directly — you must REASON from what you know about them.
-
-Examples of inferential reasoning:
-1. Q: "What type of vacation would Sarah most enjoy?" → From profiles: Sarah loves hiking, nature photography, hates crowds → Answer: "A wilderness hiking/photography trip in a remote national park"
-2. Q: "What gift would Alex appreciate most?" → From profiles: Alex is passionate about cooking Italian food, collects vintage cookbooks → Answer: "A rare vintage Italian cookbook"
-3. Q: "How would Jamie react to a surprise party?" → From profiles: Jamie is introverted, values quiet evenings, gets anxious in large groups → Answer: "Jamie would likely feel uncomfortable and anxious"
-
-{ANSWER_RULES}
-
-Entity Profiles:
-{profile_text}
-
-Episode Timeline:
-{episode_text}
-
-Relevant Raw Sessions:
-{raw_text}
-
-Question: {question}
-
-Think about what you know about this person — their traits, preferences, experiences, values — and INFER the answer. Be specific and concise:"""
-
-    return _llm_call(api_key, [{"role": "user", "content": prompt}], max_tokens=300)
-
-
 def synthesize_subanswers(api_key: str, question: str, sub_qas: list[tuple[str, str]]) -> str:
     """Synthesize sub-answers into a final answer for multi-hop questions."""
     sub_text = "\n".join(f"Q: {q}\nA: {a}" for q, a in sub_qas)

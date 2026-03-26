@@ -1,63 +1,25 @@
-# MemChip — Best Score Tracker
+# MemChip Best Score Tracker
 
-## 🏆 Current Best: v2_run5_baseline — 69.8% overall
+## Current Best: Run 9 (v5) — 81.6% overall (mini benchmark)
 
-| Category | Score | Accuracy |
-|---|---|---|
-| Temporal | 34/37 | **91.9%** |
-| Multi-hop | 56/70 | **80.0%** |
-| Open-domain | 10/13 | **76.9%** |
-| Single-hop | 19/32 | 59.4% |
-| Adversarial | 20/47 | 42.6% |
-| **Overall** | **139/199** | **69.8%** |
+3 conversations (conv-26, conv-30, conv-44), 461 questions.
 
-### Configuration
-- **LLM:** OpenRouter → openai/gpt-4.1-mini
-- **Extraction:** 5-type (triples, summaries, entities, temporal, profiles)
-- **Storage:** SQLite + FTS5
-- **Retrieval:** Keyword-based session selection, no semantic search
-- **Answerer:** 4 strategies (A=profile, B=direct, C=session, D=temporal)
-- **Router:** Auto-selects strategy based on question type
-- **No entity masking, no embedding search, no reranker**
-
-### Conversations tested: conv-26 only (1/10)
-
----
-
-## Score History
-
-| Version | Date | Overall | Temporal | Multi-hop | Open-domain | Single-hop | Adversarial | Key Change |
-|---|---|---|---|---|---|---|---|---|
-| v2_run5 | 2026-03-25 | **69.8%** | 91.9% | 80.0% | 76.9% | 59.4% | 42.6% | Baseline |
-| v2_run6 | 2026-03-25 | ~65.5% | ~same | ~same | ~same | ~same | 38.1% | Prompt-only adversarial fix (WORSE) |
-
----
-
-## Category Bests (track which config peaked each category)
-
-| Category | Best Score | Version | Config Detail |
+| Category | Correct | Total | Score |
 |---|---|---|---|
-| Temporal | 91.9% | v2_run5 | Baseline |
-| Multi-hop | 80.0% | v2_run5 | Baseline |
-| Open-domain | 76.9% | v2_run5 | Baseline |
-| Single-hop | 59.4% | v2_run5 | Baseline |
-| Adversarial | 42.6% | v2_run5 | Baseline |
+| Single-hop (1) | 53 | 73 | 72.6% |
+| Multi-hop (2) | 80 | 87 | 92.0% |
+| Open-domain (3) | 10 | 20 | 50.0% |
+| Temporal (4) | 148 | 176 | 84.1% |
+| Adversarial (5) | 85 | 105 | 81.0% |
+| **Overall** | **376** | **461** | **81.6%** |
 
----
+## History
+- v2 run5 baseline: 69.8% (199q, 1 conv)
+- v2 run6: 65.3% (regression)
+- v3 run7: 75.2% (full 10 convs, 1,974q)
+- v4 run8: 78.5% (mini 3 convs, 461q) — concise answers + anti-generalization
+- v5 run9: 81.6% (mini 3 convs, 461q) — temporal context + token compression ← CURRENT BEST
 
----
-
-## Speed Tracking
-
-| Version | Per-query latency | LLM calls/query | Retrieval method |
-|---|---|---|---|
-| v2_run5 | ~19s | 3-4 (router+retrieval+answer+escalation) | Keyword overlap (LLM-powered) |
-| Target | < 2s | 1 (answer only) | Local embeddings + BM25 |
-
-**Competitor benchmarks:**
-- Mem0: 0.2s median, 1.4s full pipeline
-- Mem0 with rerank+filter: ~0.41s
-
----
-
-_Updated automatically after each benchmark run. Always compare against these numbers._
+## Weak spots
+- Open-domain (50%) regressed — needs world knowledge fallback
+- Single-hop (72.6%) — plateau, needs better retrieval
