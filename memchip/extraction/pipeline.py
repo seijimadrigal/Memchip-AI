@@ -34,6 +34,7 @@ class Extraction:
     temporal_events: List[Dict[str, Any]] = field(default_factory=list)
     profile_attributes: List[Dict[str, str]] = field(default_factory=list)
     raw_text: str = ""
+    importance: int = 3  # 0-5 score
 
 
 class ExtractionPipeline:
@@ -47,16 +48,52 @@ class ExtractionPipeline:
         self.model = model
         self.api_key = api_key
 
+    def classify(self, text: str) -> Dict[str, Any]:
+        """Rate importance 0-5. Single LLM call."""
+        prompt = f"""Rate the importance of this text for long-term memory. Return ONLY a single integer 0-5.
+
+0 = NOISE — heartbeats, status checks, "HEARTBEAT_OK", gateway connect/disconnect, empty exchanges
+1 = OPERATIONAL — deployment logs, plugin updates, build outputs, routine confirmations
+2 = ROUTINE — task progress updates, standard work, feature implementation steps
+3 = SIGNIFICANT — decisions, preferences, useful findings, research results
+4 = CRITICAL — architecture decisions, API keys/passwords, business strategy, key relationships
+5 = FOUNDATIONAL — core identity, long-term strategy, permanent reference material
+
+Return ONLY the number. Nothing else.
+
+Text:
+{text[:1500]}"""
+        try:
+            response = call_llm(
+                prompt=prompt,
+                provider=self.provider,
+                model=self.model,
+                api_key=self.api_key,
+            )
+            score = int(re.search(r'\d+', response.strip()).group())
+            return {"importance": min(max(score, 0), 5)}
+        except Exception:
+            return {"importance": 3}
+
     def extract(
         self,
         text: str,
         user_id: str = "default",
         session_id: str = "",
         timestamp: str = "",
+        score_threshold: int = 1,
     ) -> Extraction:
-        """Run full extraction pipeline on text."""
+        """Run full extraction pipeline on text. Skips if importance < threshold."""
         import concurrent.futures
         result = Extraction(raw_text=text)
+
+        # Classify: importance only (1 cheap LLM call)
+        classification = self.classify(text)
+        result.importance = classification["importance"]
+
+        if result.importance < score_threshold:
+            # Not worth remembering — return empty extraction
+            return result
 
         # Run extractions in parallel (5 independent LLM calls)
         with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:

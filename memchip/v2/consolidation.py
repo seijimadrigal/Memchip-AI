@@ -145,6 +145,30 @@ CRITICAL: NEVER generalize specific facts. "Sweden" must stay "Sweden", NOT "hom
     return _llm_call(api_key, messages, max_tokens=2000)
 
 
+def extract_profile_facts(api_key: str, entity: str, session_id: str, date: str, conversation_text: str) -> str | None:
+    """Extract NEW facts about an entity from a session (append-only, v9.1)."""
+    prompt = f"""Extract ALL new facts about {entity} from this conversation session.
+Output as a bullet list. Include EVERY specific detail: names, dates, places, titles, numbers, country names.
+Resolve relative dates using session date ({date}).
+CRITICAL: NEVER generalize or abstract. Use EXACT proper nouns from the conversation.
+- Say "Sweden" NOT "home country" or "her country"
+- Say "3 children" NOT "multiple children" or "several kids"  
+- Say "Nothing is Impossible" NOT "a book" or "an inspiring book"
+- Say "rainbow flag, transgender symbol" NOT "LGBTQ symbols"
+If {entity} is barely mentioned or no new facts, output "NONE".
+
+Session ({session_id}, {date}):
+{conversation_text}
+
+New facts about {entity}:"""
+    
+    messages = [{"role": "user", "content": prompt}]
+    result = _llm_call(api_key, messages, max_tokens=800)
+    if result.strip().upper() == "NONE" or len(result.strip()) < 10:
+        return None
+    return result
+
+
 def extract_temporal_events(api_key: str, session_id: str, date: str, conversation_text: str, speaker_a: str, speaker_b: str) -> list[dict]:
     """Extract temporal events as (entity, event, date) tuples."""
     prompt = f"""Extract ALL events with dates from this conversation. Resolve relative dates using session date ({date}).
@@ -185,11 +209,21 @@ def consolidate_session(api_key: str, storage, session_id: str, date: str, conve
     episode = build_episode_summary(api_key, session_id, date, conv_text, speaker_a, speaker_b)
     storage.upsert_episode(session_id, date, date_iso, episode["summary"], episode["key_entities"])
     
-    # 3. Update entity profiles for both speakers
+    # 3. Update entity profiles for both speakers (v8.1: append-only, v9: with verification)
     for entity in [speaker_a, speaker_b]:
         existing = storage.get_profile(entity)
-        new_profile = build_entity_profile(api_key, entity, existing, session_id, date, conv_text)
-        storage.upsert_profile(entity, new_profile)
+        new_facts = extract_profile_facts(api_key, entity, session_id, date, conv_text)
+        if existing and new_facts:
+            # Append new facts instead of rewriting (no verification pass — it bloated profiles 34%)
+            updated = existing.rstrip() + f"\n\n## Session {session_id} ({date}) Updates\n{new_facts}"
+            storage.upsert_profile(entity, updated)
+        elif new_facts:
+            # First profile - use full build
+            new_profile = build_entity_profile(api_key, entity, None, session_id, date, conv_text)
+            storage.upsert_profile(entity, new_profile)
+        elif not existing:
+            new_profile = build_entity_profile(api_key, entity, None, session_id, date, conv_text)
+            storage.upsert_profile(entity, new_profile)
     
     # 4. Extract and store temporal events
     try:
@@ -198,6 +232,119 @@ def consolidate_session(api_key: str, storage, session_id: str, date: str, conve
             storage.store_temporal_event(session_id, ev["entity"], ev["event"], ev["date"])
     except Exception:
         pass  # Don't fail ingestion if temporal extraction fails
+
+    # 5. Extract and store atomic facts (v8) + verification pass (v9)
+    try:
+        facts = extract_atomic_facts(api_key, session_id, date, conv_text, speaker_a, speaker_b)
+        if facts:
+            storage.store_atomic_facts(session_id, date_iso, facts)
+    except Exception:
+        pass  # Don't fail ingestion if atomic extraction fails
+
+
+def verify_extraction(api_key: str, session_id: str, date: str, conversation_text: str, speaker_a: str, speaker_b: str, existing_facts: list[dict]) -> list[dict]:
+    """Second-pass verification: find facts missed in initial extraction."""
+    facts_text = "\n".join(f"- {f.get('fact', f.get('fact_text', ''))}" for f in existing_facts if f.get('fact') or f.get('fact_text'))
+    if not facts_text.strip():
+        return []
+    
+    prompt = f"""Here are facts already extracted from this conversation session:
+{facts_text}
+
+Now read the conversation again CAREFULLY. What facts were MISSED? Look for:
+- Books, movies, songs, shows mentioned by title
+- Specific activities, hobbies, sports with details
+- Places visited or mentioned
+- People/pets mentioned by name
+- Numbers, dates, quantities
+- Opinions, preferences, plans
+- Items given, received, bought, made
+
+Session Date: {date}
+Participants: {speaker_a}, {speaker_b}
+
+Conversation:
+{conversation_text}
+
+List ONLY the MISSED facts as a JSON array of {{"subject": "person name", "fact": "atomic fact"}}.
+If nothing was missed, return [].
+Return ONLY the JSON array."""
+
+    messages = [{"role": "user", "content": prompt}]
+    try:
+        result = _llm_call(api_key, messages, max_tokens=1000)
+        json_match = re.search(r'\[.*\]', result, re.DOTALL)
+        if json_match:
+            missed = json.loads(json_match.group())
+            return [f for f in missed if isinstance(f, dict) and f.get('fact')]
+    except Exception:
+        pass
+    return []
+
+
+def extract_atomic_facts(api_key: str, session_id: str, date: str, conversation_text: str, speaker_a: str, speaker_b: str) -> list[dict]:
+    """Extract atomic facts from a conversation session."""
+    prompt = f"""Extract ALL atomic facts from this conversation. Each fact should be a single, self-contained, searchable sentence.
+
+RULES:
+1. Each fact must express exactly ONE piece of information
+2. Always state WHO — use full names, never pronouns
+3. Include specific details: names, dates, places, titles, numbers
+4. Resolve relative dates using session date ({date})
+5. Filter out greetings and filler — only meaningful facts
+6. Write in third person: "Emma likes blue" not "I like blue"
+7. Split compound facts: "Emma likes blue and red" → two facts
+
+EXAMPLES:
+- "Emma's favorite color is blue"
+- "John moved to NYC in March 2024"  
+- "Sarah works at Google as a software engineer"
+- "Emma read the book 'Nothing is Impossible' last month (around {date})"
+- "Caroline moved from Sweden"
+- "Daniel's dog is named Max"
+
+Session Date: {date}
+Participants: {speaker_a}, {speaker_b}
+
+Conversation:
+{conversation_text}
+
+Return a JSON array of objects, each with "subject" (person name) and "fact" (the atomic fact sentence).
+Return ONLY the JSON array."""
+
+    messages = [{"role": "user", "content": prompt}]
+    
+    # v8.1: Retry with fallback for JSON parse failures
+    for attempt in range(2):
+        try:
+            result = _llm_call(api_key, messages, max_tokens=1500)
+            json_match = re.search(r'\[.*\]', result, re.DOTALL)
+            if json_match:
+                facts = json.loads(json_match.group())
+                valid = [f for f in facts if isinstance(f, dict) and ("fact" in f or "fact_text" in f)]
+                if valid:
+                    return valid
+            # If no valid JSON array found, try line-by-line fallback
+            if attempt == 0:
+                # Retry with stricter prompt
+                messages = [{"role": "user", "content": prompt + "\n\nIMPORTANT: Output ONLY a valid JSON array. Example: [{\"subject\": \"Emma\", \"fact\": \"Emma likes blue\"}]"}]
+                continue
+            # Final fallback: parse bullet points as facts
+            lines = [l.strip().lstrip("- •*") for l in result.split("\n") if l.strip().lstrip("- •*")]
+            fallback_facts = []
+            for line in lines:
+                if len(line) > 10 and any(name.lower() in line.lower() for name in [speaker_a, speaker_b]):
+                    # Guess subject
+                    subj = speaker_a if speaker_a.lower() in line.lower() else speaker_b
+                    fallback_facts.append({"subject": subj, "fact": line})
+            return fallback_facts
+        except json.JSONDecodeError:
+            if attempt == 0:
+                messages = [{"role": "user", "content": prompt + "\n\nIMPORTANT: Output ONLY a valid JSON array. Example: [{\"subject\": \"Emma\", \"fact\": \"Emma likes blue\"}]"}]
+                continue
+        except Exception:
+            pass
+    return []
 
 
 def _parse_date_to_iso(date_str: str) -> str:

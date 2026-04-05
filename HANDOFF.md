@@ -72,6 +72,7 @@ memchip/
 - **Format:** 10 conversations, each with 15-20 sessions spanning months
 - **Questions:** 1,540 scored (categories 1-4), category 5 (adversarial) excluded
 - **Categories:** 1=multi_hop (282), 2=temporal (321), 3=open_domain (96), 4=single_hop (841)
+- **⚠️ WARNING:** Many runs (v10-v24) had categories 1↔4 SWAPPED in the benchmark runner. Always use the mapping above.
 - **Judging:** LLM judge (gpt-4.1-mini) compares prediction vs ground truth
 
 ## How To Run Benchmark

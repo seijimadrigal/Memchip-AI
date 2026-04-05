@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+.next/
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# Environment & secrets
+.env
+.env.local
+.env.production
+*.pem
+*.key
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Database files
+*.db
+*.sqlite
+
+# Benchmark results & runs (large, reproducible)
+results/
+iterations/
+runs/
+
+# Memory chunks (contain secrets from exported memories)
+chunks/
+
+# Study/research repos (external, large)
+evermemos-study/
+memori-study/
+locomo-benchmark/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Docker
+cloud/nginx/ssl/

@@ -64,10 +64,25 @@ class Storage:
         """)
         c.execute("CREATE INDEX IF NOT EXISTS idx_temporal_date ON temporal_events(event_date_iso)")
         c.execute("CREATE INDEX IF NOT EXISTS idx_temporal_entity ON temporal_events(entity)")
-        # FTS5 for raw engram text (v8)
+
+        # Atomic facts table (v8)
         c.execute("""
-            CREATE VIRTUAL TABLE IF NOT EXISTS engrams_fts USING fts5(
-                session_id, raw_text, tokenize='porter'
+            CREATE TABLE IF NOT EXISTS atomic_facts (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                session_id TEXT,
+                date TEXT,
+                fact_text TEXT NOT NULL,
+                subject TEXT,
+                created_at TEXT
+            )
+        """)
+        c.execute("CREATE INDEX IF NOT EXISTS idx_atomic_session ON atomic_facts(session_id)")
+        c.execute("CREATE INDEX IF NOT EXISTS idx_atomic_subject ON atomic_facts(subject)")
+        # FTS5 for atomic facts
+        c.execute("""
+            CREATE VIRTUAL TABLE IF NOT EXISTS atomic_facts_fts USING fts5(
+                fact_text, subject, session_id,
+                tokenize='porter unicode61'
             )
         """)
         c.commit()
@@ -188,11 +203,6 @@ class Storage:
             "INSERT OR REPLACE INTO engrams (session_id, date, raw_text, token_count) VALUES (?, ?, ?, ?)",
             (session_id, date, raw_text, token_count),
         )
-        # Also index in FTS5 (v8)
-        self.conn.execute(
-            "INSERT OR REPLACE INTO engrams_fts (session_id, raw_text) VALUES (?, ?)",
-            (session_id, raw_text),
-        )
         self.conn.commit()
 
     def get_engram(self, session_id: str) -> str | None:
@@ -213,8 +223,27 @@ class Storage:
         rows = self.conn.execute("SELECT session_id, date, raw_text FROM engrams ORDER BY date").fetchall()
         return [{"session_id": r["session_id"], "date": r["date"], "raw_text": r["raw_text"]} for r in rows]
 
-    def search_engrams(self, query: str, limit: int = 5) -> list[dict]:
-        """FTS5 search on raw engram text (v8)."""
+    def store_atomic_facts(self, session_id: str, date: str, facts: list[dict]):
+        """Store atomic facts extracted from a session."""
+        from datetime import datetime
+        c = self.conn
+        for f in facts:
+            fact_text = f.get("fact", f.get("fact_text", ""))
+            subject = f.get("subject", "")
+            if not fact_text:
+                continue
+            c.execute(
+                "INSERT INTO atomic_facts (session_id, date, fact_text, subject, created_at) VALUES (?, ?, ?, ?, ?)",
+                (session_id, date, fact_text, subject, datetime.now().isoformat()),
+            )
+            c.execute(
+                "INSERT INTO atomic_facts_fts (fact_text, subject, session_id) VALUES (?, ?, ?)",
+                (fact_text, subject, session_id),
+            )
+        c.commit()
+
+    def search_atomic_facts(self, query: str, limit: int = 20) -> list[dict]:
+        """Search atomic facts using FTS5."""
         stop = {"what","when","where","who","how","did","does","do","is","are","was","were",
                 "the","a","an","in","on","at","to","for","of","with","has","have","had",
                 "and","or","but","not","this","that","they","their","it","its","about","from","by"}
@@ -225,37 +254,18 @@ class Storage:
         fts_query = " OR ".join(keywords)
         try:
             rows = self.conn.execute(
-                "SELECT session_id, raw_text, rank FROM engrams_fts WHERE engrams_fts MATCH ? ORDER BY rank LIMIT ?",
+                "SELECT fact_text, subject, session_id, rank FROM atomic_facts_fts "
+                "WHERE atomic_facts_fts MATCH ? ORDER BY rank LIMIT ?",
                 (fts_query, limit),
             ).fetchall()
-            return [{"session_id": r["session_id"], "raw_text": r["raw_text"], "rank": r["rank"]} for r in rows]
+            return [{"fact_text": r["fact_text"], "subject": r["subject"], "session_id": r["session_id"]} for r in rows]
         except Exception:
             return []
 
-    def get_engram_snippets(self, session_id: str, query: str, window: int = 500) -> str:
-        """Extract best snippet window from a raw engram around keyword matches (v8)."""
-        row = self.conn.execute("SELECT raw_text FROM engrams WHERE session_id = ?", (session_id,)).fetchone()
-        if not row:
-            return ""
-        text = row["raw_text"]
-        if len(text) <= window:
-            return text
-        # Find best window around first keyword match
-        words = re.findall(r'\b\w+\b', query.lower())
-        stop = {"what","when","where","who","how","did","does","do","is","are","was","were",
-                "the","a","an","in","on","at","to","for","of","with","has","have","had",
-                "and","or","but","not","this","that","they","their","it","its","about","from","by"}
-        keywords = [w for w in words if w not in stop and len(w) > 2]
-        text_lower = text.lower()
-        best_pos = 0
-        for kw in keywords:
-            pos = text_lower.find(kw)
-            if pos >= 0:
-                best_pos = pos
-                break
-        start = max(0, best_pos - window // 2)
-        end = min(len(text), start + window)
-        return text[start:end]
+    def get_all_atomic_facts(self) -> list[dict]:
+        """Get all atomic facts."""
+        rows = self.conn.execute("SELECT fact_text, subject, session_id, date FROM atomic_facts ORDER BY date").fetchall()
+        return [{"fact_text": r["fact_text"], "subject": r["subject"], "session_id": r["session_id"], "date": r["date"]} for r in rows]
 
     def close(self):
         self.conn.close()

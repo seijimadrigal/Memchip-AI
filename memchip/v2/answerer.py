@@ -63,14 +63,20 @@ def _mask_entities_in_context(question: str, profiles: list[dict], episodes: lis
     return masked_profiles, masked_episodes, masked_raw
 
 
-ANSWER_RULES = """IMPORTANT RULES:
+ANSWER_RULES = """CRITICAL RULES:
 - Answer the question exactly as asked. Do NOT correct the question or point out errors in attribution.
 - If the question asks "What did X do?" and your memory shows Y did it, answer with what was done (the action/fact), using the name from the question.
 - Never say "Actually, it was Y who did that, not X." Just answer the question directly.
-- Be EXTREMELY concise — answer like a quiz. Just the fact, nothing else.
-- Examples: "Sweden", "trans woman", "software engineer at Google", "July 12, 2023", "painting watercolors"
-- Do NOT explain reasoning, add context, or give background. Just the direct answer.
-- If multiple facts are asked, list them briefly separated by commas.
+- Be MAXIMALLY CONCISE. Answer like a trivia quiz — shortest possible answer.
+- Examples of GOOD answers: "sunset", "3", "Single", "rock climbing, fishing, camping", "July 12, 2023"
+- Examples of BAD answers: "A painting inspired by sunsets with calming colors" (just say "sunset"), "Multiple children" (say the number), "Caroline experienced a tough breakup" (just say "Single")
+- ONLY include facts that DIRECTLY answer the question. Do NOT list extra related facts.
+- If the question asks "What books has X read?" list only the books EXPLICITLY named in conversations, not inferred ones.
+- When listing items (activities, events, books, etc.), include only the MOST NOTABLE 2-5 items, not an exhaustive list. Prefer specific over generic.
+- Use exact names, places, titles — NEVER generalize. Say "Sweden" not "home country". Say "3" not "multiple".
+- Do NOT add dates, context, explanations, or background. Just the bare facts.
+- Do NOT elaborate or paraphrase. Use the simplest, shortest form.
+- If multiple items are asked, list them separated by commas. No numbering, no bullets.
 - NEVER start with "Based on the profiles..." or "According to..." — just state the answer."""
 
 
@@ -78,9 +84,7 @@ def answer_strategy_a(api_key: str, question: str, profiles: list[dict]) -> str:
     """Gist recall: profiles only."""
     profile_text = "\n\n".join(f"## {p['entity']}\n{p['profile_text']}" for p in profiles)
     
-    prompt = f"""Based on these entity profiles, answer the question concisely and specifically.
-If the answer is clearly in the profiles, state it directly.
-If the information is NOT in the profiles at all, say "Information not mentioned in profiles."
+    prompt = f"""Answer this question using ONLY the profiles below. Give the shortest possible answer.
 
 {ANSWER_RULES}
 
@@ -89,9 +93,9 @@ Profiles:
 
 Question: {question}
 
-Answer (be specific — include names, dates, places):"""
+Answer:"""
 
-    return _llm_call(api_key, [{"role": "user", "content": prompt}], max_tokens=200)
+    return _llm_call(api_key, [{"role": "user", "content": prompt}], max_tokens=100)
 
 
 def answer_strategy_b(api_key: str, question: str, profiles: list[dict], episodes: list[dict], temporal_context: str = "") -> str:
@@ -101,9 +105,8 @@ def answer_strategy_b(api_key: str, question: str, profiles: list[dict], episode
     
     temporal_section = f"\n{temporal_context}" if temporal_context else ""
     
-    prompt = f"""Based on the entity profiles and episode summaries below, answer the question.
-Use specific details — dates, names, places. Cross-reference profiles and episodes.
-If the answer is NOT found in the provided information, say "Information not mentioned."
+    prompt = f"""Answer this question using the profiles and episode summaries below. Give the shortest possible answer.
+If the answer requires listing items, list ALL matching items but NOTHING extra.
 
 {ANSWER_RULES}
 
@@ -115,9 +118,9 @@ Episode Timeline:
 
 Question: {question}
 
-Answer (specific and concise):"""
+Answer:"""
 
-    return _llm_call(api_key, [{"role": "user", "content": prompt}], max_tokens=300)
+    return _llm_call(api_key, [{"role": "user", "content": prompt}], max_tokens=150)
 
 
 def answer_strategy_c(api_key: str, question: str, profiles: list[dict], episodes: list[dict], raw_sessions: list[dict], temporal_context: str = "") -> str:
@@ -134,9 +137,8 @@ def answer_strategy_c(api_key: str, question: str, profiles: list[dict], episode
     raw_text = "\n\n".join(compressed_raw)
     temporal_section = f"\n\nTimeline of Events:\n{temporal_context}" if temporal_context else ""
     
-    prompt = f"""Based on the entity profiles, episode summaries, and raw conversation sessions below, answer the question.
-Use specific details from the raw conversations when available.
-Pay close attention to exact wording, names, dates, and details.
+    prompt = f"""Answer this question using the profiles, episodes, and raw conversations below. Give the shortest possible answer.
+Use exact details from raw conversations when available. If listing items, include ALL matching items but NOTHING extra.
 
 {ANSWER_RULES}
 
@@ -151,9 +153,9 @@ Relevant Raw Sessions:
 
 Question: {question}
 
-Answer (specific, accurate, concise):"""
+Answer:"""
 
-    return _llm_call(api_key, [{"role": "user", "content": prompt}], max_tokens=300)
+    return _llm_call(api_key, [{"role": "user", "content": prompt}], max_tokens=150)
 
 
 def answer_strategy_d(api_key: str, question: str, profiles: list[dict], episodes: list[dict], all_raw: list[dict]) -> str:
@@ -183,41 +185,44 @@ Answer (thorough, specific, accurate):"""
     return _llm_call(api_key, [{"role": "user", "content": prompt}], max_tokens=400)
 
 
-def answer_strategy_open_domain(api_key: str, question: str, profiles: list[dict], episodes: list[dict], raw_sessions: list[dict]) -> str:
-    """Open-domain recall (v8): answer questions requiring INFERENCE from personality, preferences, life events."""
+def answer_open_domain(api_key: str, question: str, profiles: list[dict], episodes: list[dict], raw_sessions: list[dict] | None = None, atomic_context: str = "") -> str:
+    """Open-domain: requires inferring from memory context + world knowledge."""
     profile_text = "\n\n".join(f"## {p['entity']}\n{p['profile_text']}" for p in profiles)
     episode_text = "\n\n".join(f"### {ep['session_id']} ({ep['date']})\n{ep['summary']}" for ep in episodes)
-    compressed_raw = []
-    for rs in raw_sessions:
-        text = rs['raw_text']
-        if len(text) > 3000:
-            text = text[:3000] + "\n... [truncated]"
-        compressed_raw.append(f"### {rs['session_id']} ({rs['date']})\n{text}")
-    raw_text = "\n\n".join(compressed_raw) if compressed_raw else "(none)"
+    raw_text = ""
+    if raw_sessions:
+        compressed_raw = []
+        for rs in raw_sessions:
+            text = rs['raw_text']
+            if len(text) > 3000:
+                text = text[:3000] + "\n... [truncated]"
+            compressed_raw.append(f"### {rs['session_id']} ({rs['date']})\n{text}")
+        raw_text = "\n\nRelevant Raw Sessions:\n" + "\n\n".join(compressed_raw)
+    
+    atomic_section = atomic_context if atomic_context else ""
+    
+    prompt = f"""You are answering a question that requires INFERENCE and REASONING based on what you know about these people from their conversations, combined with general world knowledge.
 
-    prompt = f"""You must answer a question about a person by INFERRING from their personality, preferences, life history, and behavior patterns.
-
-The answer may NOT be stated directly — you must REASON from what you know about them.
-
-Examples of inferential reasoning:
-1. Q: "What type of vacation would Sarah most enjoy?" → From profiles: Sarah loves hiking, nature photography, hates crowds → Answer: "A wilderness hiking/photography trip in a remote national park"
-2. Q: "What gift would Alex appreciate most?" → From profiles: Alex is passionate about cooking Italian food, collects vintage cookbooks → Answer: "A rare vintage Italian cookbook"
-3. Q: "How would Jamie react to a surprise party?" → From profiles: Jamie is introverted, values quiet evenings, gets anxious in large groups → Answer: "Jamie would likely feel uncomfortable and anxious"
-
-{ANSWER_RULES}
+This is NOT a simple fact lookup — you need to think about what these people would likely do, think, or prefer based on their personality, interests, location, and lifestyle as revealed in the conversations.
 
 Entity Profiles:
 {profile_text}
 
 Episode Timeline:
-{episode_text}
-
-Relevant Raw Sessions:
-{raw_text}
+{episode_text}{raw_text}{atomic_section}
 
 Question: {question}
 
-Think about what you know about this person — their traits, preferences, experiences, values — and INFER the answer. Be specific and concise:"""
+REASONING APPROACH:
+1. First identify what relevant facts from the conversations bear on this question
+2. Then apply common sense and world knowledge to reason about the answer
+3. Give a direct, concise answer (1-2 sentences max)
+
+For "would X...?" questions: Answer Yes or No first, then briefly explain why based on their known traits/interests.
+For "what could X...?" questions: Give the most logical answer based on their profile and general knowledge.
+For "which/where" inference questions: Use location clues, interests, and context to make the best inference.
+
+Answer:"""
 
     return _llm_call(api_key, [{"role": "user", "content": prompt}], max_tokens=300)
 

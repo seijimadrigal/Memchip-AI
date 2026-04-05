@@ -122,7 +122,7 @@ def run_benchmark(
         with open(checkpoint_path) as f:
             checkpoint = json.load(f)
             results = checkpoint.get("results", [])
-            processed_ids = {r["conv_id"] + "_" + str(r["q_idx"]) for r in results}
+            processed_ids = {r["conv_id"] + "_" + r["question"] for r in results}
         print(f"Resuming from checkpoint: {len(results)} questions already processed")
 
     total_questions = sum(
@@ -199,11 +199,10 @@ def run_benchmark(
         print(f"  Answering {len(scored_qa)} questions...")
 
         for q_idx, qa in enumerate(scored_qa):
-            result_id = f"{conv_id}_{q_idx}"
+            question = qa["question"]
+            result_id = f"{conv_id}_{question}"
             if result_id in processed_ids:
                 continue
-
-            question = qa["question"]
             ground_truth = qa["answer"]
             category = qa["category"]
 
