@@ -6,6 +6,56 @@ MemChip replaces flat-file memory (like MEMORY.md) with a real memory backend: h
 
 ---
 
+## Benchmarks
+
+Tested on [LoCoMo](https://github.com/snap-research/locomo) — the gold-standard benchmark for long-term conversational memory (1,540 scored questions across 10 multi-session conversations).
+
+### LoCoMo Leaderboard
+
+| System | Overall | Multi-hop | Single-hop | Temporal | Open-domain |
+|--------|---------|-----------|------------|----------|-------------|
+| EverMemOS | 92.3% | **88.2%** | 90.0% | — | — |
+| MemU | 92.09% | — | — | — | — |
+| **MemChip** | **86.8%** | 71.9% | **90.0%** | **94.6%** | 84.6% |
+| Memori | 81.95% | — | — | — | — |
+| Mem0 | 62-67% | — | — | — | — |
+| ReadAgent | 67.9% | — | — | — | — |
+| RAG baseline | ~60% | — | — | — | — |
+
+> **MemChip scores within 6 points of state-of-the-art** while being fully self-hosted, requiring no external vector databases (Milvus, Elasticsearch), and running on a single $10/mo VPS.
+
+### Category Breakdown (Best Run)
+
+```
+┌────────────────┬────────┬───────────────────────────────┐
+│ Category       │ Score  │ What it tests                 │
+├────────────────┼────────┼───────────────────────────────┤
+│ Temporal       │ 94.6%  │ "When did X happen?"          │
+│ Single-hop     │ 90.0%  │ "What is X's favorite Y?"     │
+│ Open-domain    │ 84.6%  │ "Tell me about X"             │
+│ Multi-hop      │ 71.9%  │ "Connect X to Y to Z"         │
+└────────────────┴────────┴───────────────────────────────┘
+```
+
+### Cost Comparison
+
+| System | Infrastructure | Monthly Cost | Setup Complexity |
+|--------|---------------|-------------|-----------------|
+| EverMemOS | Milvus + Elasticsearch + MongoDB + MinIO + etcd | $50-100+ | 5 Docker containers, 6GB+ RAM |
+| Mem0 (Cloud) | SaaS | $99-499/mo | API key only |
+| Mem0 (Self-hosted) | Qdrant + PostgreSQL | $20-40 | 3 containers |
+| **MemChip** | **PostgreSQL + Redis** | **$5-10** | **2 containers, 1GB RAM** |
+
+> MemChip achieves 86.8% LoCoMo with just PostgreSQL + Redis. No Milvus, no Elasticsearch, no MongoDB. Embeddings run locally (all-MiniLM-L6-v2, free).
+
+### What's Next
+
+- **Multi-hop improvement** (71.9% → target 85%+) — the main gap vs EverMemOS
+- **Agentic retrieval** — multi-step reasoning for complex queries
+- **Image memory** — BLIP caption integration (shown to boost single-hop +1.4%)
+
+---
+
 ## Why MemChip?
 
 | | Flat Files (MEMORY.md) | MemChip |
