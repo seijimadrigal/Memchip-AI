@@ -10,10 +10,10 @@ import {
   Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter,
 } from "@/components/ui/dialog";
 import {
-  FolderKanban, Plus, Archive, Brain, CheckSquare, Users, Clock, Trash2,
+  FolderKanban, Plus, Archive, Brain, Users,
 } from "lucide-react";
 import {
-  getProjects, createProject, updateProject, getTasks, createTask, updateTask, getMemories,
+  getProjects, createProject, updateProject, getMemories,
 } from "@/lib/api";
 import { toast } from "sonner";
 
@@ -26,18 +26,6 @@ interface Project {
   agents?: string[];
   memory_count?: number;
   status?: string;
-  created_at?: string;
-}
-
-interface Task {
-  id: string;
-  name: string;
-  project_id?: string;
-  pool_id?: string;
-  agents?: string[];
-  memory_count?: number;
-  status?: string;
-  expires_at?: string;
   created_at?: string;
 }
 
@@ -64,7 +52,6 @@ export default function ProjectsPage() {
   const [loading, setLoading] = useState(true);
   const [createOpen, setCreateOpen] = useState(false);
   const [detailProject, setDetailProject] = useState<Project | null>(null);
-  const [detailTasks, setDetailTasks] = useState<Task[]>([]);
   const [detailMemories, setDetailMemories] = useState<Memory[]>([]);
   const [loadingDetail, setLoadingDetail] = useState(false);
 
@@ -73,11 +60,6 @@ export default function ProjectsPage() {
   const [newSlug, setNewSlug] = useState("");
   const [newDesc, setNewDesc] = useState("");
   const [newAgents, setNewAgents] = useState("");
-
-  // New task form
-  const [newTaskName, setNewTaskName] = useState("");
-  const [newTaskAgents, setNewTaskAgents] = useState("");
-  const [newTaskExpires, setNewTaskExpires] = useState("");
 
   // Edit agents
   const [editAgentsOpen, setEditAgentsOpen] = useState<Project | null>(null);
@@ -129,46 +111,12 @@ export default function ProjectsPage() {
     setDetailProject(project);
     setLoadingDetail(true);
     try {
-      const [tasks, memories] = await Promise.allSettled([
-        getTasks({ project_id: project.id }),
-        project.pool_id ? getMemories({ pool_id: project.pool_id, limit: "10" }) : Promise.resolve([]),
-      ]);
-      const taskData = tasks.status === "fulfilled" ? tasks.value : [];
-      const memData = memories.status === "fulfilled" ? memories.value : [];
-      setDetailTasks(Array.isArray(taskData) ? taskData : taskData.tasks || taskData.items || []);
+      const memData = project.pool_id ? await getMemories({ pool_id: project.pool_id, limit: "10" }) : [];
       setDetailMemories(Array.isArray(memData) ? memData : memData.memories || memData.items || []);
     } catch {
       // ignore
     } finally {
       setLoadingDetail(false);
-    }
-  }
-
-  async function handleCreateTask() {
-    if (!newTaskName.trim() || !detailProject) return;
-    try {
-      const agents = newTaskAgents.split(",").map(a => a.trim()).filter(Boolean);
-      await createTask({
-        name: newTaskName.trim(),
-        project_id: detailProject.id,
-        agents: agents.length > 0 ? agents : undefined,
-        expires_in_hours: newTaskExpires ? parseInt(newTaskExpires) : undefined,
-      });
-      toast.success("Task created");
-      setNewTaskName(""); setNewTaskAgents(""); setNewTaskExpires("");
-      openDetail(detailProject);
-    } catch {
-      toast.error("Failed to create task");
-    }
-  }
-
-  async function handleTaskAction(task: Task, status: string) {
-    try {
-      await updateTask(task.id, { status });
-      toast.success(`Task ${status}`);
-      if (detailProject) openDetail(detailProject);
-    } catch {
-      toast.error("Failed to update task");
     }
   }
 
@@ -195,7 +143,7 @@ export default function ProjectsPage() {
             Projects
           </h1>
           <p className="text-sm text-muted-foreground mt-1">
-            Manage projects, tasks, and agent assignments
+            Manage projects and agent assignments
           </p>
         </div>
         <Button onClick={() => setCreateOpen(true)} className="gap-2">
@@ -427,87 +375,6 @@ export default function ProjectsPage() {
                   )}
                 </div>
 
-                {/* Tasks */}
-                <div>
-                  <h3 className="text-sm font-semibold mb-2 flex items-center gap-2">
-                    <CheckSquare className="h-4 w-4" /> Tasks
-                  </h3>
-                  {loadingDetail ? (
-                    <p className="text-xs text-muted-foreground">Loading…</p>
-                  ) : (
-                    <div className="space-y-2">
-                      {detailTasks.length === 0 && (
-                        <p className="text-xs text-muted-foreground">No tasks yet.</p>
-                      )}
-                      {detailTasks.map((task) => (
-                        <div key={task.id} className="rounded-md border border-border p-3 flex items-start justify-between gap-2">
-                          <div className="space-y-1 min-w-0">
-                            <div className="flex items-center gap-2">
-                              <CheckSquare className="h-3.5 w-3.5 text-muted-foreground flex-shrink-0" />
-                              <span className="text-sm font-medium truncate">{task.name}</span>
-                              <Badge variant="outline" className={statusColor[task.status || "active"] + " text-xs"}>
-                                {task.status || "active"}
-                              </Badge>
-                            </div>
-                            <div className="flex flex-wrap gap-1">
-                              {task.agents?.map((a) => (
-                                <Badge key={a} variant="outline" className="bg-purple-500/20 text-purple-400 border-purple-500/30 text-[10px]">{a}</Badge>
-                              ))}
-                            </div>
-                            <div className="text-xs text-muted-foreground flex gap-3">
-                              {task.pool_id && <span className="font-mono">pool: {task.pool_id}</span>}
-                              <span><Brain className="h-3 w-3 inline" /> {task.memory_count ?? 0}</span>
-                              {task.expires_at && (
-                                <span className="flex items-center gap-1"><Clock className="h-3 w-3" />{new Date(task.expires_at).toLocaleString()}</span>
-                              )}
-                            </div>
-                          </div>
-                          <div className="flex gap-1 flex-shrink-0">
-                            {task.status !== "completed" && (
-                              <Button variant="ghost" size="icon" className="h-7 w-7" title="Complete" onClick={() => handleTaskAction(task, "completed")}>
-                                <CheckSquare className="h-3.5 w-3.5 text-blue-400" />
-                              </Button>
-                            )}
-                            {task.status !== "archived" && (
-                              <Button variant="ghost" size="icon" className="h-7 w-7" title="Archive" onClick={() => handleTaskAction(task, "archived")}>
-                                <Archive className="h-3.5 w-3.5" />
-                              </Button>
-                            )}
-                          </div>
-                        </div>
-                      ))}
-
-                      {/* New Task */}
-                      <div className="rounded-md border border-dashed border-border p-3 space-y-2">
-                        <p className="text-xs font-medium text-muted-foreground">New Task</p>
-                        <div className="flex gap-2">
-                          <Input
-                            value={newTaskName}
-                            onChange={(e) => setNewTaskName(e.target.value)}
-                            placeholder="Task name"
-                            className="text-sm h-8"
-                          />
-                          <Input
-                            value={newTaskAgents}
-                            onChange={(e) => setNewTaskAgents(e.target.value)}
-                            placeholder="Agents"
-                            className="text-sm h-8 w-32"
-                          />
-                          <Input
-                            value={newTaskExpires}
-                            onChange={(e) => setNewTaskExpires(e.target.value)}
-                            placeholder="Hours"
-                            type="number"
-                            className="text-sm h-8 w-20"
-                          />
-                          <Button size="sm" className="h-8" onClick={handleCreateTask} disabled={!newTaskName.trim()}>
-                            <Plus className="h-3.5 w-3.5" />
-                          </Button>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
               </div>
             </>
           )}

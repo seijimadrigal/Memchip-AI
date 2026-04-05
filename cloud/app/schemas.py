@@ -405,7 +405,7 @@ class HealthResponse(BaseModel):
 
 class ProjectCreateRequest(BaseModel):
     name: str
-    slug: str
+    slug: Optional[str] = None  # Auto-generated from name if not provided
     description: Optional[str] = None
     agents: List[str] = Field(default_factory=list)
     metadata: Optional[Dict[str, Any]] = None
@@ -439,39 +439,6 @@ class ProjectResponse(BaseModel):
 
 class ProjectDetailResponse(ProjectResponse):
     recent_memories: List[Dict[str, Any]] = Field(default_factory=list)
-
-
-class TaskCreateRequest(BaseModel):
-    name: str
-    project_id: Optional[str] = None
-    agents: List[str] = Field(default_factory=list)
-    expires_in_hours: Optional[float] = None
-    metadata: Optional[Dict[str, Any]] = None
-
-
-class TaskUpdateRequest(BaseModel):
-    name: Optional[str] = None
-    agents: Optional[List[str]] = None
-    status: Optional[str] = None
-    metadata: Optional[Dict[str, Any]] = None
-
-
-class TaskResponse(BaseModel):
-    id: str
-    org_id: str
-    project_id: Optional[str] = None
-    name: str
-    pool_id: str
-    agents: List[str]
-    status: str
-    expires_at: Optional[datetime] = None
-    metadata: Optional[Dict[str, Any]] = None
-    memory_count: int = 0
-    created_at: datetime
-    updated_at: datetime
-
-    class Config:
-        from_attributes = True
 
 
 # ========== v0.4.0: Agent Context Schemas ==========

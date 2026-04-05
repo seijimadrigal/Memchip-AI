@@ -605,18 +605,14 @@ memory_type, scope, limit, offset`}
             />
           </div>
 
-          {/* Projects & Tasks */}
+          {/* Projects */}
           <div>
-            <h3 className="text-lg font-semibold mb-2">Projects & Tasks</h3>
+            <h3 className="text-lg font-semibold mb-2">Projects</h3>
             <Endpoint method="POST" path="/v1/projects/" desc="Create project" body={`{ "name": "My Project", "description": "..." }`} />
             <Endpoint method="GET" path="/v1/projects/" desc="List projects" />
             <Endpoint method="GET" path="/v1/projects/{id}" desc="Get project" />
             <Endpoint method="PUT" path="/v1/projects/{id}" desc="Update project" />
             <Endpoint method="DELETE" path="/v1/projects/{id}" desc="Delete project" />
-            <Endpoint method="POST" path="/v1/tasks/" desc="Create task" body={`{ "project_id": "proj_xxx", "name": "Task name", "status": "open" }`} />
-            <Endpoint method="GET" path="/v1/tasks/" desc="List tasks" />
-            <Endpoint method="PUT" path="/v1/tasks/{id}" desc="Update task" />
-            <Endpoint method="DELETE" path="/v1/tasks/{id}" desc="Delete task" />
           </div>
 
           {/* Agent Context */}
@@ -624,7 +620,7 @@ memory_type, scope, limit, offset`}
             <h3 className="text-lg font-semibold mb-2">Agent Context</h3>
             <Endpoint method="GET" path="/v1/agents/{agent_id}/context/" desc="Get agent context" />
             <Endpoint method="PUT" path="/v1/agents/{agent_id}/context/" desc="Update agent context"
-              body={`{ "active_task_id": "task_xxx", "active_project_id": "proj_xxx" }`}
+              body={`{ "active_project_id": "proj_xxx", "default_scope": "team" }`}
             />
             <Endpoint method="DELETE" path="/v1/agents/{agent_id}/context/" desc="Clear agent context" />
           </div>

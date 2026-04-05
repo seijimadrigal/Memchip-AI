@@ -1,5 +1,6 @@
 """MemChip Cloud API — FastAPI application. v0.4.0"""
 import asyncio
+import re
 import time
 from collections import deque
 from contextlib import asynccontextmanager
@@ -30,7 +31,6 @@ from app.schemas import (
     SubscriptionCreateRequest, SubscriptionResponse,
     # v0.4.0
     ProjectCreateRequest, ProjectUpdateRequest, ProjectResponse, ProjectDetailResponse,
-    TaskCreateRequest, TaskUpdateRequest, TaskResponse,
     AgentContextUpdateRequest, AgentContextResponse,
     # Assistant
     AssistantChatRequest, AssistantChatResponse, AssistantSource,
@@ -44,7 +44,6 @@ from app.engine import (
     create_subscription, list_subscriptions, delete_subscription,
     # v0.4.0
     create_project, get_project, list_projects, update_project, archive_project,
-    create_task, get_task, list_tasks, update_task, archive_task,
     get_memory_count_for_pool, get_recent_memories_for_pool,
     get_agent_context, set_agent_context, clear_agent_context,
 )
@@ -52,7 +51,7 @@ from app.models import (
     Memory, MemorySession, PoolAccess, Webhook,
     MemorySchema, MemoryInstruction, MemoryAudit,
     MemoryEvent, MemorySubscription,
-    Project, Task, AgentContext,
+    Project, AgentContext,
 )
 from app.websocket import websocket_endpoint, manager
 from app.config import EMBEDDING_MODEL, REDIS_URL
@@ -445,9 +444,10 @@ async def api_create_project(
     auth: AuthContext = Depends(authenticate),
     db: AsyncSession = Depends(get_db),
 ):
+    slug = req.slug or re.sub(r'[^a-z0-9]+', '-', req.name.lower()).strip('-')
     project = await create_project(
         db, org_id=auth.org_id,
-        name=req.name, slug=req.slug,
+        name=req.name, slug=slug,
         description=req.description,
         agents=req.agents,
         metadata=req.metadata,
@@ -555,116 +555,6 @@ async def api_delete_project(
     return {"status": "ok", "id": project.id, "new_status": "archived"}
 
 
-# ========== v0.4.0: Task Endpoints ==========
-
-@app.post("/v1/tasks/", response_model=TaskResponse)
-async def api_create_task(
-    req: TaskCreateRequest,
-    auth: AuthContext = Depends(authenticate),
-    db: AsyncSession = Depends(get_db),
-):
-    task = await create_task(
-        db, org_id=auth.org_id,
-        name=req.name, project_id=req.project_id,
-        agents=req.agents,
-        expires_in_hours=req.expires_in_hours,
-        metadata=req.metadata,
-    )
-    memory_count = await get_memory_count_for_pool(db, auth.org_id, task.pool_id)
-    return TaskResponse(
-        id=task.id, org_id=task.org_id,
-        project_id=task.project_id, name=task.name,
-        pool_id=task.pool_id, agents=task.agents or [],
-        status=task.status, expires_at=task.expires_at,
-        metadata=task.metadata_,
-        memory_count=memory_count,
-        created_at=task.created_at, updated_at=task.updated_at,
-    )
-
-
-@app.get("/v1/tasks/", response_model=list[TaskResponse])
-async def api_list_tasks(
-    project_id: str = Query(None),
-    status: str = Query(None),
-    agent_id: str = Query(None),
-    auth: AuthContext = Depends(authenticate),
-    db: AsyncSession = Depends(get_db),
-):
-    tasks = await list_tasks(db, auth.org_id, project_id=project_id, status=status, agent_id=agent_id)
-    results = []
-    for t in tasks:
-        memory_count = await get_memory_count_for_pool(db, auth.org_id, t.pool_id)
-        results.append(TaskResponse(
-            id=t.id, org_id=t.org_id,
-            project_id=t.project_id, name=t.name,
-            pool_id=t.pool_id, agents=t.agents or [],
-            status=t.status, expires_at=t.expires_at,
-            metadata=t.metadata_,
-            memory_count=memory_count,
-            created_at=t.created_at, updated_at=t.updated_at,
-        ))
-    return results
-
-
-@app.get("/v1/tasks/{task_id}", response_model=TaskResponse)
-async def api_get_task(
-    task_id: str,
-    auth: AuthContext = Depends(authenticate),
-    db: AsyncSession = Depends(get_db),
-):
-    task = await get_task(db, task_id)
-    if not task or task.org_id != auth.org_id:
-        raise HTTPException(404, "Task not found")
-    memory_count = await get_memory_count_for_pool(db, auth.org_id, task.pool_id)
-    return TaskResponse(
-        id=task.id, org_id=task.org_id,
-        project_id=task.project_id, name=task.name,
-        pool_id=task.pool_id, agents=task.agents or [],
-        status=task.status, expires_at=task.expires_at,
-        metadata=task.metadata_,
-        memory_count=memory_count,
-        created_at=task.created_at, updated_at=task.updated_at,
-    )
-
-
-@app.put("/v1/tasks/{task_id}", response_model=TaskResponse)
-async def api_update_task(
-    task_id: str,
-    req: TaskUpdateRequest,
-    auth: AuthContext = Depends(authenticate),
-    db: AsyncSession = Depends(get_db),
-):
-    task = await update_task(
-        db, task_id, auth.org_id,
-        name=req.name, agents=req.agents,
-        status=req.status, metadata=req.metadata,
-    )
-    if not task:
-        raise HTTPException(404, "Task not found")
-    memory_count = await get_memory_count_for_pool(db, auth.org_id, task.pool_id)
-    return TaskResponse(
-        id=task.id, org_id=task.org_id,
-        project_id=task.project_id, name=task.name,
-        pool_id=task.pool_id, agents=task.agents or [],
-        status=task.status, expires_at=task.expires_at,
-        metadata=task.metadata_,
-        memory_count=memory_count,
-        created_at=task.created_at, updated_at=task.updated_at,
-    )
-
-
-@app.delete("/v1/tasks/{task_id}")
-async def api_delete_task(
-    task_id: str,
-    auth: AuthContext = Depends(authenticate),
-    db: AsyncSession = Depends(get_db),
-):
-    task = await archive_task(db, task_id, auth.org_id)
-    if not task:
-        raise HTTPException(404, "Task not found")
-    return {"status": "ok", "id": task.id, "new_status": task.status}
-
-
 # ========== v0.4.0: Agent Context Endpoints ==========
 
 @app.get("/v1/agents/{agent_id}/context/", response_model=AgentContextResponse)
@@ -744,8 +634,8 @@ MemChip is a memory service for AI agents with these core concepts:
 - **Auto-capture**: The OpenClaw plugin intercepts conversations and auto-stores memories via POST /v1/memories/
 - **Search**: Hybrid retrieval — BM25 full-text + vector similarity + knowledge graph walk, fused via RRF
 - **Decay**: Memories decay over time based on access frequency; low-decay memories get archived
-- **Projects & Tasks**: Organize memories into projects (with auto-generated pools) and tasks
-- **Agent Context**: Agents can set active project/task for auto-routing of new memories
+- **Projects**: Organize memories into projects (with auto-generated pools)
+- **Agent Context**: Agents can set active project for auto-routing of new memories
 
 ## API Quick Reference
 - POST /v1/memories/ — Add memory (extracts triples, summaries, etc.)
@@ -753,8 +643,7 @@ MemChip is a memory service for AI agents with these core concepts:
 - POST /v1/memories/answer/ — Search + LLM answer
 - GET /v1/memories/ — List with filters
 - POST /v1/projects/ — Create project (auto-generates pool)
-- POST /v1/tasks/ — Create task
-- PUT /v1/agents/{id}/context/ — Set agent's active project/task
+- PUT /v1/agents/{id}/context/ — Set agent's active project
 
 ## Plugin Configuration (OpenClaw)
 ```json

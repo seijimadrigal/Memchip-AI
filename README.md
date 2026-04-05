@@ -98,7 +98,7 @@ Tested on [LoCoMo](https://github.com/snap-research/locomo) — the gold-standar
 │  └──────────┘ └──────────┘ └──────────────────┘ │
 │  ┌──────────┐ ┌──────────┐ ┌──────────────────┐ │
 │  │ Projects  │ │ Pools &  │ │  Assistant       │ │
-│  │ & Tasks   │ │ ACL      │ │  (LLM + search)  │ │
+│  │           │ │ ACL      │ │  (LLM + search)  │ │
 │  └──────────┘ └──────────┘ └──────────────────┘ │
 └───────┬──────────────┬──────────────┬───────────┘
         │              │              │
@@ -236,8 +236,7 @@ const results = await mc.search({ query: 'preferences', userId: 'seiji' });
 | `POST` | `/v1/assistant/chat/` | AI assistant with dual-retrieval |
 | `GET` | `/v1/agents/{id}/profile/` | Dynamic MEMORY.md-like summary |
 | `POST` | `/v1/projects/` | Create project (auto-generates pool) |
-| `POST` | `/v1/tasks/` | Create task |
-| `PUT` | `/v1/agents/{id}/context/` | Set agent's active project/task |
+| `PUT` | `/v1/agents/{id}/context/` | Set agent's active project |
 | `GET` | `/v1/health` | Health check |
 | `GET` | `/v1/analytics/` | Usage analytics |
 | `GET` | `/v1/graph/` | Memory relationship graph |
